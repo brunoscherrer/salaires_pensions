@@ -226,8 +226,8 @@ class carriere_public(carriere):
         ( [("MCFHC","Maître de Conférences Hors Classe")], [(678,1), (716,1), (754,1), (796,1), (830,5), (880,100) ] ),
         ( [("PR2","Professeur d'Université 2ème classe")], [(667,1), (705,1), (743,1), (785,1), (830,3), (880,100) ] ),
         ( [("PR1","Professeur d'Université 1ère classe")], [(830,3), (967,1), (1008,1), (1062,1), (1119,1), (1143,1), (1168,100) ] ),
-        ( [("ProfEcoles","Professeur des écoles (grille 2021)")], [(390,1), (441,1), (448,2), (461,2), (476,2.5), (492,3), (519,3), (557,3.5), (590,4), (629,4), (673,100) ] ), 
-        ( [("ProfAgrege","Professeur agrégé (grille 2021)")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,4), (800, 4), (830,100) ] )   
+        ( [("ProfEcoles","Professeur des écoles")], [(390,1), (441,1), (448,2), (461,2), (476,2.5), (492,3), (519,3), (557,3.5), (590,4), (629,4), (673,100) ] ), 
+        ( [("ProfAgrege","Professeur agrégé")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,4), (800, 4), (830,100) ] )   
     ]
 
     def __init__(self, m, age_debut, annee_debut, id_metier, part_prime=0.0):
@@ -239,10 +239,11 @@ class carriere_public(carriere):
                 break
             n_metier += 1
 
+        self.n_metier = n_metier
         self.nom_metier = carriere_public.grilles[n_metier][0][0][1]
             
         self.metier, grille = carriere_public.grilles[n_metier]
-        self.part_prime=part_prime
+        self.part_prime = part_prime
         
         self.sal,self.sal_hp,self.prime = [],[],[]
 
@@ -270,7 +271,38 @@ class carriere_public(carriere):
             self.prime.append( prime )        
 
 
+    def plot_grille_prime(self):
 
+        figure(figsize=(11,4))
+
+        subplot(1,2,1)
+        g = carriere_public.grilles[self.n_metier][1]
+        x,y = 0, g[0][0]
+        lx, ly = [x], [y]
+    
+        for i in xrange(1,len(g)):
+            dx = g[i-1][1]
+            lx.append(x+dx)
+            ly.append(y)
+            x = x+dx
+            y = g[i][0]
+            lx.append(x)
+            ly.append(y)
+        lx.append(45)
+        ly.append(y)
+        
+        plot(lx,ly)
+        xlabel(dec("Ancienneté"))
+        ylabel(dec("Indice majoré"))
+        title(dec("Grille indiciaire ("+self.nom_metier)+")")
+        
+        subplot(1,2,2)
+        plot( [self.prime[i]*100 for i in xrange(len(self.prime))] )
+        xlabel(dec("Ancienneté"))
+        ylabel(dec("Pourcentage du salaire brut"))
+        title(dec("Prime ("+self.nom_metier)+")")
+        
+              
 #######################################
 # fonctions pour tracer des graphiques
 
@@ -303,7 +335,8 @@ def plot_modeles(lm,r):
 
 
 # sur les carrières
-            
+
+
 def plot_carriere_corr(m, c, corr, div=12, couleur=(0.8,0.8,0.8),label=""):
 
     plot( xrange( c.annee_debut, c.annee_debut + carriere.age_max+1 - c.age_debut)  ,  [ c.sal[i]/div/corr[c.annee_debut+i-m.debut] for i in xrange(len(c.sal)) ], color=couleur, label=label  )
@@ -352,6 +385,15 @@ m1 = modele_gouv(debut,fin)
 m2 = modele_destinie(debut,fin)
 
 
+# figure prof ecoles
+
+c = carriere_public(m1,25,2019,"ProfEcoles",0.1)
+c.plot_grille_prime()
+savefig("Prime_ProfEcoles.jpg")
+
+
+# figure comparaison modèles
+
 def genere_comparaison_modeles(a,b):
 
     figure(figsize=(10,8))
@@ -362,9 +404,8 @@ def genere_comparaison_modeles(a,b):
 print "Génération des courbes sur les modèles"
 genere_comparaison_modeles(1950,2120)        
 
-exit(1)
     
-# Analyse des carrières 
+# Analyse des carrières (gif animés)
     
 tmp_dir = "./tmp/"
 gif_dir = "./gif/"
