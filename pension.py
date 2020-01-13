@@ -324,7 +324,7 @@ def plot_modele(m, f, tit="", r=[]):
 def plot_modeles(lm,r):
 
     for i in xrange(6):
-        label = ["Prix (Inflation intégrée)","SMIC annuel","SMPT annuel","Valeur d' l'indice Fonction Publique","Valeur d'achat du point Macron","Valeur de vente du point Macron"][i]
+        label = ["Prix (Inflation intégrée)","SMIC annuel","SMPT annuel","Valeur du point d'indice de la Fonction Publique","Valeur d'achat du point Macron","Valeur de vente du point Macron"][i]
         subplot(3,2,i+1)
         for m in lm:
             var = [m.prix, m.smic, m.smpt, m.indfp, m.achat_pt, m.vente_pt][i]
@@ -336,6 +336,7 @@ def plot_modeles(lm,r):
 
 # sur les carrières
 
+exit(1)
 
 def plot_carriere_corr(m, c, corr, div=12, couleur=(0.8,0.8,0.8),label=""):
 
