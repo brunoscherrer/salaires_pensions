@@ -336,8 +336,6 @@ def plot_modeles(lm,r):
 
 # sur les carrières
 
-exit(1)
-
 def plot_carriere_corr(m, c, corr, div=12, couleur=(0.8,0.8,0.8),label=""):
 
     plot( xrange( c.annee_debut, c.annee_debut + carriere.age_max+1 - c.age_debut)  ,  [ c.sal[i]/div/corr[c.annee_debut+i-m.debut] for i in xrange(len(c.sal)) ], color=couleur, label=label  )
@@ -388,6 +386,8 @@ m2 = modele_destinie(debut,fin)
 
 # figure prof ecoles
 
+print "Génération du profil carrière d'un prof des écoles"
+
 c = carriere_public(m1,25,2019,"ProfEcoles",0.1)
 c.plot_grille_prime()
 savefig("Prime_ProfEcoles.jpg")
@@ -405,9 +405,12 @@ def genere_comparaison_modeles(a,b):
 print "Génération des courbes sur les modèles"
 genere_comparaison_modeles(1950,2120)        
 
+
     
 # Analyse des carrières (gif animés)
-    
+
+print "Génération d'animations gif sur l'évolution de carrières dans le public"
+
 tmp_dir = "./tmp/"
 gif_dir = "./gif/"
 
