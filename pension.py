@@ -406,7 +406,7 @@ def genere_anim( modeles, cas, annees ):
 
                 
 cas = [ ("ProfEcoles",0.1), ("ProfAgrege",0.2), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.2), ("ATSEM2",0.2), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1) ]
-annees = xrange(1970,2051,5)
-genere_anim( [m1,m2], cas, annees )
+annees = xrange(1980,2041,5)
+genere_anim( [m1], cas, annees )
 
 show()
