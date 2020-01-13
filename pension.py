@@ -357,11 +357,12 @@ def genere_comparaison_modeles(a,b):
     figure(figsize=(10,8))
     plot_modeles([m1,m2],[a,b])
     if SAVE:
-        savefig("gouv_vs_dest.pdf")
+        savefig("gouv_vs_dest.jpg")
 
 print "Génération des courbes sur les modèles"
 genere_comparaison_modeles(1950,2120)        
 
+exit(1)
     
 # Analyse des carrières 
     
@@ -409,4 +410,4 @@ cas = [ ("ProfEcoles",0.1), ("ProfAgrege",0.2), ("PR2",0.1), ("PR1",0.1), ("ATSE
 annees = xrange(1980,2041,5)
 genere_anim( [m1], cas, annees )
 
-show()
+
