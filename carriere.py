@@ -157,10 +157,10 @@ class modele_destinie(modele_abs):
 
 class carriere(object):
 
-    age_max = 68
-    age_mort = 85
+    age_max = 68  # age limite pour travailler (pour les simus)
+    age_mort = 82 # espérance de vie
     
-    def __init__(self, age_debut, annee_debut, nom_metier="Travailleur, Travailleuse"):
+    def __init__(self, age_debut, annee_debut, nom_metier="Travailleur/Travailleuse"):
 
         self.age_debut = age_debut
         self.annee_debut = annee_debut
@@ -219,12 +219,12 @@ class carriere(object):
 
 class carriere_prive(carriere):
     
-    def __init__(self, m, age_debut, annee_debut, nom_metier, coefs=[]):
+    def __init__(self, m, age_debut, annee_debut, nom_metier="Privé", coefs=[]):
 
         if coefs == []:
             coefs=[1.0]*(carriere.age_max+1-age_debut)
         
-        super(carriere_smpt,self).__init__(age_debut, annee_debut, nom_m)
+        super(carriere_prive,self).__init__(age_debut, annee_debut, nom_metier)
         self.sal = [ coefs[i] * m.smpt[ i + annee_debut - m.debut ] for i in xrange(carriere.age_max+1-age_debut) ]
 
         self.calcule_retraite_macron(m)
@@ -405,14 +405,18 @@ def plot_carriere_corr(m, c, corr, div=12, plot_retraite=0, couleur=(0.8,0.8,0.8
                 ly.append( p / div / corr[ annee - m.debut ] )                
             plot( lx, ly, color=couleur )
             text( lx[1],ly[1], str(age))
+
             
-def plot_evolution_carriere_corr(ax, m, metier, prime, corr, focus, annees, labely, div, posproj=0.1, plot_retraite=0):
+def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, labely, div, posproj=0.1, plot_retraite=0):
 
     age_debut = 22
 
     # Evolution de carrière en fonction de l'année de départ
     for a in annees:
-        c = carriere_public(m, age_debut, a, metier, prime)
+        if id_metier=="Privé":
+            c = carriere_prive(m, age_debut, a )
+        else:
+            c = carriere_public(m, age_debut, a, id_metier, prime)
         plot_carriere_corr(m,c,corr,div)
 
     # Courbes du SMIC et du SMPT
@@ -421,7 +425,10 @@ def plot_evolution_carriere_corr(ax, m, metier, prime, corr, focus, annees, labe
     plot(rg, [m.smpt[i-m.debut]/div/corr[i-m.debut] for i in rg], label="Salaire brut mensuel moyen)",color="blue")
     
     # Focus sur une année
-    c = carriere_public(m, age_debut, focus, metier, prime)
+    if id_metier=="Privé":
+        c = carriere_prive(m, age_debut, focus )
+    else:
+        c = carriere_public(m, age_debut, focus, id_metier, prime)
     plot_carriere_corr(m, c, corr, div, plot_retraite, "green", dec("Carrière commençant en %d"%focus))
     
     ylabel(labely)
@@ -430,7 +437,10 @@ def plot_evolution_carriere_corr(ax, m, metier, prime, corr, focus, annees, labe
     text(0.95, posproj, "Projection "+m.nom, ha='right', va='center', transform=ax.transAxes, bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
     
     axvline(ANNEE_REF, color="grey", linestyle="dashed")
-    title( dec(c.nom_metier+", Prime(%d)=%d%%"%(ANNEE_REF,int(c.part_prime*100)) ) )
+    if id_metier=="Privé":
+        title( dec(c.nom_metier) )
+    else:
+        title( dec(c.nom_metier+", Prime(%d)=%d%%"%(ANNEE_REF,int(c.part_prime*100)) ) )
 
             
 def genere_anim( modeles, cas, annees, plot_retraite=0 ):
@@ -443,6 +453,7 @@ def genere_anim( modeles, cas, annees, plot_retraite=0 ):
 
             print id_metier, prime
             filename = "%s_%s_%d"%(m.nom,id_metier,int(prime*100))
+
             for focus in annees:
                 print focus
             
@@ -488,7 +499,7 @@ m2 = modele_destinie(debut,fin)
 
 # Carrières considérées
 
-cas = [ ("ProfEcoles",0.1), ("ProfAgrege",0.2), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.2), ("ATSEM2",0.2), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1) ]
+cas = [ ("Privé",0.0), ("ProfEcoles",0.07), ("ProfAgrege",0.1), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1) ]
 annees = xrange(1980,2041,5)
 
 
@@ -496,7 +507,7 @@ print "Génération de la comparaison des modèles macro de prédiction"
 plot_comparaison_modeles(debut,fin)        
 
 print "Génération des grilles indiciaires"
-plot_grilles( m1, cas )
+#plot_grilles( m1, cas )
 
 print "Génération d'animations gif sur l'évolution de carrières dans le public"
 genere_anim( [m1], cas, annees, 1 )
