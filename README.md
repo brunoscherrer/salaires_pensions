@@ -16,19 +16,19 @@ Le code permet de générer les figures et gif animés ci-dessous.
 
 Voila une comparaison des 2 modèles macro-économiques pour l'instant considérés:
 
-![](./gouv_vs_dest.jpg)
+![](./fig/gouv_vs_dest.jpg)
 
 Considérons un *professeur des écoles ayant une prime de 10% en 2019*. Voici l'évolution de sa carrière (en point d'indice et en prime):
 
-![](./Carriere_ProfEcoles.jpg)
+![](./fig/Carriere_ProfEcoles.png)
 
 Dans les hypothèses du gouvernement, voici l'évolution de son salaire en euros constants (2019) par rapport au SMIC et au salaire moyen (SMPT) en fonction de l'année de sa prise de fonction:
 
-![](./gif/Salaire_Gouvernement_ProfEcoles_10.gif)
+![](./fig/Salaire_Gouvernement_ProfEcoles_7.gif)
 
 Voici la même chose où l'on regarde le ratio salaire/SMIC:
 
-![](./gif/Ratio_Gouvernement_ProfEcoles_10.gif)
+![](./fig/Ratio_Gouvernement_ProfEcoles_7.gif)
 
 La trop faible augmentation du point d'indice et de la prime fait que son salaire décroche par rapport au salaire moyen et finit par s'approcher du SMIC.
 

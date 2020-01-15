@@ -20,7 +20,6 @@ def shell_command(com):
 # pour les images
 
 ext_images = "jpg"
-dir_images = "./fig/"
 
 def mysavefig(f):
     savefig(dir_images+f)
@@ -28,6 +27,7 @@ def mysavefig(f):
     
 ANNEE_REF = 2019 # année courante
 
+PREVISION_MAX = 2071 # on regarde pas trop loin (ça n'a pas de sens)
 
 def dec(s):
     return s.decode("utf-8")
@@ -240,6 +240,8 @@ class carriere_public(carriere):
         ( [("ATSEM1","ATSEM 1ère classe"),("AdjAdm1","Adjoint Administratif 1ère classe")], [ (350,1), (358,1), (368,2), (380,2), (393,2), (403,2), (415,3), (430,3), (450,3), (466,100) ] ),
         ( [("MCF","Maître de Conférences")], [ (474,1), (531,2+10./12), (584,2+10./12), (643,2+10./12), (693,2+10./12), (739,3.5), (769,2+10./12), (803,2+10./12), (830,100) ] ),
         ( [("CR","Chargé de Recherche Classe Normale")], [ (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,100) ] ),
+        ( [("DR2","Directeur de Recherche 2ème classe")], [ (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 1+3./12), (830, 3.5), (890,100) ] ),
+        ( [("DR1","Directeur de Recherche 1ère classe")], [ (830,3), (972,3), (1013,3), (1067,100) ] ),
         ( [("MCFHC","Maître de Conférences Hors Classe")], [(678,1), (716,1), (754,1), (796,1), (830,5), (880,100) ] ),
         ( [("PR2","Professeur d'Université 2ème classe")], [(667,1), (705,1), (743,1), (785,1), (830,3), (880,100) ] ),
         ( [("PR1","Professeur d'Université 1ère classe")], [(830,3), (967,1), (1008,1), (1062,1), (1119,1), (1143,1), (1168,100) ] ),
@@ -325,8 +327,6 @@ class carriere_public(carriere):
         ylabel(dec("Pourcentage du salaire brut"))
         title(dec("Prime ("+self.nom_metier)+")")
 
-        if plot_retraite==1:
-            pass
 
 
 #######################################
@@ -356,7 +356,6 @@ def plot_modeles(lm,r):
             var = [m.prix, m.smic, m.smpt, m.indfp, m.achat_pt, m.vente_pt][i]
             plot_modele(m, var, dec(label),r)
         legend(loc='best')
-    legend(loc='best')
     tight_layout()
 
 
@@ -387,14 +386,14 @@ def plot_grilles( m, cas ):
     
 
 
-def plot_carriere_corr(m, c, corr, div=12, plot_retraite=0, couleur=(0.8,0.8,0.8),label="", ):
+def plot_carriere_corr(ax, m, c, corr, div=12, plot_retraite=0, couleur=(0.8,0.8,0.8),label="", ):
 
     # plot_retraite: 0:rien, 1:retraite macron, 2:retraite actuelle
     
     plot( xrange( c.annee_debut, c.annee_debut + carriere.age_max+1 - c.age_debut)  ,  [ c.sal[i] / div / corr[c.annee_debut + i - m.debut] for i in xrange(len(c.sal)) ], color=couleur, label=label  )
 
     if plot_retraite==1:
-        for (age,_,pens,_) in  c.pension_macron:
+        for (age,_,pens,t) in  c.pension_macron:
             annee0 = c.annee_debut + age - c.age_debut
             lx = [ annee0 ]    # age de départ
             ly = [ c.sal[age - c.age_debut] / div / corr[ annee0 - m.debut  ]  ]   # dernier salaire
@@ -403,11 +402,17 @@ def plot_carriere_corr(m, c, corr, div=12, plot_retraite=0, couleur=(0.8,0.8,0.8
                 lx.append( annee )
                 p = pens / m.prix[ annee0 - m.debut ] * m.prix[ annee - m.debut ]  # revalorisation de la pension par rapport à l'inflation (ref=age de départ à la retraite)
                 ly.append( p / div / corr[ annee - m.debut ] )                
-            plot( lx, ly, color=couleur )
-            text( lx[1],ly[1], str(age))
+            plot( lx, ly, color=couleur, linestyle="dashed", label=dec("Retraite (âge, tx remp)") )
+
+            p1 = ax.transData.transform_point((lx[1], ly[1]))
+            p2 = ax.transData.transform_point((lx[-1], ly[-1]))
+            dy = (p2[1] - p1[1])
+            dx = (p2[0] - p1[0])
+            rotn = degrees(np.arctan2(dy, dx))
+            text( p1[0]+2,p1[1]+2, dec("%d ans, %d%%"%(age,t*100)), transform=None, rotation=rotn )
 
             
-def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, labely, div, posproj=0.1, plot_retraite=0):
+def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, labely, div, plot_retraite=0, posproj=0.95):
 
     age_debut = 22
 
@@ -417,24 +422,24 @@ def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, l
             c = carriere_prive(m, age_debut, a )
         else:
             c = carriere_public(m, age_debut, a, id_metier, prime)
-        plot_carriere_corr(m,c,corr,div)
+        plot_carriere_corr(ax,m,c,corr,div)
 
     # Courbes du SMIC et du SMPT
-    rg = xrange( annees[0],  annees[-1] + carriere.age_mort - age_debut )
-    plot(rg, [m.smic[i-m.debut]/div/corr[i-m.debut] for i in rg], label="SMIC brut mensuel",color="red")
-    plot(rg, [m.smpt[i-m.debut]/div/corr[i-m.debut] for i in rg], label="Salaire brut mensuel moyen)",color="blue")
+    rg = xrange( annees[0], PREVISION_MAX )
+    plot(rg, [m.smic[i-m.debut]/div/corr[i-m.debut] for i in rg], label="SMIC",color="red")
+    plot(rg, [m.smpt[i-m.debut]/div/corr[i-m.debut] for i in rg], label="Salaire moyen",color="blue")
     
     # Focus sur une année
     if id_metier=="Privé":
         c = carriere_prive(m, age_debut, focus )
     else:
         c = carriere_public(m, age_debut, focus, id_metier, prime)
-    plot_carriere_corr(m, c, corr, div, plot_retraite, "green", dec("Carrière commençant en %d"%focus))
+    plot_carriere_corr(ax, m, c, corr, div, plot_retraite, "green", dec("Salaire (déb:%d"%focus)+")")
     
     ylabel(labely)
     legend(loc="best")
 
-    text(0.95, posproj, "Projection "+m.nom, ha='right', va='center', transform=ax.transAxes, bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+    text(0.45, 0.95 , "Projection "+m.nom, ha='left', va='top', transform=ax.transAxes, bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
     
     axvline(ANNEE_REF, color="grey", linestyle="dashed")
     if id_metier=="Privé":
@@ -457,25 +462,29 @@ def genere_anim( modeles, cas, annees, plot_retraite=0 ):
             for focus in annees:
                 print focus
             
-                fig = figure()
+                fig = figure( figsize=(8,6) )
+                a = annees[0]
+                xlim( (a, PREVISION_MAX) )
                 ax = fig.add_subplot(111)
-                plot_evolution_carriere_corr(ax, m, id_metier, prime, m.smpt, focus, annees, "Ratio revenu/SMPT", 1, 0.9, plot_retraite)
+                plot_evolution_carriere_corr(ax, m, id_metier, prime, m.smpt, focus, annees, "Ratio revenu/SMPT", 1, plot_retraite)
                 if SAVE:
                     savefig(tmp_dir+"Ratio_"+filename+"_%d.png"%focus)
 
-                fig = figure()
+                fig = figure( figsize=(8,6) )
+                a = annees[0]
+                xlim( (a, PREVISION_MAX) )
                 ax = fig.add_subplot(111)
-                plot_evolution_carriere_corr(ax, m,id_metier, prime, m.corr_prix_annee_ref, focus, annees, "Euros constants (2019)", 12, 0.02, plot_retraite)
+                plot_evolution_carriere_corr(ax, m,id_metier, prime, m.corr_prix_annee_ref, focus, annees, "Euros constants (2019)", 12, plot_retraite)
                 if SAVE:
                     savefig(tmp_dir+"Salaire_"+filename+"_%d.png"%focus)
                     
             if SAVE:    
                 print "Génération de l'image animée Ratio_"+filename+".gif"
-                shell_command( "convert -delay 50 -loop 0 "+tmp_dir+"Ratio_"+filename+"*.png "+dir_images+"Ratio_"+filename+".gif" )
+                shell_command( "convert -delay 100 -loop 0 "+tmp_dir+"Ratio_"+filename+"*.png "+dir_images+"Ratio_"+filename+".gif" )
                 shell_command( "rm "+tmp_dir+"Ratio_"+filename+"*.png" )
         
                 print "Génération de l'image animée Salaire_"+filename+".gif"
-                shell_command( "convert -delay 50 -loop 0 "+tmp_dir+"Salaire_"+filename+"*.png "+dir_images+"Salaire_"+filename+".gif" )
+                shell_command( "convert -delay 100 -loop 0 "+tmp_dir+"Salaire_"+filename+"*.png "+dir_images+"Salaire_"+filename+".gif" )
                 shell_command( "rm "+tmp_dir+"Salaire_"+filename+"*.png" )
             
                 close('all')
@@ -490,27 +499,57 @@ def genere_anim( modeles, cas, annees, plot_retraite=0 ):
 
 SAVE = True   # si False: ne génère pas les fichiers images
 
-debut, fin = 1980, 2120
+debut, fin = 1980, 2100
 
 # Modèle de projection
 
 m1 = modele_gouv(debut,fin)
 m2 = modele_destinie(debut,fin)
 
-# Carrières considérées
+#
 
-cas = [ ("Privé",0.0), ("ProfEcoles",0.07), ("ProfAgrege",0.1), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1) ]
-annees = xrange(1980,2041,5)
+dir_images="./fig/"
+c=carriere_public(m1,25,1980,"ProfEcoles",0.07)
+c.plot_grille_prime()
+mysavefig("Carriere_ProfEcoles")
 
 
-print "Génération de la comparaison des modèles macro de prédiction"
-plot_comparaison_modeles(debut,fin)        
+def simu0():
 
-print "Génération des grilles indiciaires"
-#plot_grilles( m1, cas )
+    print "Génération de la comparaison des modèles macro de prédiction"
+    plot_comparaison_modeles(debut,fin)        
 
-print "Génération d'animations gif sur l'évolution de carrières dans le public"
-genere_anim( [m1], cas, annees, 1 )
+    print "Génération des grilles indiciaires"
+    plot_grilles( m1, cas )
+
+    
+def simu1():
+
+    global dir_images
+    dir_images = "./fig/"
+
+    cas = [ ("ProfEcoles",0.07), ("ProfAgrege",0.07), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1) ]
+    annees = xrange(1980,2041,5)
+
+    print "Génération d'animations gif sur l'évolution de carrières dans le public"
+    genere_anim( [m1,m2], cas, annees, 1 )
+    
+
+def simu2():
+
+    global dir_images
+    dir_images = "./fig2/"
+    
+    cas = [ ("CR",0.1), ("DR2",0.1), ("DR1",0.1) ]
+    annees = xrange(1980,2041,5)
+    
+    genere_anim( [m1,m2], cas, annees, 0 )
+
+
+simu1()
+
+simu2()
+
 
 if not SAVE:
     show()
