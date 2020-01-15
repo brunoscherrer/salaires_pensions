@@ -509,7 +509,7 @@ m2 = modele_destinie(debut,fin)
 #
 
 dir_images="./fig/"
-c=carriere_public(m1,25,1980,"ProfEcoles",0.07)
+c=carriere_public(m1,25,2019,"ProfEcoles",0.07)
 c.plot_grille_prime()
 mysavefig("Carriere_ProfEcoles")
 

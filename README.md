@@ -18,7 +18,7 @@ Voila une comparaison des 2 modèles macro-économiques pour l'instant considér
 
 ![](./fig/gouv_vs_dest.jpg)
 
-Considérons un *professeur des écoles ayant une prime de 10% en 2019*. Voici l'évolution de sa carrière (en point d'indice et en prime):
+Considérons un *professeur des écoles ayant une prime de 7% en 2019*. Voici l'évolution de sa carrière (en point d'indice et en prime):
 
 ![](./fig/Carriere_ProfEcoles.png)
 
