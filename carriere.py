@@ -8,6 +8,8 @@
 from pylab import *
 import os
 
+from prettytable import PrettyTable
+
 
 # Remarque: convert doit être installé pour générer les gif
 
@@ -27,7 +29,7 @@ def mysavefig(f):
     
 ANNEE_REF = 2019 # année courante
 
-PREVISION_MAX = 2071 # on regarde pas trop loin (ça n'a pas de sens)
+PREVISION_MAX = 2100 # on regarde pas trop loin (ça n'a pas de sens)
 
 def dec(s):
     return s.decode("utf-8")
@@ -115,10 +117,10 @@ class modele_abs(object):
 
 class modele_gouv(modele_abs):
     
-    def __init__(self, deb, fin, croissance=1.3):
+    def __init__(self, deb, fin, croissance=1.3, indfp_index_sur_smpt=False):
 
-        self.nom="Gouvernement"
         inflation=1.0175
+        self.nom="Gouvernement_c%.1f_i%.2f_%s"%(croissance, (inflation-1)*100, str(indfp_index_sur_smpt))
         present=ANNEE_REF
         super(modele_gouv,self).__init__(deb,present,fin)
 
@@ -128,7 +130,10 @@ class modele_gouv(modele_abs):
             prix *= inflation
             smic *= (inflation+croissance/100.)
             smpt *= (inflation+croissance/100.)
-            indfp *= inflation
+            if indfp_index_sur_smpt:
+                indfp *= (inflation+croissance/100.)
+            else:
+                indfp *= inflation
             n = i-deb
             self.prix[n],self.smic[n],self.smpt[n],self.indfp[n] = prix, smic, smpt, indfp
 
@@ -157,11 +162,12 @@ class modele_destinie(modele_abs):
 
 class carriere(object):
 
-    age_max = 68  # age limite pour travailler (pour les simus)
-    age_mort = 82 # espérance de vie
+    age_max = 69   # age limite pour travailler (pour les simus)
+    age_mort = 82  # espérance de vie
     
-    def __init__(self, age_debut, annee_debut, nom_metier="Travailleur/Travailleuse"):
+    def __init__(self, m, age_debut, annee_debut, nom_metier="Travailleur/Travailleuse"):
 
+        self.m = m
         self.age_debut = age_debut
         self.annee_debut = annee_debut
         self.pension = []
@@ -169,7 +175,7 @@ class carriere(object):
         self.nom_metier = nom_metier
         
         
-    def calcule_retraite_macron(self,m):
+    def calcule_retraite_macron(self):
 
         pension = []    
         nb_pts = []   
@@ -180,38 +186,43 @@ class carriere(object):
             an = self.annee_debut + i
             
             # calcul des points
-            pts += self.sal[i] / m.achat_pt[ an - m.debut ] 
+            pts += self.sal[i] / self.m.achat_pt[ an - self.m.debut ] 
             nb_pts.append ( pts )
             
             # calcul de la pension (si possible)
             age = self.age_debut + i
-            if age in [60, 62, 64, 66, 68]:
-                d = .05*(age - m.age_pivot)
-                p = (1.0+d) * pts * m.vente_pt[ an - m.debut ]
+            if age in xrange(60, carriere.age_max+1):
+                d = .05*(age - self.m.age_pivot)
+                p = (1.0+d) * pts * self.m.vente_pt[ an - self.m.debut ]
                 pension.append( (age, d, p, p/self.sal[i]) ) 
 
         self.pension_macron = pension
         self.nb_pts = nb_pts
         
 
-    def affiche_carriere(self,m):
+    def affiche_carriere(self):
 
         print "Carrière"
         print "Annee   Age    Sal.cour Sal.cst   Pts    Ach.Pt  Vte.Pt"
 
         for i in xrange(carriere.age_max - self.age_debut + 1):
             an = self.annee_debut+i
-            print "%d: %d ans   %.2f  %.2f   %.2f   %.2f  %.2f"%( an, self.age_debut+i, self.sal[i]/12, self.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ ANNEE_REF - m.debut], self.nb_pts[i], m.achat_pt[an - m.debut], m.vente_pt[ an - m.debut] )
+            print "%d: %d ans   %.2f  %.2f   %.2f   %.2f  %.2f"%( an, self.age_debut+i, self.sal[i]/12, self.sal[i]/12/self.m.prix[ an - self.m.debut ]*self.m.prix[ ANNEE_REF - self.m.debut], self.nb_pts[i], self.m.achat_pt[an - self.m.debut], self.m.vente_pt[ an - self.m.debut] )
             
         self.affiche_pension_macron()
 
         
     def affiche_pension_macron(self):
 
+        x = PrettyTable()
+        
         print "Retraite Macron"
+        x.field_names = ["Année de départ", "Age", "Surcote/décote", "Pension mens brute (EuroCour)", "Pension mens brute (EurCst)", "Taux de remplacement" ]
         for (a,d,p,t) in self.pension_macron:
-            print "Départ en %d (%d ans): sur/decote:%.2f  pension:%.2f => Tx remp brut:%.1f"%(self.annee_debut+a-self.age_debut,a,d,p/12,t*100)
-            
+            an = self.annee_debut+a-self.age_debut
+            x.add_row( [ an, a, d, "%.2f"%(p/12), "%.2f"%(p/12/self.m.corr_prix_annee_ref[ an - self.m.debut]), "%.2f"%(t*100) ])
+
+        print(x)
         
 
 # carrière dans le privé
@@ -224,10 +235,10 @@ class carriere_prive(carriere):
         if coefs == []:
             coefs=[1.0]*(carriere.age_max+1-age_debut)
         
-        super(carriere_prive,self).__init__(age_debut, annee_debut, nom_metier)
+        super(carriere_prive,self).__init__(m, age_debut, annee_debut, nom_metier)
         self.sal = [ coefs[i] * m.smpt[ i + annee_debut - m.debut ] for i in xrange(carriere.age_max+1-age_debut) ]
 
-        self.calcule_retraite_macron(m)
+        self.calcule_retraite_macron()
 
         
         
@@ -246,11 +257,13 @@ class carriere_public(carriere):
         ( [("PR2","Professeur d'Université 2ème classe")], [(667,1), (705,1), (743,1), (785,1), (830,3), (880,100) ] ),
         ( [("PR1","Professeur d'Université 1ère classe")], [(830,3), (967,1), (1008,1), (1062,1), (1119,1), (1143,1), (1168,100) ] ),
         ( [("ProfEcoles","Professeur des écoles")], [(390,1), (441,1), (448,2), (461,2), (476,2.5), (492,3), (519,3), (557,3.5), (590,4), (629,4), (673,100) ] ), 
-        ( [("ProfAgrege","Professeur agrégé")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,4), (800, 4), (830,100) ] )   
+        ( [("ProfCertifie","Professeur certifié")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,4), (800, 4), (830,100) ] ) ,
+        ( [("Infirmier","Infirmière en soins généraux")], [(422,2), (435,2), (455,2), (475,2), (498,3), (521,3.5), (544,4), (567,4), (594,4), (627,100)] ),
+        ( [("AideSoignant","Aide-soignante hospitalière")], [(350,1), (358,1), (368,2), (380,2), (393,2), (403,2), (415,3), (430,3), (450,3), (466,100) ] )
     ]
 
     def __init__(self, m, age_debut, annee_debut, id_metier, part_prime=0.0):
-        super(carriere_public,self).__init__(age_debut, annee_debut)
+        super(carriere_public,self).__init__(m, age_debut, annee_debut)
 
         n_metier=0
         while(True):
@@ -264,7 +277,7 @@ class carriere_public(carriere):
         self.metier, grille = carriere_public.grilles[n_metier]
         self.part_prime = part_prime
         
-        self.sal,self.sal_hp,self.prime = [],[],[]
+        self.sal,self. sal_hp, self.prime, self.indm = [],[],[], []
 
         echelon, t = 0, grille[0][1]  # echelon, duree restante avant le prochain changement
 
@@ -273,24 +286,48 @@ class carriere_public(carriere):
             annee = annee_debut+i 
 
             if t <= 1: # changement de echelon dans l'année (ou à la fin)
-                sal_hp = (t * grille[echelon][0] + (1-t) * grille[echelon+1][0]) * m.indfp[annee-m.debut] 
+                indm = (t * grille[echelon][0] + (1-t) * grille[echelon+1][0])
                 echelon += 1
-                t = grille[echelon+1][1]-(1-t)
+                t = grille[echelon][1]-(1-t)
             else:
-                sal_hp = grille[echelon][0] * m.indfp[annee-m.debut] 
+                indm = grille[echelon][0]
                 t -= 1
+
+            sal_hp = indm * self.m.indfp[annee-self.m.debut] 
         
-            prime = max( 0, part_prime + m.corr_part_prime[annee-m.debut] )
+            prime = max( 0, part_prime + self.m.corr_part_prime[annee-self.m.debut] )
             
             sal = (sal_hp*(1+prime))
-            if sal<m.smic[annee-m.debut]:
-                sal = m.smic[annee-m.debut] 
+            if sal<self.m.smic[annee-self.m.debut]:
+                sal = self.m.smic[annee-self.m.debut] 
             self.sal.append( sal )
             self.sal_hp.append( sal_hp )
             self.prime.append( prime )        
+            self.indm.append( indm )
 
-        self.calcule_retraite_macron(m)
+        self.calcule_retraite_macron()
 
+
+    def affiche_carriere(self):
+
+        print self.nom_metier," - an=annuel, mens=mensuel, HP=Hors Prime, EurCour=euros courants, EurConst=euros constants",ANNEE_REF
+
+        x = PrettyTable()
+
+        x.field_names = ["Année", "Age", "Ind maj", "IndFP an", "IndFP mens", "HP EuroCour an", "HP EuroCour mens", "Tx Prime", "EurCour an", "EurConst an", "EuroConst mens", "Tot Pts", "Val Ach Pt", "Val Vte Pt","Ind Prix" ]
+
+
+        for i in xrange(carriere.age_max - self.age_debut + 1):
+            an = self.annee_debut+i
+            m = self.m
+            sal_cst = self.sal[i]/m.corr_prix_annee_ref[ an - m.debut]  #m.prix[ an - m.debut ]*m.prix[ ANNEE_REF - m.debut]
+
+            x.add_row( [ an, self.age_debut+i, "%.1f"%self.indm[i], "%.2f"%m.indfp[ an - m.debut ], "%.2f"%(m.indfp[ an - m.debut ]/12), "%.2f"%self.sal_hp[i], "%.2f"%(self.sal_hp[i]/12), "%.2f"%(self.prime[i]*100), "%.2f"%self.sal[i], "%.2f"%sal_cst, "%.2f"%(sal_cst/12), "%.2f"%self.nb_pts[i], "%.2f"%m.achat_pt[ an - m.debut], "%.2f"%m.vente_pt[ an - m.debut], "%.2f"%m.prix[ an - m.debut ] ])
+
+        print(x)
+            
+        self.affiche_pension_macron()
+        
     def plot_grille(self):
 
         g = carriere_public.grilles[self.n_metier][1]
@@ -359,7 +396,6 @@ def plot_modeles(lm,r):
     tight_layout()
 
 
-
 def plot_comparaison_modeles(a,b):
 
     figure(figsize=(10,8))
@@ -367,6 +403,7 @@ def plot_comparaison_modeles(a,b):
     if SAVE:
         mysavefig("gouv_vs_dest.jpg")
         close('all')
+
 
 
 # sur les carrières
@@ -393,7 +430,8 @@ def plot_carriere_corr(ax, m, c, corr, div=12, plot_retraite=0, couleur=(0.8,0.8
     plot( xrange( c.annee_debut, c.annee_debut + carriere.age_max+1 - c.age_debut)  ,  [ c.sal[i] / div / corr[c.annee_debut + i - m.debut] for i in xrange(len(c.sal)) ], color=couleur, label=label  )
 
     if plot_retraite==1:
-        for (age,_,pens,t) in  c.pension_macron:
+        for i in xrange(0,len(c.pension_macron),2):
+            (age,_,pens,t) = c.pension_macron[i]
             annee0 = c.annee_debut + age - c.age_debut
             lx = [ annee0 ]    # age de départ
             ly = [ c.sal[age - c.age_debut] / div / corr[ annee0 - m.debut  ]  ]   # dernier salaire
@@ -480,11 +518,11 @@ def genere_anim( modeles, cas, annees, plot_retraite=0 ):
                     
             if SAVE:    
                 print "Génération de l'image animée Ratio_"+filename+".gif"
-                shell_command( "convert -delay 100 -loop 0 "+tmp_dir+"Ratio_"+filename+"*.png "+dir_images+"Ratio_"+filename+".gif" )
+                shell_command( "convert -delay 300 -loop 0 "+tmp_dir+"Ratio_"+filename+"*.png "+dir_images+"Ratio_"+filename+".gif" )
                 shell_command( "rm "+tmp_dir+"Ratio_"+filename+"*.png" )
         
                 print "Génération de l'image animée Salaire_"+filename+".gif"
-                shell_command( "convert -delay 100 -loop 0 "+tmp_dir+"Salaire_"+filename+"*.png "+dir_images+"Salaire_"+filename+".gif" )
+                shell_command( "convert -delay 300 -loop 0 "+tmp_dir+"Salaire_"+filename+"*.png "+dir_images+"Salaire_"+filename+".gif" )
                 shell_command( "rm "+tmp_dir+"Salaire_"+filename+"*.png" )
             
                 close('all')
@@ -497,59 +535,77 @@ def genere_anim( modeles, cas, annees, plot_retraite=0 ):
 ####################################################
 
 
-SAVE = True   # si False: ne génère pas les fichiers images
-
-debut, fin = 1980, 2100
-
-# Modèle de projection
-
-m1 = modele_gouv(debut,fin)
-m2 = modele_destinie(debut,fin)
-
-#
-
-dir_images="./fig/"
-c=carriere_public(m1,25,2019,"ProfEcoles",0.07)
-c.plot_grille_prime()
-mysavefig("Carriere_ProfEcoles")
-
-
 def simu0():
 
+    global dir_images
+    dir_images="./fig/modeles/"
+    
     print "Génération de la comparaison des modèles macro de prédiction"
     plot_comparaison_modeles(debut,fin)        
 
     print "Génération des grilles indiciaires"
     plot_grilles( m1, cas )
 
+    c=carriere_public(m1,25,2019,"ProfEcoles",0.07)
+    c.plot_grille_prime()
+    mysavefig("Carriere_ProfEcoles")
+
     
 def simu1():
 
     global dir_images
-    dir_images = "./fig/"
-
-    cas = [ ("ProfEcoles",0.07), ("ProfAgrege",0.07), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1) ]
-    annees = xrange(1980,2041,5)
 
     print "Génération d'animations gif sur l'évolution de carrières dans le public"
-    genere_anim( [m1,m2], cas, annees, 1 )
+
+    dir_images = "./fig/salaires_retraites/"
+    genere_anim( [m1,m2], cas, range(1980,2041,5), 1 )
+
+    dir_images = "./fig/salaires/"
+    genere_anim( [m1,m2], cas, range(2020, 2061, 5), 0 )
     
 
-def simu2():
+def debug0():
 
-    global dir_images
-    dir_images = "./fig2/"
-    
-    cas = [ ("CR",0.1), ("DR2",0.1), ("DR1",0.1) ]
-    annees = xrange(1980,2041,5)
-    
-    genere_anim( [m1,m2], cas, annees, 0 )
+    c=carriere_public(m1,22,2012,"ProfEcoles",0.08)
+    c.affiche_carriere()
 
+    c=carriere_public(m1,22,2012,"ProfCertifie",0.09)
+    c.affiche_carriere()
+
+
+####
+
+SAVE = True   # si False: ne génère pas les fichiers images/animations
+
+
+# Modèles de projection
+
+debut, fin = 1980, 2120
+
+m1 = modele_gouv(debut,fin,1.3,False)
+m2 = modele_gouv(debut,fin,1.3,True)
+#m3 = modele_destinie(debut,fin)
+
+
+# Carrières considérées
+
+cas = [ ("ProfEcoles",0.08), ("ProfCertifie",0.09), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1), ("DR1",0.1), ("DR2",0.1), ("Infirmier",0.23), ("AideSoignant",0.19) ]
+
+
+### Génération d'un exemple
+
+debug0()
+
+### Génération comparaison modèles
+    
+simu0()
+
+
+### Génération infographies
 
 simu1()
 
-simu2()
-
+###
 
 if not SAVE:
     show()
