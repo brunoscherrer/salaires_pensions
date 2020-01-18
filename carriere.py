@@ -120,7 +120,7 @@ class modele_gouv(modele_abs):
     def __init__(self, deb, fin, croissance=1.3, indfp_index_sur_smpt=False):
 
         inflation=1.0175
-        self.nom="Gouvernement_c%.1f_i%.2f_%s"%(croissance, (inflation-1)*100, str(indfp_index_sur_smpt))
+        self.nom="Gouvernement"#_c%.1f_i%.2f_%s"%(croissance, (inflation-1)*100, str(indfp_index_sur_smpt))
         present=ANNEE_REF
         super(modele_gouv,self).__init__(deb,present,fin)
 
@@ -392,14 +392,14 @@ def plot_modeles(lm,r):
         for m in lm:
             var = [m.prix, m.smic, m.smpt, m.indfp, m.achat_pt, m.vente_pt][i]
             plot_modele(m, var, dec(label),r)
-        legend(loc='best')
+        legend(loc='upper right')
     tight_layout()
 
 
 def plot_comparaison_modeles(a,b):
 
     figure(figsize=(10,8))
-    plot_modeles([m1,m2],[a,b])
+    plot_modeles([m1],[a,b])
     if SAVE:
         mysavefig("gouv_vs_dest.jpg")
         close('all')
@@ -475,9 +475,13 @@ def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, l
     plot_carriere_corr(ax, m, c, corr, div, plot_retraite, "green", dec("Salaire (déb:%d"%focus)+")")
     
     ylabel(labely)
-    legend(loc="best")
+    legend(loc="upper right")
 
-    text(0.45, 0.95 , "Projection "+m.nom, ha='left', va='top', transform=ax.transAxes, bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+    y1,y2 = ax.get_ylim()
+    y = y1+(y2-y1)*0.98
+    text(ANNEE_REF+2, y, dec("Projection "+m.nom), ha='left', va='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+    if annees[0]<ANNEE_REF:
+        text(ANNEE_REF-2, y, dec("Données réelles"), ha='right', va='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
     
     axvline(ANNEE_REF, color="grey", linestyle="dashed")
     if id_metier=="Privé":
@@ -558,14 +562,16 @@ def simu1():
     print "Génération d'animations gif sur l'évolution de carrières dans le public"
 
     dir_images = "./fig/salaires_retraites/"
-    genere_anim( [m1,m2], cas, range(1980,2041,5), 1 )
+    genere_anim( [m1], cas, range(1980,2041,5), 1 )
 
     dir_images = "./fig/salaires/"
-    genere_anim( [m1,m2], cas, range(2020, 2061, 5), 0 )
+    genere_anim( [m1], cas, range(2020, 2061, 5), 0 )
     
 
 def debug0():
 
+    print "Details carrière et retraite pour deux professions"
+    
     c=carriere_public(m1,22,2012,"ProfEcoles",0.08)
     c.affiche_carriere()
 
@@ -573,6 +579,30 @@ def debug0():
     c.affiche_carriere()
 
 
+def pour_article():
+
+    dir_images="./articles/"
+
+    id_metier = "ProfEcoles"
+    prime = 0.08
+
+    m=m1
+    
+    fig=figure()
+    xlim( (2020,2070) )
+    ax = fig.add_subplot(111)
+    plot_evolution_carriere_corr(ax, m, id_metier, prime, m.prix, 2020, [2020], "Euros constants (2019)", 12)
+    if SAVE:
+        savefig(dir_images+"salaireEC.png")
+    
+    fig=figure()
+    xlim( (2020,2070) )
+    ax = fig.add_subplot(111)
+    plot_evolution_carriere_corr(ax, m, id_metier, prime, m.smpt, 2020, [2020], "Ratio revenu/SMPT", 1)
+    if SAVE:
+        savefig(dir_images+"salaireRel.png")
+    
+    
 ####
 
 SAVE = True   # si False: ne génère pas les fichiers images/animations
@@ -583,13 +613,13 @@ SAVE = True   # si False: ne génère pas les fichiers images/animations
 debut, fin = 1980, 2120
 
 m1 = modele_gouv(debut,fin,1.3,False)
-m2 = modele_gouv(debut,fin,1.3,True)
+#m2 = modele_gouv(debut,fin,1.3,True)
 #m3 = modele_destinie(debut,fin)
 
 
 # Carrières considérées
 
-cas = [ ("ProfEcoles",0.08), ("ProfCertifie",0.09), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1), ("DR1",0.1), ("DR2",0.1), ("Infirmier",0.23), ("AideSoignant",0.19) ]
+cas = [ ("ProfEcoles",0.08) ]#, ("ProfCertifie",0.09), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1), ("DR1",0.1), ("DR2",0.1), ("Infirmier",0.23), ("AideSoignant",0.19) ]
 
 
 ### Génération d'un exemple
@@ -606,6 +636,8 @@ simu0()
 simu1()
 
 ###
+
+pour_article()
 
 if not SAVE:
     show()
