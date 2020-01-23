@@ -117,10 +117,10 @@ class modele_abs(object):
 
 class modele_gouv(modele_abs):
     
-    def __init__(self, deb, fin, croissance=1.3, indfp_index_sur_smpt=False):
+    def __init__(self, deb, fin, croissance=1.3):
 
         inflation=1.0175
-        self.nom="Gouvernement"#_c%.1f_i%.2f_%s"%(croissance, (inflation-1)*100, str(indfp_index_sur_smpt))
+        self.nom="Gouvernement"
         present=ANNEE_REF
         super(modele_gouv,self).__init__(deb,present,fin)
 
@@ -130,10 +130,10 @@ class modele_gouv(modele_abs):
             prix *= inflation
             smic *= (inflation+croissance/100.)
             smpt *= (inflation+croissance/100.)
-            if indfp_index_sur_smpt:
-                indfp *= (inflation+croissance/100.)
-            else:
-                indfp *= inflation
+            #if indfp_index_sur_smpt:
+            #    indfp *= (inflation+croissance/100.)
+            #else:
+            indfp *= inflation
             n = i-deb
             self.prix[n],self.smic[n],self.smpt[n],self.indfp[n] = prix, smic, smpt, indfp
 
@@ -396,10 +396,10 @@ def plot_modeles(lm,r):
     tight_layout()
 
 
-def plot_comparaison_modeles(a,b):
+def plot_comparaison_modeles(lm, a,b):
 
     figure(figsize=(10,8))
-    plot_modeles([m1],[a,b])
+    plot_modeles(lm,[a,b])
     if SAVE:
         mysavefig("gouv_vs_dest.jpg")
         close('all')
@@ -542,11 +542,8 @@ def genere_anim( modeles, cas, annees, plot_retraite=0 ):
 def simu0():
 
     global dir_images
-    dir_images="./fig/modeles/"
-    
-    print "Génération de la comparaison des modèles macro de prédiction"
-    plot_comparaison_modeles(debut,fin)        
-
+    dir_images="./fig/grilles/"
+      
     print "Génération des grilles indiciaires"
     plot_grilles( m1, cas )
 
@@ -562,10 +559,10 @@ def simu1():
     print "Génération d'animations gif sur l'évolution de carrières dans le public"
 
     dir_images = "./fig/salaires_retraites/"
-    genere_anim( [m1], cas, range(1980,2041,5), 1 )
+    genere_anim( [m1, m2], cas, range(1980,2041,5), 1 )
 
     dir_images = "./fig/salaires/"
-    genere_anim( [m1], cas, range(2020, 2061, 5), 0 )
+    genere_anim( [m1, m2], cas, range(2020, 2061, 5), 0 )
     
 
 def debug0():
@@ -612,14 +609,17 @@ SAVE = True   # si False: ne génère pas les fichiers images/animations
 
 debut, fin = 1980, 2120
 
-m1 = modele_gouv(debut,fin,1.3,False)
-#m2 = modele_gouv(debut,fin,1.3,True)
-#m3 = modele_destinie(debut,fin)
+m1 = modele_gouv(debut,fin,1.3)
+m2 = modele_destinie(debut,fin)
+
+dir_images="./fig/"
+print "Génération de la comparaison des modèles macro de prédiction"
+plot_comparaison_modeles([m1,m2],debut,fin)      
 
 
 # Carrières considérées
 
-cas = [ ("ProfEcoles",0.08) ]#, ("ProfCertifie",0.09), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1), ("DR1",0.1), ("DR2",0.1), ("Infirmier",0.23), ("AideSoignant",0.19) ]
+cas = [ ("ProfEcoles",0.08), ("ProfCertifie",0.09), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1), ("DR1",0.1), ("DR2",0.1), ("Infirmier",0.23), ("AideSoignant",0.19) ]
 
 
 ### Génération d'un exemple
