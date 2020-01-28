@@ -241,14 +241,17 @@ class carriere(object):
             pass
 
         else: # default style="text"
-        
-            print "Carrière"
-            print "Annee   Age    Sal.cour Sal.cst   Pts    Ach.Pt  Vte.Pt"
+
+            x = PrettyTable()
+            
+            print self.nom_metier
+            x.field_names = [ "Annee","Age","Salaire","Salaire EC","Pts","Ach.Pt","Vte.Pt" ]
 
             for i in xrange(carriere.age_max - self.age_debut + 1):
                 an = self.annee_debut+i
-                print "%d: %d ans   %.2f  %.2f   %.2f   %.2f  %.2f"%( an, self.age_debut+i, self.sal[i]/12, self.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ ANNEE_REF - m.debut], self.nb_pts[i], m.achat_pt[an - m.debut], m.vente_pt[ an - m.debut] )
-            
+                x.add_row( [ "%d"%an, "%d ans"%(self.age_debut+i),"%.2f"%( self.sal[i]/12),"%.2f"%(self.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ ANNEE_REF - m.debut]),"%.2f"%(self.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),"%.2f"%(m.vente_pt[ an - m.debut]) ] )
+
+            print(x)
             self.affiche_pension_macron(style)
 
         
@@ -264,10 +267,11 @@ class carriere(object):
         
             x = PrettyTable()
             print "Retraite Macron (Synthèse départs)"
-            x.field_names = ["Année", "Age", "Sur-/dé-cote", "Brut ms", "Brut ms EC", "Tx rempl.", "%/SMIC" ]
+            x.field_names = ["Année", "Age", "AgePivot", "Sur-/dé-cote", "Brut ms", "Brut ms EC", "Tx rempl.", "%/SMIC" ]
             for (a,d,p,t) in self.pension_macron:
                 an = self.annee_debut+a-self.age_debut
-                x.add_row( [ an, a, d, "%.2f"%(p/12), "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]), "%.2f"%(t*100), "%.2f"%(p/m.smic[ an - m.debut ]) ])
+                ap = int(m.age_pivot[ an - m.debut])
+                x.add_row( [ an, a, "%d ans %d mois"%(ap, round((m.age_pivot[ an - m.debut]-ap)*12)), d, "%.2f"%(p/12), "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]), "%.2f"%(t*100), "%.2f"%(p/m.smic[ an - m.debut ]) ])
             print(x)
 
             print "Retraite Macron (détaillée selon départ)"
@@ -316,31 +320,30 @@ class carriere_public(carriere):
     # TODO: rentrer plus de grilles
     
     grilles = [
-        ( [("ATSEM2","ATSEM 2ème classe"),("AdjAdm2","Adjoint Administratif 2ème classe")], [ (329,1), (330,2), (333,2), (336, 2), (345,2), (351,2), (364,2), (380,2), (390,3), (402,3), (411,4), (418, 100) ] ),
-        ( [("ATSEM1","ATSEM 1ère classe"),("AdjAdm1","Adjoint Administratif 1ère classe")], [ (350,1), (358,1), (368,2), (380,2), (393,2), (403,2), (415,3), (430,3), (450,3), (466,100) ] ),
-        ( [("MCF","Maître de Conférences")], [ (474,1), (531,2+10./12), (584,2+10./12), (643,2+10./12), (693,2+10./12), (739,3.5), (769,2+10./12), (803,2+10./12), (830,100) ] ),
-        ( [("CR","Chargé de Recherche")], [ (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,100) ] ),
-        ( [("DR2","Directeur de Recherche 2ème classe")], [ (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 1+3./12), (830, 3.5), (890,100) ] ),
-        ( [("DR1","Directeur de Recherche 1ère classe")], [ (830,3), (972,3), (1013,3), (1067,100) ] ),
-        ( [("MCFHC","Maître de Conférences Hors Classe")], [(678,1), (716,1), (754,1), (796,1), (830,5), (880,100) ] ),
-        ( [("PR2","Professeur d'Université 2ème classe")], [(667,1), (705,1), (743,1), (785,1), (830,3), (880,100) ] ),
-        ( [("PR1","Professeur d'Université 1ère classe")], [(830,3), (967,1), (1008,1), (1062,1), (1119,1), (1143,1), (1168,100) ] ),
-        ( [("ProfEcoles","Professeur des écoles")], [(390,1), (441,1), (448,2), (461,2), (476,2.5), (492,3), (519,3), (557,3.5), (590,4), (629,4), (668,2.5), (715,2.5), (763,3), (806,3), (821,100) ] ), 
-        ( [("ProfCertifie","Professeur certifié")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,2), (800, 2), (830,100) ] ) ,
-        ( [("Infirmier2","Infirmière en soins généraux Grade 2")], [(422,1), (435,2), (455,2), (475,2), (498,3), (521,3.5), (544,4), (567,4), (594,4), (627,100)] ),
-        ( [("AideSoignant","Aide-soignante hospitalière")], [(350,1), (358,1), (368,2), (380,2), (393,2), (403,2), (415,3), (430,3), (450,3), (466,100) ] )
+        ( [("ATSEM","ATSEM (C2 puis C1)"),("AdjAdm","Adjoint Administratif (C2 puis C1)")], [ (329,1), (330,2), (333,2), (336, 2), (345,2), (351,2), (364,2), (380,2), (390,3), (402,3), (411,4), (415, 3), (430,3), (450,3), (466,100) ] ),
+        ( [("CR","Chargé de Recherche (CN puis HC)"), ("MCF","Maître de Conférences (CN puis HC)")], [ (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,100) ] ),
+        ( [("DR","Directeur de Recherche (DR2 puis DR1)"), ("PR","Professeur d'Université (PR2 puis PR1)") ], [ (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 1+3./12), (830, 3), (972,3), (1013,100) ] ),
+        ( [("ProfCertifie","Professeur certifié"), ("ProfEcoles","Professeur des écoles")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,2), (800, 2), (830,100) ] ) ,
+        ( [("Infirmier","Infirmière en soins généraux (CN, CS, puis HC)")], [(390,2), (404,3), (422,3), (446,3), (469,3), (501,3), (520,4), (544,4), (571,4), (594,4), (627,100) ] ),
+        ( [("AideSoignant","Aide-soignante (CN puis HC)")], [(327,1), (328,2), (329,2), (330,2), (332,2), (334,2), (338,2), (342,2), (346,3), (356,3), (368,3+1./3), (380,2), (390,3), (402,3), (411,4), (418,100) ] ),
+        ( [("Redacteur","Rédacteur territorial (C2 puis C1)")], [(356,2), (362,2), (369,2), (379,2), (390,2), (401,2), (416, 2), (436,3), (452,3), (461,3), (480,3), (504,4), (534,3), (551,3), (569,3), (587,100) ] )
+        
     ]
 
     @classmethod
     def numero_metier(cls, id_metier):
 
-        n_metier=0
-        while ( n_metier < len(carriere_public.grilles) ):
-            if id_metier == carriere_public.grilles[n_metier][0][0][0]:
-                return n_metier
-            n_metier += 1
+        n_metier = [0,0]
+        while ( n_metier[0] < len(carriere_public.grilles) ):
+            lc = carriere_public.grilles[ n_metier[0] ][0]
+            while n_metier[1] < len(lc):
+                if id_metier == lc[ n_metier[1] ][0]:
+                    return n_metier
+                n_metier[1] += 1
+            n_metier[0] +=1
+            n_metier[1] = 0
 
-        return -1 # si pas trouvé
+        return(-1,0) # si pas trouvé
             
     
     def __init__(self, m, age_debut, annee_debut, id_metier, part_prime=0.0):
@@ -348,13 +351,14 @@ class carriere_public(carriere):
         super(carriere_public,self).__init__(m, age_debut, annee_debut)
 
         n_metier = carriere_public.numero_metier(id_metier)
-        if n_metier == -1:
+        if n_metier == (-1,0):
             raise Exception(id_metier+" n'a pas été trouvé dans la liste des métiers publics")
 
         self.n_metier = n_metier
-        self.nom_metier = carriere_public.grilles[n_metier][0][0][1]
-            
-        self.metier, grille = carriere_public.grilles[n_metier]
+        self.nom_metier = carriere_public.grilles[ n_metier[0] ][0][n_metier[1]][1]
+        
+        grille = carriere_public.grilles[n_metier[0]][1]
+        
         self.part_prime = part_prime
         
         self.sal,self. sal_hp, self.prime, self.indm, self.gipa = [], [], [], [], []
@@ -446,7 +450,7 @@ class carriere_public(carriere):
         
     def plot_grille(self):
 
-        g = carriere_public.grilles[self.n_metier][1]
+        g = carriere_public.grilles[self.n_metier[0]][1]
         x,y = 0, g[0][0]
         lx, ly = [x], [y]
     
@@ -686,13 +690,10 @@ def debug0():
 
     print "Details carrière et retraite pour deux professions"
     
-    c=carriere_public(m1,22,2020,"ProfCertifie",0.08)
-    c.affiche_carriere()
-
     c=carriere_public(m1,22,2020,"ProfEcoles",0.08)
     c.affiche_carriere()
 
-    c=carriere_public(m1,22,2002,"Infirmier2",0.23)
+    c=carriere_prive(m1,22,2002)
     c.affiche_carriere()
 
 
@@ -747,7 +748,7 @@ m2 = modele_destinie(debut,fin)
 
 # Carrières considérées
 
-cas = [ ("ProfEcoles",0.08), ("ProfCertifie",0.09), ("PR2",0.1), ("PR1",0.1), ("ATSEM1",0.1), ("ATSEM2",0.1), ("MCF",0.1), ("MCFHC",0.1), ("CR",0.1), ("DR1",0.1), ("DR2",0.1), ("Infirmier2",0.23), ("AideSoignant",0.19) ]
+cas = [ ("ProfEcoles",0.081), ("ProfCertifie",0.096), ("PR",0.071), ("ATSEM",0.16), ("MCF",0.034), ("CR",0.034), ("DR",0.071), ("Infirmier",0.299), ("AideSoignant",0.242), ("Redacteur",0.281) ]
 
 
 
@@ -757,12 +758,12 @@ debug0()
 
 ### Génération comparaison des grilles
     
-#simu0()
+simu0()
 
 
 ### Génération comparaison modèles et infographies
 
-#simu1()
+simu1()
 
 ###
 
