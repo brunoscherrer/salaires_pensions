@@ -1,17 +1,24 @@
-\documentclass[a4paper,11pt]{book}
- 
-% - taille de la fonte    : 10pt, 11pt, 12pt
-% - recto ou recto-verso    : oneside, twoside
+\documentclass[a4paper,10pt]{report}
  
 % Chargement d'extensions
-\usepackage[latin1]{inputenc}    
-\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage[landscape,left=1cm,top=1.5cm,right=1cm,bottom=1.5cm]{geometry}
 
 \usepackage{minitoc}
- 
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+
 % Informations le titre, le(s) auteur(s), la date
-\title{Titre du livre}
-\author{ 1 Nom 1 \and 2 Nom 2}
+\title{Reproduction de cas-types de la réforme des retraites à points pour la Fonction Publique}
+\author{Bruno Scherrer}
 \date{\today}
  
 \begin{document}
@@ -20,48 +27,14 @@
 
 \maketitle
  
-    % Le prologue du livre
-    \frontmatter
- 
-    \chapter{Avant-propos}
-    \chapter{Remerciements}
-    \chapter{Introduction}
- 
-    % Corps du livre
-    \mainmatter
+\begin{abstract}
+  Ce document donne les valeurs (sous forme de tableaux détaillés) de l'évolution de la carrière et des possibles retraites pour plusieurs métiers de la fonction publique. Pour le passé (avant 2019), on s'appuie sur les données macro-économiques réelles. Pour le futur, on se base sur les hypothèses macro-économiques du gouvernement Philippe (croissance des salaires du privé de 1.3\% par an, croissance du point d'indice de 0\% par an, augmentation des primes de 0.23 points par an) et sur son système de retraites par points. On peut observer une dévalorisation significative dans le temps de l'ensemble des métiers de la fonction publique.
+\end{abstract}
 
-    \tableofcontents
-    
-    \part{Une partie}
-    
-    \chapter{Un chapitre}
+\setcounter{tocdepth}{0}
+\tableofcontents
 
-    \minitoc
+\setcounter{tocdepth}{1}
+\input{corps}
 
-    \section{Une section}
-
-    \subsection{Une sous-section}
-
-    \subsubsection{Une sous-sous-section}
-
-    \paragraph{Une sous-sous-sous-sous-section}
-    \subparagraph{Une sous-sous-sous-sous-sous-section}
- 
-    % Les annexes
-    \appendix
- 
-    \chapter{Premier annexe}
-    \chapter{Second annexe}
- 
-    
-    \backmatter
- 
-    \chapter{Conclusion et discussion}
- 
-    
-    \tableofcontents    
-    \listoffigures        % Liste des figures
-    \listoftables        % Liste des tableaux
- 
-% Fin du document
 \end{document}
