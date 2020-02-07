@@ -1,0 +1,297 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.20)  7 FEB 2020 14:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**book.tex
+(./book.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 11 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/francais.ldf
+Language: francais 2018/02/04 v3.4b French support from the babel system
+
+
+Package francais.ldf Warning: Option `francais' for Babel is *deprecated*,
+(francais.ldf)                it might be removed sooner or later. Please
+(francais.ldf)                use `french' instead; reported on input line 31.
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2018/02/04 v3.4b French support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count89
+)
+\l@acadian = a dialect from \language\l@french 
+\FB@nonchar=\count90
+Package babel Info: Making : an active character on input line 411.
+Package babel Info: Making ; an active character on input line 412.
+Package babel Info: Making ! an active character on input line 413.
+Package babel Info: Making ? an active character on input line 414.
+\FBguill@level=\count91
+\FB@everypar=\toks16
+\FB@Mht=\dimen104
+\mc@charclass=\count92
+\mc@charfam=\count93
+\mc@charslot=\count94
+\std@mcc=\count95
+\dec@mcc=\count96
+\c@FBcaption@count=\count97
+\listindentFB=\skip43
+\descindentFB=\skip44
+\labelwidthFB=\skip45
+\leftmarginFB=\skip46
+\parindentFFN=\dimen105
+\FBfnindent=\skip47
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/minitoc/minitoc.sty
+Package: minitoc 2015/07/13 v61 Package minitoc
+
+(/usr/share/texlive/texmf-dist/tex/latex/minitoc/mtcmess.sty
+Package: mtcmess 2006/03/14
+)
+Package minitoc Info: I0001
+(minitoc)             *** minitoc package, version 61 ***.
+\tf@mtc=\write3
+\mtcindent=\skip48
+\mtcskipamount=\skip49
+Package minitoc Info: I0005
+(minitoc)             compatible with hyperref.
+Package minitoc Info: I0023
+(minitoc)             part level macros available.
+Package minitoc Info: I0003
+(minitoc)             chapter level macros available.
+\mtc@toks=\toks18
+\mtc@strutbox=\box26
+\mtc@hstrutbox=\box27
+Package minitoc Info: I0002
+(minitoc)             Autoconfiguration of extensions.
+\openout3 = `book.mtc0'.
+
+\openout3 = `book.mtc'.
+
+ (./book.mtc0)
+Package minitoc Info: I0012
+(minitoc)             Long extensions (Unix-like) will be used.
+Package minitoc Info: I0031
+(minitoc)             ==> this version is configured for UNIX-like 
+(minitoc)                 (long extensions) file names.
+\openout3 = `book.mtc'.
+
+\openout3 = `book.mtc0'.
+
+\c@mtc=\count98
+\c@minitocdepth=\count99
+\c@ptc=\count100
+\c@parttocdepth=\count101
+\ptcindent=\skip50
+Package minitoc Info: I0010
+(minitoc)             The english language is selected.
+(minitoc)              on input line 4909.
+
+(/usr/share/texlive/texmf-dist/tex/latex/minitoc/english.mld
+File: english.mld 2006/01/13
+)
+(/usr/share/texlive/texmf-dist/tex/latex/minitoc/english.mld
+File: english.mld 2006/01/13
+)) (./book.aux)
+\openout1 = `book.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Info: Redefining \degres on input line 17.
+LaTeX Info: Redefining \dots on input line 17.
+LaTeX Info: Redefining \up on input line 17.
+
+
+Package french.ldf Warning: OT1 encoding should not be used for French.
+(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
+(french.ldf)                of your document; reported on input line 17.
+
+Package minitoc(hints) Info: I0049
+(minitoc(hints))             ==> You requested the hints option. 
+(minitoc(hints))             Some hints are eventually given below.
+Package minitoc Info: I0024
+(minitoc)             PREPARING MINITOCS FROM book.toc on input line 20.
+Package minitoc Info: I0033
+(minitoc)             Writing book.mtc1.
+\openout3 = `book.mtc1'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing book.mtc2.
+\openout3 = `book.mtc2'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing book.mtc3.
+\openout3 = `book.mtc3'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing book.mtc4.
+\openout3 = `book.mtc4'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing book.mtc5.
+\openout3 = `book.mtc5'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing book.mtc6.
+\openout3 = `book.mtc6'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing book.mtc7.
+\openout3 = `book.mtc7'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+] [1
+
+] [2
+
+] [3] [4
+
+]
+[5] [6
+
+] (./book.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 8.
+)
+\tf@toc=\write4
+\openout4 = `book.toc'.
+
+ [1
+
+] [2
+
+] [3] [4]
+Chapitre 1.
+\openout3 = `book.mtc'.
+
+\openout3 = `book.mtc'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 40.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 40.
+(./book.mtc4) [5
+
+] [6
+
+]
+Annexe A.
+[7] [8
+
+]
+Annexe B.
+[9] [10
+
+] [11
+
+] [12
+
+] (./book.toc)
+\tf@toc=\write5
+\openout5 = `book.toc'.
+
+ [13] [14
+
+] (./book.lof)
+\tf@lof=\write6
+\openout6 = `book.lof'.
+
+ [15] [16
+
+] (./book.lot)
+\tf@lot=\write7
+\openout7 = `book.lot'.
+
+Package minitoc Info: I0009
+(minitoc)             Listing minitoc auxiliary files. 
+(minitoc)             Creating the book.maf file.
+\openout3 = `book.maf'.
+
+Package minitoc(hints) Info: I0019
+(minitoc(hints))             No hints have been written 
+(minitoc(hints))             in the book.log file..
+
+[17] (./book.aux) ) 
+Here is how much of TeX's memory you used:
+ 3123 strings out of 494780
+ 42837 string characters out of 6176875
+ 133118 words of memory out of 5000000
+ 6258 multiletter control sequences out of 15000+600000
+ 10684 words of font info for 37 fonts, out of 8000000 for 9000
+ 81 hyphenation exceptions out of 8191
+ 30i,9n,30p,190b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
+Output written on book.pdf (25 pages, 78128 bytes).
+PDF statistics:
+ 109 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

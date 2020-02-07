@@ -1,0 +1,67 @@
+\documentclass[a4paper,11pt]{book}
+ 
+% - taille de la fonte    : 10pt, 11pt, 12pt
+% - recto ou recto-verso    : oneside, twoside
+ 
+% Chargement d'extensions
+\usepackage[latin1]{inputenc}    
+\usepackage[francais]{babel}
+
+\usepackage{minitoc}
+ 
+% Informations le titre, le(s) auteur(s), la date
+\title{Titre du livre}
+\author{ 1 Nom 1 \and 2 Nom 2}
+\date{\today}
+ 
+\begin{document}
+
+\dominitoc
+
+\maketitle
+ 
+    % Le prologue du livre
+    \frontmatter
+ 
+    \chapter{Avant-propos}
+    \chapter{Remerciements}
+    \chapter{Introduction}
+ 
+    % Corps du livre
+    \mainmatter
+
+    \tableofcontents
+    
+    \part{Une partie}
+    
+    \chapter{Un chapitre}
+
+    \minitoc
+
+    \section{Une section}
+
+    \subsection{Une sous-section}
+
+    \subsubsection{Une sous-sous-section}
+
+    \paragraph{Une sous-sous-sous-sous-section}
+    \subparagraph{Une sous-sous-sous-sous-sous-section}
+ 
+    % Les annexes
+    \appendix
+ 
+    \chapter{Premier annexe}
+    \chapter{Second annexe}
+ 
+    
+    \backmatter
+ 
+    \chapter{Conclusion et discussion}
+ 
+    
+    \tableofcontents    
+    \listoffigures        % Liste des figures
+    \listoftables        % Liste des tableaux
+ 
+% Fin du document
+\end{document}

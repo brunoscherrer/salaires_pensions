@@ -7,9 +7,8 @@
 
 # Remarque: convert doit être installé pour générer les gif
 
-
 ANNEE_REF = 2019 # année courante (délimite le futur du passé)
-PREVISION_MAX = 2110 # on regarde pas trop loin (ça n'a pas de sens)
+PREVISION_MAX = 2100 # on regarde pas trop loin (ça n'a pas de sens)
 
 
 from pylab import *
@@ -18,17 +17,6 @@ import os
 from prettytable import PrettyTable
 
 
-def shell_command(com):
-    print com
-    os.system(com)
-
-
-# pour les images (type de fichier)
-
-ext_images = "png"
-
-def mysavefig(f):
-    savefig(dir_images+f)
 
 # pour le codage utf8 (matplotlib)
 
@@ -245,11 +233,11 @@ class carriere(object):
             x = PrettyTable()
             
             print self.nom_metier
-            x.field_names = [ "Annee","Age","Salaire","Salaire EC","Pts","Ach.Pt","Vte.Pt" ]
+            x.field_names = [ "Annee","Age","Salaire ms","Pts","Ach.Pt","Vte.Pt" ]
 
             for i in xrange(carriere.age_max - self.age_debut + 1):
                 an = self.annee_debut+i
-                x.add_row( [ "%d"%an, "%d ans"%(self.age_debut+i),"%.2f"%( self.sal[i]/12),"%.2f"%(self.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ ANNEE_REF - m.debut]),"%.2f"%(self.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),"%.2f"%(m.vente_pt[ an - m.debut]) ] )
+                x.add_row( [ "%d"%an, "%d ans"%(self.age_debut+i),"%.2f"%(self.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ ANNEE_REF - m.debut]),"%.2f"%(self.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),"%.2f"%(m.vente_pt[ an - m.debut]) ] )
 
             print(x)
             self.affiche_pension_macron(style)
@@ -267,11 +255,11 @@ class carriere(object):
         
             x = PrettyTable()
             print "Retraite Macron (Synthèse départs)"
-            x.field_names = ["Année", "Age", "AgePivot", "Sur-/dé-cote", "Brut ms", "Brut ms EC", "Tx rempl.", "%/SMIC" ]
+            x.field_names = ["Année", "Age", "AgePivot", "+/-cote", "Brut ms", "Brut ms EC", "Tx rempl.", "%/SMIC" ]
             for (a,d,p,t) in self.pension_macron:
                 an = self.annee_debut+a-self.age_debut
                 ap = int(m.age_pivot[ an - m.debut])
-                x.add_row( [ an, a, "%d ans %d mois"%(ap, round((m.age_pivot[ an - m.debut]-ap)*12)), d, "%.2f"%(p/12), "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]), "%.2f"%(t*100), "%.2f"%(p/m.smic[ an - m.debut ]) ])
+                x.add_row( [ an, a, "%d ans %d mois"%(ap, round((m.age_pivot[ an - m.debut]-ap)*12)), "%.2f%%"%(d*100), "%.2f"%(p/12), "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]), "%.2f"%(t*100), "%.2f"%(p/m.smic[ an - m.debut ]) ])
             print(x)
 
             print "Retraite Macron (détaillée selon départ)"
@@ -299,6 +287,8 @@ class carriere_prive(carriere):
     
     def __init__(self, m, age_debut, annee_debut, nom_metier="Privé", coefs=[]):
 
+        self.nom_metier="Privé"
+        
         if coefs == []:
             coefs=[1.0]*(carriere.age_max+1-age_debut)
         
@@ -318,6 +308,8 @@ CORRECTION_GIPA = True # maintien du pouvoir d'achat
 class carriere_public(carriere):
 
     # TODO: rentrer plus de grilles
+
+    HEA1,HEA2,HEA3,HEB1,HEB2,HEB3,HEBb1, HEBb2, HEBb3 = 890, 925,972, 972, 1013, 1067, 1067, 1095, 1124
     
     grilles = [
         ( [("ATSEM","ATSEM (C2 puis C1)"),("AdjAdm","Adjoint Administratif (C2 puis C1)")], [ (329,1), (330,2), (333,2), (336, 2), (345,2), (351,2), (364,2), (380,2), (390,3), (402,3), (411,4), (415, 3), (430,3), (450,3), (466,100) ] ),
@@ -326,7 +318,12 @@ class carriere_public(carriere):
         ( [("ProfCertifie","Professeur certifié"), ("ProfEcoles","Professeur des écoles")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,2), (800, 2), (830,100) ] ) ,
         ( [("Infirmier","Infirmière en soins généraux (CN, CS, puis HC)")], [(390,2), (404,3), (422,3), (446,3), (469,3), (501,3), (520,4), (544,4), (571,4), (594,4), (627,100) ] ),
         ( [("AideSoignant","Aide-soignante (CN puis HC)")], [(327,1), (328,2), (329,2), (330,2), (332,2), (334,2), (338,2), (342,2), (346,3), (356,3), (368,3+1./3), (380,2), (390,3), (402,3), (411,4), (418,100) ] ),
-        ( [("Redacteur","Rédacteur territorial (C2 puis C1)")], [(356,2), (362,2), (369,2), (379,2), (390,2), (401,2), (416, 2), (436,3), (452,3), (461,3), (480,3), (504,4), (534,3), (551,3), (569,3), (587,100) ] )
+        ( [("Redacteur","Rédacteur territorial (C2 puis C1)")], [(356,2), (362,2), (369,2), (379,2), (390,2), (401,2), (416, 2), (436,3), (452,3), (461,3), (480,3), (504,4), (534,3), (551,3), (569,3), (587,100) ] ),
+        ( [("BIATSS","BIATSS (CN puis CS)")], [(343,2), (349,2), (355,2), (361,2), (369,2), (381,2), (396,2), (415,3), (431,3), (441,3), (457,3), (477,4), (503,4), (534,100)] ),
+        ( [("TechHosp","Technicien hospitalier"),("SecretaireAdmin","Secrétaire administratif")], [(339,2), (344,2), (349,2), (356,2), (366,2), (379,2), (394,2), (413,3), (429,3), (440,3), (453,3), (477,4), (503,100) ] ),
+        ( [("AdjTech","Adjoint Technique (devenant principal C2 puis C1)")], [(326,1), (327,2), (328,2), (329,2), (330,2), (332,2), (335,2), (339,2), (343,3), (354,3), (367,3.33), (380,2), (390,3), (402,3), (411,4), (415,3), (430,3), (450,3), (466,100) ] ),
+        ( [("Magistrat","Magistrat (second puis premier grade)")], [(461,1), (505,1), (555,2), (591,2), (667,1.5), (705,1.5), (743,1.5), (792,1.5), (830,2), (HEA1, 1), (HEA2,1), (HEA3,1), (HEB1,1), (HEB2,1), (HEB3,1), (HEBb1,1), (HEBb2,1), (HEBb3,100) ] ),
+        ( [("ProfAgrege","Professeur agrégé")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,2), (800, 2), (830,3), (HEA1,1), (HEA2,1), (HEA3,100) ] )
         
     ]
 
@@ -337,6 +334,7 @@ class carriere_public(carriere):
         while ( n_metier[0] < len(carriere_public.grilles) ):
             lc = carriere_public.grilles[ n_metier[0] ][0]
             while n_metier[1] < len(lc):
+                #print id_metier, lc[ n_metier[1] ][0]
                 if id_metier == lc[ n_metier[1] ][0]:
                     return n_metier
                 n_metier[1] += 1
@@ -516,31 +514,7 @@ def plot_modeles(lm,r):
     tight_layout()
 
 
-def plot_comparaison_modeles(lm, a,b):
 
-    figure(figsize=(10,8))
-    plot_modeles(lm,[a,b])
-    if SAVE:
-        mysavefig("gouv_vs_dest.png")
-        close('all')
-
-
-
-# sur les carrières
-
-def plot_grilles( m, cas ):
-
-    for id_metier,_ in cas:
-
-        figure()
-        filename = "grille_%s.%s"%( id_metier, ext_images)
-        print "Génération du fichier",filename
-        c = carriere_public(m, 25, 2019, id_metier, 0.0)
-        c.plot_grille()
-        if SAVE:
-            mysavefig(filename)
-            close('all')
-    
 
 
 def plot_carriere_corr(ax, m, c, corr, div=12, plot_retraite=0, couleur=(0.8,0.8,0.8),label="", ):
@@ -576,7 +550,7 @@ def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, l
     # Evolution de carrière en fonction de l'année de départ
     for a in annees:
         if id_metier=="Privé":
-            c = carriere_prive(m, age_debut, a )
+            c = carriere_prive(m, age_debut, a, "Privé", [prime]*100 )
         else:
             c = carriere_public(m, age_debut, a, id_metier, prime)
         plot_carriere_corr(ax,m,c,corr,div)
@@ -588,7 +562,7 @@ def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, l
     
     # Focus sur une année
     if id_metier=="Privé":
-        c = carriere_prive(m, age_debut, focus )
+        c = carriere_prive(m, age_debut, focus, "Privé", [prime]*100 )
     else:
         c = carriere_public(m, age_debut, focus, id_metier, prime)
     plot_carriere_corr(ax, m, c, corr, div, plot_retraite, "green", dec("Salaire (déb:%d"%focus)+")")
@@ -609,167 +583,6 @@ def plot_evolution_carriere_corr(ax, m, id_metier, prime, corr, focus, annees, l
         title( dec(c.nom_metier+", Prime(%d)=%d%%"%(ANNEE_REF,int(c.part_prime*100)) ) )
 
             
-def genere_anim( modeles, cas, annees, plot_retraite=0 ):
-
-    tmp_dir = "./tmp/"
-    
-    for m in modeles:
-
-        for id_metier,prime in cas:
-
-            print id_metier, prime
-            filename = "%s_%s_%d"%(m.nom,id_metier,int(prime*100))
-
-            for focus in annees:
-                print focus
-            
-                fig = figure( figsize=(8,6) )
-                a = annees[0]
-                xlim( (a, PREVISION_MAX) )
-                ax = fig.add_subplot(111)
-                plot_evolution_carriere_corr(ax, m, id_metier, prime, m.smpt, focus, annees, "Ratio revenu/SMPT", 1, plot_retraite)
-                if SAVE:
-                    savefig(tmp_dir+"Ratio_"+filename+"_%d.png"%focus)
-
-                fig = figure( figsize=(8,6) )
-                a = annees[0]
-                xlim( (a, PREVISION_MAX) )
-                ax = fig.add_subplot(111)
-                plot_evolution_carriere_corr(ax, m,id_metier, prime, m.corr_prix_annee_ref, focus, annees, "Euros constants (2019)", 12, plot_retraite)
-                if SAVE:
-                    savefig(tmp_dir+"Salaire_"+filename+"_%d.png"%focus)
-                    
-            if SAVE:    
-                print "Génération de l'image animée Ratio_"+filename+".gif"
-                shell_command( "convert -delay 300 -loop 0 "+tmp_dir+"Ratio_"+filename+"*.png "+dir_images+"Ratio_"+filename+".gif" )
-                shell_command( "rm "+tmp_dir+"Ratio_"+filename+"*.png" )
-        
-                print "Génération de l'image animée Salaire_"+filename+".gif"
-                shell_command( "convert -delay 300 -loop 0 "+tmp_dir+"Salaire_"+filename+"*.png "+dir_images+"Salaire_"+filename+".gif" )
-                shell_command( "rm "+tmp_dir+"Salaire_"+filename+"*.png" )
-            
-                close('all')
 
 
 
-
-####################################################
-# Partie principale
-####################################################
-
-
-def simu0():
-
-    global dir_images
-    dir_images="./fig/grilles/"
-      
-    print "Génération des grilles indiciaires"
-    plot_grilles( m1, cas )
-
-    c=carriere_public(m1,25,2019,"ProfEcoles",0.08)
-    c.plot_grille_prime()
-    mysavefig("Carriere_ProfEcoles")
-
-    
-def simu1():
-
-    global dir_images
-
-    dir_images="./fig/"
-    print "Génération de la comparaison des modèles macro de prédiction"
-    plot_comparaison_modeles([m1,m2],debut,fin)  
-    
-    print "Génération d'animations gif sur l'évolution de carrières dans le public"
-    dir_images = "./fig/salaires_retraites/"
-    genere_anim( [m1, m2], cas, range(1980,2041,5), 1 )
-    dir_images = "./fig/salaires/"
-    genere_anim( [m1, m2], cas, range(1980,2041,5), 0 )
-    
-
-def debug0():
-
-    print "Details carrière et retraite pour deux professions"
-    
-    c=carriere_public(m1,22,2020,"ProfEcoles",0.08)
-    c.affiche_carriere()
-
-    c=carriere_prive(m1,22,2002)
-    c.affiche_carriere()
-
-
-def pour_article_1():
-
-    global dir_images
-    dir_images = "./articles/1/"
-       
-    id_metier = "ProfEcoles"
-    prime = 0.08
-
-    m = m1
-
-    c = carriere_public(m1,22,2020, id_metier, prime)
-    c.plot_grille_prime()
-    mysavefig("grille.png")
-    
-    fig=figure()
-    xlim( (2020,2070) )
-    ax = fig.add_subplot(111)
-    plot_evolution_carriere_corr(ax, m, id_metier, prime, m.prix, 2020, [2020], "Euros constants (2019)", 12)
-    if SAVE:
-        mysavefig("salaireEC.png")
-    
-    fig=figure()
-    xlim( (2020,2070) )
-    ax = fig.add_subplot(111)
-    plot_evolution_carriere_corr(ax, m, id_metier, prime, m.smpt, 2020, [2020], "Ratio revenu/SMPT", 1)
-    if SAVE:
-        mysavefig("salaireRel.png")
-    
-    # animations
-    genere_anim( [m1], [ (id_metier,prime) ], range(2020,2051,5), 0 )
-    shell_command("mv "+dir_images+"Ratio_Gouvernement_"+id_metier+"_%d"%(prime*100)+".gif "+dir_images+"selonannee.gif")
-    genere_anim( [m1], [ (id_metier,prime) ], range(1980,2051,5), 1 )
-    shell_command("mv "+dir_images+"Ratio_Gouvernement_"+id_metier+"_%d"%(prime*100)+".gif "+dir_images+"selonannee_retraite.gif")
-    
-    
-
-####
-
-SAVE = True   # si False: ne génère pas les fichiers images/animations
-
-
-# Modèles de projection
-
-debut, fin = 1980, 2120
-
-m1 = modele_gouv(debut,fin)
-m2 = modele_destinie(debut,fin)
-
-
-# Carrières considérées
-
-cas = [ ("ProfEcoles",0.081), ("ProfCertifie",0.096), ("PR",0.071), ("ATSEM",0.16), ("MCF",0.034), ("CR",0.034), ("DR",0.071), ("Infirmier",0.299), ("AideSoignant",0.242), ("Redacteur",0.281) ]
-
-
-
-### Génération d'un exemple
-
-debug0()
-
-### Génération comparaison des grilles
-    
-simu0()
-
-
-### Génération comparaison modèles et infographies
-
-simu1()
-
-###
-
-pour_article_1()
-
-###
-
-if not SAVE:
-    show()

@@ -1,0 +1,5 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {1.1}Une section}{\reset@font\mtcSfont 5}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {1.1.1}Une sous-section}{\reset@font\mtcSSfont 5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Une sous-sous-section}{\reset@font\mtcSSSfont 5}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode Une sous-sous-sous-sous-section}{\reset@font\mtcPfont 5}}
+{\reset@font\mtcSPfont\mtc@string\contentsline{subparagraph}{\noexpand \leavevmode Une sous-sous-sous-sous-sous-section}{\reset@font\mtcSPfont 5}}
