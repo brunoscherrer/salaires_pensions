@@ -1,5 +1,12 @@
 \documentclass[a4paper,10pt]{report}
- 
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+]{doclicense}
+
+
+
 % Chargement d'extensions
 \usepackage[utf8]{inputenc}  
 \usepackage[T1]{fontenc}
@@ -13,28 +20,40 @@
 \usepackage{hyperref}
 \usepackage{eurosym}
 \usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
 
 \pagestyle{fancy}
 
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+\titlespacing*{\chapter} {0pt}{20pt}{40pt}
+
 % Informations le titre, le(s) auteur(s), la date
-\title{Reproduction de cas-types de la réforme des retraites à points pour la Fonction Publique}
+\title{Simulation de carrières et retraites à points\\pour différents métiers de la fonction publique}
 \author{Bruno Scherrer}
 \date{\today}
- 
+
+\addto{\captionsfrench}{%
+\renewcommand{\mtctitle}{Carrières (âge de début, année de naissance)}
+}
+
 \begin{document}
+
 
 \dominitoc
 
 \maketitle
- 
+
+\doclicenseThis
+
 \begin{abstract}
-  Ce document donne les valeurs (sous forme de tableaux détaillés) de l'évolution de la carrière et des possibles retraites pour plusieurs métiers de la fonction publique. Pour le passé (avant 2019), on s'appuie sur les données macro-économiques réelles. Pour le futur, on se base sur les hypothèses macro-économiques du gouvernement Philippe (croissance des salaires du privé de 1.3\% par an, croissance du point d'indice de 0\% par an, augmentation des primes de 0.23 points par an) et sur son système de retraites par points. On peut observer une dévalorisation significative dans le temps de l'ensemble des métiers de la fonction publique.
+  Ce document présente des simulations (sous forme de tableaux détaillés et de graphes) de l'évolution de la carrière et des possibles retraites pour plusieurs métiers de la fonction publique. Pour le passé (avant 2019), on s'appuie sur les données macro-économiques (inflation, croissance, point d'indice) réelles. Pour le futur, on se base sur les hypothèses macro-économiques du gouvernement Philippe (croissance des salaires du privé de 1.3\% par an, croissance du point d'indice de 0\% par an, augmentation des primes de 0.23 points par an) et sur son système de retraites par points. En regardant comment les rémunérations et les pensions évoluent par rapport au SMIC et au salaire moyen, on observe, dans le temps, une dévalorisation significative de l'ensemble des métiers de la fonction publique.
 \end{abstract}
 
 \setcounter{tocdepth}{0}
 \tableofcontents
 
-\setcounter{tocdepth}{1}
 \input{corps}
 
 \end{document}
