@@ -80,8 +80,8 @@ class modele_abs(object):
 
         self.age_legal = 62
 
-        self.age_pivot = [ max( 64, 65 + (i-2040)/12.) for i in xrange(debut,fin+1) ]
-        
+        self.age_pivot = [ max( 62+1./3., 62+1./3. + (i-2022)*1./3.) for i in xrange(debut,2027) ] + [ (64 + (i-2027)*1./12.) for i in xrange(2027,fin) ]
+                           
         self.debut = debut
         self.debut_proj = debut_proj
         self.fin = fin
@@ -100,10 +100,8 @@ class modele_abs(object):
         
 
         
-        
     def post_init(self):
-
-        a=2022
+        
         
         # calcul du point par rapport au valeurs 2020 (indexation sur inflation+smpt)
         n = self.fin+1-self.debut
@@ -111,17 +109,27 @@ class modele_abs(object):
         self.vente_pt = [0.0]*n
         self.corr_part_prime = [0.0]*n
         self.corr_prix_annee_ref = [0.0]*n
-        
+
+        # indexation progressive du point sur l'inflation vers le smpt (calcul du coef d'évolution
+        coef=[1.0]*n
+        for i in xrange(self.debut+1,self.fin+1):
+            alpha=max( 0, min (1, (i-2025)/17.) )
+            # alpha=1.0  # décomenter pour annuler l'indexation progressive
+            coef[i-self.debut]=coef[i-1-self.debut]*(
+                alpha        * self.smpt[i-self.debut] / self.smpt[i-1-self.debut]
+                +(1.0-alpha) * self.prix[i-self.debut] / self.prix[i-1-self.debut]
+                )
+            
         for i in xrange(self.debut,self.fin+1):
 
-            tmp = self.smpt[i-self.debut] / self.smpt[a-self.debut] # indexation du point sur le salaire moyen
-            self.achat_pt[i-self.debut] = 10.0 / 0.9 / 0.2812 * tmp  
+            tmp = coef[i-self.debut] / coef[2025-self.debut]  # 1.0 en 2022
+            self.achat_pt[i-self.debut] = 10.0 / 0.9 / 0.2812 * tmp
             self.vente_pt[i-self.debut] = 0.55 * tmp
-
+                        
             self.corr_part_prime[i-self.debut] = 0.0023*(i-ANNEE_REF)        
             self.corr_prix_annee_ref[i-self.debut] = self.prix[ i - self.debut ] / self.prix[ ANNEE_REF-self.debut ]
-            
 
+            
 # classe pour décrire le contexte macro envisagé par le gouvernement
 
 class modele_gouv(modele_abs):
@@ -287,13 +295,13 @@ class carriere(object):
                       "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]),
                       "%.2f"%(t*100),
                       "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
-                      seuil(p/m.smic[ an - m.debut ],85)       
+                      seuil(p/m.smic[ an - m.debut ], 1.0)       
                 ]
                 for j in xrange(carriere.age_mort+1 - a):
                     if a+j in [70,75,80,85,90]:
                         an = self.annee_debut+a-self.age_debut + j
                         p = self.revenus_retraite_macron[i][j]
-                        l.append( seuil(p/m.smic[ an - m.debut ],85) )
+                        l.append( seuil(p/m.smic[ an - m.debut ], 1.0) )
                 
                 f.write(tex_row(l))
                 i=i+1
@@ -503,7 +511,7 @@ class carriere_public(carriere):
             #f.write(dec("\\begin{table}[htb]\\centering\\caption{Synthèse de la carrière} \n"))
             f.write("{\\scriptsize \\begin{center} \\begin{tabular}{|c|c||c|c|c|c|c|c||c|c||c|c|c||} \n")
             f.write("\\hline \n")
-            f.write(dec("Année & Âge & Ind Maj & Pt Ind(\\euro{}cst) &  Hors-Primes(\\euro{}cst) & Tx Primes & GIPA(\\euro{}cst) & Brut(\\euro{}cst) & SMIC(\\euro{}cst) & Rev/SMIC & Cumul Pts & Val Ach Pt(\\euro{}cst) & Val Vte Pt(\\euro{}cst)  \\\\ \n"))
+            f.write(dec("Année & Âge & Ind Maj & Pt Ind(\\euro{}cst) &  Hors-Primes(\\euro{}cst) & Tx Primes & GIPA(\\euro{}cst) & Brut(\\euro{}cst) & SMIC(\\euro{}cst) & Rev/SMIC & Cumul Pts & Achat Pt(\\euro{}cst) & Vente Pt(\\euro{}cst)  \\\\ \n"))
             f.write("\\hline \\hline\n")
 
             for i in xrange(carriere.age_max - self.age_debut + 1):
@@ -524,7 +532,7 @@ class carriere_public(carriere):
                       #"%.2f"%sal_cst,
                       "%.2f"%(sal_cst/12),
                       "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
-                      "{\\bf \color{OliveGreen} %.2f}"%(self.sal[i] / m.smic[ an - m.debut ]),
+                      "{\\bf %.2f}"%(self.sal[i] / m.smic[ an - m.debut ]),
                       "%.2f"%self.nb_pts[i],
                       "%.2f"%(m.achat_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut]),
                       "%.2f"%(m.vente_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut])
