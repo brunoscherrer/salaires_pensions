@@ -32,14 +32,14 @@ def genere_anim( carrieres,  plot_retraite=0, filename="", dir="./", ):
         plt.xlim( (a1, a2) )
         ax = fig.add_subplot(111)
                 
-        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, i, carrieres, a2, "Ratio revenu/SMIC", 1, plot_retraite)
+        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, i, carrieres, a2, "Revenu/SMIC", 1, plot_retraite)
         if filename!="":
             plt.savefig(tmp_dir+"ratio_"+filename+"_%d.png"%c.annee_debut)
                 
         fig = plt.figure( figsize=(7, 5) )
         plt.xlim( (a1, a2) )
         ax = fig.add_subplot(111)
-        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.corr_prix_annee_ref, i, carrieres, a2, "Euros constants (2019)", 12, plot_retraite)
+        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.corr_prix_annee_ref, i, carrieres, a2, "Revenu \texteuro"+str(c.m.annee_ref), 12, plot_retraite)
         if filename!="":
             plt.savefig(tmp_dir+"salaire_"+filename+"_%d.png"%c.annee_debut)
                     
@@ -75,13 +75,16 @@ def plot_comparaison_modeles(lm, a,b, filename=""):
 
 def debug0():
 
-    print "Details carrière et retraite pour deux professions"
-    
-    c=CarrierePublic(m1,22,2020,"ProfEcoles",0.08)
-    
-    a=AnalyseCarriere(c)
-    a.affiche_carriere()
+    carrieres = [ CarrierePublic(m1,22,2020,"ProfEcoles",0.08), CarrierePrive(m1,22,2020,"Privé SMPT") ]
 
+    for c in carrieres:
+        
+        a=AnalyseCarriere(c)
+        for tex in [False,True]:
+            a.affiche_carriere(tex)
+            if c.public:
+                a.affiche_grille(tex)
+            a.affiche_pension_macron(tex)
 
             
 def simu0():
@@ -152,13 +155,13 @@ def simu3():
     fig=plt.figure()
     plt.xlim( (2020,2070) )
     ax = fig.add_subplot(111)
-    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.prix, 0, [c], "Euros constants (2019)", 12)
+    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.prix, 0, [c], "Revenu \texteuro "+str(c.m.annee_ref), 12)
     plt.savefig(dir+"salaireEC.png")
     
     fig=plt.figure()
     plt.xlim( (2020,2070) )
     ax = fig.add_subplot(111)
-    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smpt, 0, [c], "Ratio revenu/SMPT", 1)
+    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, 0, [c], "Revenu/SMIC", 1)
     plt.savefig(dir+"salaireRel.png")
     
     # animations
@@ -197,6 +200,7 @@ cas = [ ("ProfEcoles",0.081,23) ]
 ### Génération d'un exemple
 
 debug0()
+exit(1)
 
 ### Génération comparaison des grilles
     

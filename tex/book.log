@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.20)  24 FEB 2020 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.20)  26 FEB 2020 12:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,66 +930,6 @@ Package minitoc Info: I0033
 (minitoc)             Writing book.mtc1.
 \openout3 = `book.mtc1'.
 
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc2.
-\openout3 = `book.mtc2'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc3.
-\openout3 = `book.mtc3'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc4.
-\openout3 = `book.mtc4'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc5.
-\openout3 = `book.mtc5'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc6.
-\openout3 = `book.mtc6'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc7.
-\openout3 = `book.mtc7'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc8.
-\openout3 = `book.mtc8'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc9.
-\openout3 = `book.mtc9'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc10.
-\openout3 = `book.mtc10'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc11.
-\openout3 = `book.mtc11'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc12.
-\openout3 = `book.mtc12'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc13.
-\openout3 = `book.mtc13'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc14.
-\openout3 = `book.mtc14'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc15.
-\openout3 = `book.mtc15'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing book.mtc16.
-\openout3 = `book.mtc16'.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -1003,7 +943,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 53.
-<doclicense-CC-by-nc-sa.pdf, id=79, 121.45375pt x 43.16125pt>
+<doclicense-CC-by-nc-sa.pdf, id=19, 121.45375pt x 43.16125pt>
 File: doclicense-CC-by-nc-sa.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-sa.pdf>
 Package pdftex.def Info: doclicense-CC-by-nc-sa.pdf  used on input line 53.
@@ -1018,1646 +958,82 @@ age.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            {Infirmière en soins généraux (CN, CS, puis HC)} [1 </usr/share/
-texlive/texmf-dist/tex/latex/doclicense/images/doclicense-CC-by-nc-sa.pdf>]
+            {Magistrat (second puis premier grade)} [1 </usr/share/texlive/texm
+f-dist/tex/latex/doclicense/images/doclicense-CC-by-nc-sa.pdf>]
 Chapitre 1.
-<fig/grille_Infirmier_29.pdf, id=105, 462.52798pt x 346.89601pt>
-File: fig/grille_Infirmier_29.pdf Graphic file (type pdf)
-<use fig/grille_Infirmier_29.pdf>
-Package pdftex.def Info: fig/grille_Infirmier_29.pdf  used on input line 3.
+<fig/grille_Magistrat_52.pdf, id=30, 462.52798pt x 346.89601pt>
+File: fig/grille_Magistrat_52.pdf Graphic file (type pdf)
+<use fig/grille_Magistrat_52.pdf>
+Package pdftex.def Info: fig/grille_Magistrat_52.pdf  used on input line 3.
 (pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
 \openout3 = `book.mtc'.
 
 \openout3 = `book.mtc'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 16.
+(Font)              <9> on input line 54.
 (./book.mtc1) [2
 
- <./fig/grille_Infirmier_29.pdf>]
-<fig/Infirmier_1975_22_29_True_retraite.pdf, id=167, 1156.32pt x 433.62pt>
-File: fig/Infirmier_1975_22_29_True_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1975_22_29_True_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1975_22_29_True_retraite.pdf  used on in
-put line 49.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Infirmier_1975_22_29_False_retraite.pdf, id=168, 1156.32pt x 433.62pt>
-File: fig/Infirmier_1975_22_29_False_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1975_22_29_False_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1975_22_29_False_retraite.pdf  used on i
-nput line 78.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3 <./fig/Infirmier_1975_22_29_True_retraite.pdf> <./fig/Infirmier_1975_22_29_F
-alse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Infirmier_1975_22_29_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Infirmier_1980_22_29_True_retraite.pdf, id=297, 1156.32pt x 433.62pt>
-File: fig/Infirmier_1980_22_29_True_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1980_22_29_True_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1980_22_29_True_retraite.pdf  used on in
-put line 110.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Infirmier_1980_22_29_False_retraite.pdf, id=298, 1156.32pt x 433.62pt>
-File: fig/Infirmier_1980_22_29_False_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1980_22_29_False_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1980_22_29_False_retraite.pdf  used on i
-nput line 139.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[4 <./fig/Infirmier_1980_22_29_True_retraite.pdf> <./fig/Infirmier_1980_22_29_F
-alse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Infirmier_1980_22_29_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Infirmier_1990_22_29_True_retraite.pdf, id=424, 1156.32pt x 433.62pt>
-File: fig/Infirmier_1990_22_29_True_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1990_22_29_True_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1990_22_29_True_retraite.pdf  used on in
-put line 171.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Infirmier_1990_22_29_False_retraite.pdf, id=425, 1156.32pt x 433.62pt>
-File: fig/Infirmier_1990_22_29_False_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1990_22_29_False_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1990_22_29_False_retraite.pdf  used on i
-nput line 200.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[5 <./fig/Infirmier_1990_22_29_True_retraite.pdf> <./fig/Infirmier_1990_22_29_F
-alse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Infirmier_1990_22_29_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Infirmier_2003_22_29_True_retraite.pdf, id=549, 1156.32pt x 433.62pt>
-File: fig/Infirmier_2003_22_29_True_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_2003_22_29_True_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_2003_22_29_True_retraite.pdf  used on in
-put line 232.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Infirmier_2003_22_29_False_retraite.pdf, id=550, 1156.32pt x 433.62pt>
-File: fig/Infirmier_2003_22_29_False_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_2003_22_29_False_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_2003_22_29_False_retraite.pdf  used on i
-nput line 261.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6 <./fig/Infirmier_2003_22_29_True_retraite.pdf> <./fig/Infirmier_2003_22_29_F
-alse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Infirmier_2003_22_29_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 2.
-<fig/grille_AideSoignant_24.pdf, id=674, 462.52798pt x 346.89601pt>
-File: fig/grille_AideSoignant_24.pdf Graphic file (type pdf)
-<use fig/grille_AideSoignant_24.pdf>
-Package pdftex.def Info: fig/grille_AideSoignant_24.pdf  used on input line 266
-.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc2) [7
-
- <./fig/grille_AideSoignant_24.pdf>]
-<fig/AideSoignant_1975_22_24_True_retraite.pdf, id=729, 1156.32pt x 433.62pt>
-File: fig/AideSoignant_1975_22_24_True_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1975_22_24_True_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1975_22_24_True_retraite.pdf  used on
- input line 312.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AideSoignant_1975_22_24_False_retraite.pdf, id=730, 1156.32pt x 433.62pt>
-File: fig/AideSoignant_1975_22_24_False_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1975_22_24_False_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1975_22_24_False_retraite.pdf  used o
-n input line 341.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8 <./fig/AideSoignant_1975_22_24_True_retraite.pdf> <./fig/AideSoignant_1975_2
-2_24_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AideSoignant_1975_22_24_False_retraite.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/AideSoignant_1980_22_24_True_retraite.pdf, id=855, 1156.32pt x 433.62pt>
-File: fig/AideSoignant_1980_22_24_True_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1980_22_24_True_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1980_22_24_True_retraite.pdf  used on
- input line 373.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AideSoignant_1980_22_24_False_retraite.pdf, id=856, 1156.32pt x 433.62pt>
-File: fig/AideSoignant_1980_22_24_False_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1980_22_24_False_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1980_22_24_False_retraite.pdf  used o
-n input line 402.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[9 <./fig/AideSoignant_1980_22_24_True_retraite.pdf> <./fig/AideSoignant_1980_2
-2_24_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AideSoignant_1980_22_24_False_retraite.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/AideSoignant_1990_22_24_True_retraite.pdf, id=981, 1156.32pt x 433.62pt>
-File: fig/AideSoignant_1990_22_24_True_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1990_22_24_True_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1990_22_24_True_retraite.pdf  used on
- input line 434.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AideSoignant_1990_22_24_False_retraite.pdf, id=982, 1156.32pt x 433.62pt>
-File: fig/AideSoignant_1990_22_24_False_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1990_22_24_False_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1990_22_24_False_retraite.pdf  used o
-n input line 463.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10 <./fig/AideSoignant_1990_22_24_True_retraite.pdf> <./fig/AideSoignant_1990_
-22_24_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AideSoignant_1990_22_24_False_retraite.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/AideSoignant_2003_22_24_True_retraite.pdf, id=1106, 1156.32pt x 433.62pt>
-File: fig/AideSoignant_2003_22_24_True_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_2003_22_24_True_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_2003_22_24_True_retraite.pdf  used on
- input line 495.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AideSoignant_2003_22_24_False_retraite.pdf, id=1107, 1156.32pt x 433.62pt>
-
-File: fig/AideSoignant_2003_22_24_False_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_2003_22_24_False_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_2003_22_24_False_retraite.pdf  used o
-n input line 524.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[11 <./fig/AideSoignant_2003_22_24_True_retraite.pdf> <./fig/AideSoignant_2003_
-22_24_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AideSoignant_2003_22_24_False_retraite.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 3.
-<fig/grille_TechHosp_27.pdf, id=1229, 462.52798pt x 346.89601pt>
-File: fig/grille_TechHosp_27.pdf Graphic file (type pdf)
-<use fig/grille_TechHosp_27.pdf>
-Package pdftex.def Info: fig/grille_TechHosp_27.pdf  used on input line 529.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc3) [12
-
- <./fig/grille_TechHosp_27.pdf>]
-<fig/TechHosp_1975_22_27_True_retraite.pdf, id=1281, 1156.32pt x 433.62pt>
-File: fig/TechHosp_1975_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1975_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1975_22_27_True_retraite.pdf  used on inp
-ut line 575.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/TechHosp_1975_22_27_False_retraite.pdf, id=1282, 1156.32pt x 433.62pt>
-File: fig/TechHosp_1975_22_27_False_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1975_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1975_22_27_False_retraite.pdf  used on in
-put line 604.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[13 <./fig/TechHosp_1975_22_27_True_retraite.pdf> <./fig/TechHosp_1975_22_27_Fa
-lse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/TechHosp_1975_22_27_False_retraite.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/TechHosp_1980_22_27_True_retraite.pdf, id=1403, 1156.32pt x 433.62pt>
-File: fig/TechHosp_1980_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1980_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1980_22_27_True_retraite.pdf  used on inp
-ut line 636.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/TechHosp_1980_22_27_False_retraite.pdf, id=1404, 1156.32pt x 433.62pt>
-File: fig/TechHosp_1980_22_27_False_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1980_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1980_22_27_False_retraite.pdf  used on in
-put line 665.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[14 <./fig/TechHosp_1980_22_27_True_retraite.pdf> <./fig/TechHosp_1980_22_27_Fa
-lse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/TechHosp_1980_22_27_False_retraite.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/TechHosp_1990_22_27_True_retraite.pdf, id=1525, 1156.32pt x 433.62pt>
-File: fig/TechHosp_1990_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1990_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1990_22_27_True_retraite.pdf  used on inp
-ut line 697.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/TechHosp_1990_22_27_False_retraite.pdf, id=1526, 1156.32pt x 433.62pt>
-File: fig/TechHosp_1990_22_27_False_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1990_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1990_22_27_False_retraite.pdf  used on in
-put line 726.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[15 <./fig/TechHosp_1990_22_27_True_retraite.pdf> <./fig/TechHosp_1990_22_27_Fa
-lse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/TechHosp_1990_22_27_False_retraite.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/TechHosp_2003_22_27_True_retraite.pdf, id=1646, 1156.32pt x 433.62pt>
-File: fig/TechHosp_2003_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_2003_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_2003_22_27_True_retraite.pdf  used on inp
-ut line 758.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/TechHosp_2003_22_27_False_retraite.pdf, id=1647, 1156.32pt x 433.62pt>
-File: fig/TechHosp_2003_22_27_False_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_2003_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_2003_22_27_False_retraite.pdf  used on in
-put line 787.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[16 <./fig/TechHosp_2003_22_27_True_retraite.pdf> <./fig/TechHosp_2003_22_27_Fa
-lse_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/TechHosp_2003_22_27_False_retraite.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 4.
-<fig/grille_AdjTech_18.pdf, id=1765, 462.52798pt x 346.89601pt>
-File: fig/grille_AdjTech_18.pdf Graphic file (type pdf)
-<use fig/grille_AdjTech_18.pdf>
-Package pdftex.def Info: fig/grille_AdjTech_18.pdf  used on input line 792.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc4) [17
-
- <./fig/grille_AdjTech_18.pdf>]
-<fig/AdjTech_1975_22_18_True_retraite.pdf, id=1821, 1156.32pt x 433.62pt>
-File: fig/AdjTech_1975_22_18_True_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1975_22_18_True_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1975_22_18_True_retraite.pdf  used on inpu
-t line 838.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AdjTech_1975_22_18_False_retraite.pdf, id=1822, 1156.32pt x 433.62pt>
-File: fig/AdjTech_1975_22_18_False_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1975_22_18_False_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1975_22_18_False_retraite.pdf  used on inp
-ut line 867.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[18 <./fig/AdjTech_1975_22_18_True_retraite.pdf> <./fig/AdjTech_1975_22_18_Fals
-e_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AdjTech_1975_22_18_False_retraite.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->]
-<fig/AdjTech_1980_22_18_True_retraite.pdf, id=1947, 1156.32pt x 433.62pt>
-File: fig/AdjTech_1980_22_18_True_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1980_22_18_True_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1980_22_18_True_retraite.pdf  used on inpu
-t line 899.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AdjTech_1980_22_18_False_retraite.pdf, id=1948, 1156.32pt x 433.62pt>
-File: fig/AdjTech_1980_22_18_False_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1980_22_18_False_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1980_22_18_False_retraite.pdf  used on inp
-ut line 928.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[19 <./fig/AdjTech_1980_22_18_True_retraite.pdf> <./fig/AdjTech_1980_22_18_Fals
-e_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AdjTech_1980_22_18_False_retraite.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->]
-<fig/AdjTech_1990_22_18_True_retraite.pdf, id=2073, 1156.32pt x 433.62pt>
-File: fig/AdjTech_1990_22_18_True_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1990_22_18_True_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1990_22_18_True_retraite.pdf  used on inpu
-t line 960.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AdjTech_1990_22_18_False_retraite.pdf, id=2074, 1156.32pt x 433.62pt>
-File: fig/AdjTech_1990_22_18_False_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1990_22_18_False_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1990_22_18_False_retraite.pdf  used on inp
-ut line 989.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[20 <./fig/AdjTech_1990_22_18_True_retraite.pdf> <./fig/AdjTech_1990_22_18_Fals
-e_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AdjTech_1990_22_18_False_retraite.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->]
-<fig/AdjTech_2003_22_18_True_retraite.pdf, id=2199, 1156.32pt x 433.62pt>
-File: fig/AdjTech_2003_22_18_True_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_2003_22_18_True_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_2003_22_18_True_retraite.pdf  used on inpu
-t line 1021.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/AdjTech_2003_22_18_False_retraite.pdf, id=2200, 1156.32pt x 433.62pt>
-File: fig/AdjTech_2003_22_18_False_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_2003_22_18_False_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_2003_22_18_False_retraite.pdf  used on inp
-ut line 1050.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21 <./fig/AdjTech_2003_22_18_True_retraite.pdf> <./fig/AdjTech_2003_22_18_Fals
-e_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/AdjTech_2003_22_18_False_retraite.pdf): PD
-F inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 5.
-<fig/grille_Redacteur_28.pdf, id=2322, 462.52798pt x 346.89601pt>
-File: fig/grille_Redacteur_28.pdf Graphic file (type pdf)
-<use fig/grille_Redacteur_28.pdf>
-Package pdftex.def Info: fig/grille_Redacteur_28.pdf  used on input line 1055.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc5) [22
-
- <./fig/grille_Redacteur_28.pdf>]
-<fig/Redacteur_1975_22_28_True_retraite.pdf, id=2373, 1156.32pt x 433.62pt>
-File: fig/Redacteur_1975_22_28_True_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1975_22_28_True_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1975_22_28_True_retraite.pdf  used on in
-put line 1101.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Redacteur_1975_22_28_False_retraite.pdf, id=2374, 1156.32pt x 433.62pt>
-File: fig/Redacteur_1975_22_28_False_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1975_22_28_False_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1975_22_28_False_retraite.pdf  used on i
-nput line 1130.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23 <./fig/Redacteur_1975_22_28_True_retraite.pdf> <./fig/Redacteur_1975_22_28_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Redacteur_1975_22_28_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Redacteur_1980_22_28_True_retraite.pdf, id=2491, 1156.32pt x 433.62pt>
-File: fig/Redacteur_1980_22_28_True_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1980_22_28_True_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1980_22_28_True_retraite.pdf  used on in
-put line 1162.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Redacteur_1980_22_28_False_retraite.pdf, id=2492, 1156.32pt x 433.62pt>
-File: fig/Redacteur_1980_22_28_False_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1980_22_28_False_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1980_22_28_False_retraite.pdf  used on i
-nput line 1191.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24 <./fig/Redacteur_1980_22_28_True_retraite.pdf> <./fig/Redacteur_1980_22_28_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Redacteur_1980_22_28_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Redacteur_1990_22_28_True_retraite.pdf, id=2611, 1156.32pt x 433.62pt>
-File: fig/Redacteur_1990_22_28_True_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1990_22_28_True_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1990_22_28_True_retraite.pdf  used on in
-put line 1223.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Redacteur_1990_22_28_False_retraite.pdf, id=2612, 1156.32pt x 433.62pt>
-File: fig/Redacteur_1990_22_28_False_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1990_22_28_False_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1990_22_28_False_retraite.pdf  used on i
-nput line 1252.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[25 <./fig/Redacteur_1990_22_28_True_retraite.pdf> <./fig/Redacteur_1990_22_28_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Redacteur_1990_22_28_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Redacteur_2003_22_28_True_retraite.pdf, id=2729, 1156.32pt x 433.62pt>
-File: fig/Redacteur_2003_22_28_True_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_2003_22_28_True_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_2003_22_28_True_retraite.pdf  used on in
-put line 1284.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Redacteur_2003_22_28_False_retraite.pdf, id=2730, 1156.32pt x 433.62pt>
-File: fig/Redacteur_2003_22_28_False_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_2003_22_28_False_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_2003_22_28_False_retraite.pdf  used on i
-nput line 1313.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[26 <./fig/Redacteur_2003_22_28_True_retraite.pdf> <./fig/Redacteur_2003_22_28_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/Redacteur_2003_22_28_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 6.
-<fig/grille_SecretaireAdmin_27.pdf, id=2845, 462.52798pt x 346.89601pt>
-File: fig/grille_SecretaireAdmin_27.pdf Graphic file (type pdf)
-<use fig/grille_SecretaireAdmin_27.pdf>
-Package pdftex.def Info: fig/grille_SecretaireAdmin_27.pdf  used on input line 
-1318.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc6) [27
-
- <./fig/grille_SecretaireAdmin_27.pdf>]
-<fig/SecretaireAdmin_1975_22_27_True_retraite.pdf, id=2895, 1156.32pt x 433.62p
-t>
-File: fig/SecretaireAdmin_1975_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_1975_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1975_22_27_True_retraite.pdf  used
- on input line 1364.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/SecretaireAdmin_1975_22_27_False_retraite.pdf, id=2896, 1156.32pt x 433.62
-pt>
-File: fig/SecretaireAdmin_1975_22_27_False_retraite.pdf Graphic file (type pdf)
-
-<use fig/SecretaireAdmin_1975_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1975_22_27_False_retraite.pdf  use
-d on input line 1393.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28 <./fig/SecretaireAdmin_1975_22_27_True_retraite.pdf> <./fig/SecretaireAdmin
-_1975_22_27_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/SecretaireAdmin_1975_22_27_False_retraite.
-pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/SecretaireAdmin_1980_22_27_True_retraite.pdf, id=3015, 1156.32pt x 433.62p
-t>
-File: fig/SecretaireAdmin_1980_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_1980_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1980_22_27_True_retraite.pdf  used
- on input line 1425.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/SecretaireAdmin_1980_22_27_False_retraite.pdf, id=3016, 1156.32pt x 433.62
-pt>
-File: fig/SecretaireAdmin_1980_22_27_False_retraite.pdf Graphic file (type pdf)
-
-<use fig/SecretaireAdmin_1980_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1980_22_27_False_retraite.pdf  use
-d on input line 1454.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[29 <./fig/SecretaireAdmin_1980_22_27_True_retraite.pdf> <./fig/SecretaireAdmin
-_1980_22_27_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/SecretaireAdmin_1980_22_27_False_retraite.
-pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/SecretaireAdmin_1990_22_27_True_retraite.pdf, id=3135, 1156.32pt x 433.62p
-t>
-File: fig/SecretaireAdmin_1990_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_1990_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1990_22_27_True_retraite.pdf  used
- on input line 1486.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/SecretaireAdmin_1990_22_27_False_retraite.pdf, id=3136, 1156.32pt x 433.62
-pt>
-File: fig/SecretaireAdmin_1990_22_27_False_retraite.pdf Graphic file (type pdf)
-
-<use fig/SecretaireAdmin_1990_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1990_22_27_False_retraite.pdf  use
-d on input line 1515.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[30 <./fig/SecretaireAdmin_1990_22_27_True_retraite.pdf> <./fig/SecretaireAdmin
-_1990_22_27_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/SecretaireAdmin_1990_22_27_False_retraite.
-pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/SecretaireAdmin_2003_22_27_True_retraite.pdf, id=3256, 1156.32pt x 433.62p
-t>
-File: fig/SecretaireAdmin_2003_22_27_True_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_2003_22_27_True_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_2003_22_27_True_retraite.pdf  used
- on input line 1547.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/SecretaireAdmin_2003_22_27_False_retraite.pdf, id=3257, 1156.32pt x 433.62
-pt>
-File: fig/SecretaireAdmin_2003_22_27_False_retraite.pdf Graphic file (type pdf)
-
-<use fig/SecretaireAdmin_2003_22_27_False_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_2003_22_27_False_retraite.pdf  use
-d on input line 1576.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[31 <./fig/SecretaireAdmin_2003_22_27_True_retraite.pdf> <./fig/SecretaireAdmin
-_2003_22_27_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/SecretaireAdmin_2003_22_27_False_retraite.
-pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 7.
-<fig/grille_ATSEM_16.pdf, id=3373, 462.52798pt x 346.89601pt>
-File: fig/grille_ATSEM_16.pdf Graphic file (type pdf)
-<use fig/grille_ATSEM_16.pdf>
-Package pdftex.def Info: fig/grille_ATSEM_16.pdf  used on input line 1581.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc7) [32
-
- <./fig/grille_ATSEM_16.pdf>]
-<fig/ATSEM_1975_22_16_True_retraite.pdf, id=3428, 1156.32pt x 433.62pt>
-File: fig/ATSEM_1975_22_16_True_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1975_22_16_True_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1975_22_16_True_retraite.pdf  used on input 
-line 1627.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ATSEM_1975_22_16_False_retraite.pdf, id=3429, 1156.32pt x 433.62pt>
-File: fig/ATSEM_1975_22_16_False_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1975_22_16_False_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1975_22_16_False_retraite.pdf  used on input
- line 1656.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[33 <./fig/ATSEM_1975_22_16_True_retraite.pdf> <./fig/ATSEM_1975_22_16_False_re
-traite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ATSEM_1975_22_16_False_retraite.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ATSEM_1980_22_16_True_retraite.pdf, id=3550, 1156.32pt x 433.62pt>
-File: fig/ATSEM_1980_22_16_True_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1980_22_16_True_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1980_22_16_True_retraite.pdf  used on input 
-line 1688.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ATSEM_1980_22_16_False_retraite.pdf, id=3551, 1156.32pt x 433.62pt>
-File: fig/ATSEM_1980_22_16_False_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1980_22_16_False_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1980_22_16_False_retraite.pdf  used on input
- line 1717.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[34 <./fig/ATSEM_1980_22_16_True_retraite.pdf> <./fig/ATSEM_1980_22_16_False_re
-traite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ATSEM_1980_22_16_False_retraite.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ATSEM_1990_22_16_True_retraite.pdf, id=3672, 1156.32pt x 433.62pt>
-File: fig/ATSEM_1990_22_16_True_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1990_22_16_True_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1990_22_16_True_retraite.pdf  used on input 
-line 1749.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ATSEM_1990_22_16_False_retraite.pdf, id=3673, 1156.32pt x 433.62pt>
-File: fig/ATSEM_1990_22_16_False_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1990_22_16_False_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1990_22_16_False_retraite.pdf  used on input
- line 1778.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[35 <./fig/ATSEM_1990_22_16_True_retraite.pdf> <./fig/ATSEM_1990_22_16_False_re
-traite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ATSEM_1990_22_16_False_retraite.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ATSEM_2003_22_16_True_retraite.pdf, id=3793, 1156.32pt x 433.62pt>
-File: fig/ATSEM_2003_22_16_True_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_2003_22_16_True_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_2003_22_16_True_retraite.pdf  used on input 
-line 1810.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ATSEM_2003_22_16_False_retraite.pdf, id=3794, 1156.32pt x 433.62pt>
-File: fig/ATSEM_2003_22_16_False_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_2003_22_16_False_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_2003_22_16_False_retraite.pdf  used on input
- line 1839.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[36 <./fig/ATSEM_2003_22_16_True_retraite.pdf> <./fig/ATSEM_2003_22_16_False_re
-traite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ATSEM_2003_22_16_False_retraite.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 8.
-<fig/grille_ProfEcoles_8.pdf, id=3914, 462.52798pt x 346.89601pt>
-File: fig/grille_ProfEcoles_8.pdf Graphic file (type pdf)
-<use fig/grille_ProfEcoles_8.pdf>
-Package pdftex.def Info: fig/grille_ProfEcoles_8.pdf  used on input line 1844.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc8) [37
-
- <./fig/grille_ProfEcoles_8.pdf>]
-<fig/ProfEcoles_1975_22_8_True_retraite.pdf, id=3968, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_1975_22_8_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1975_22_8_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1975_22_8_True_retraite.pdf  used on in
-put line 1890.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfEcoles_1975_22_8_False_retraite.pdf, id=3969, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_1975_22_8_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1975_22_8_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1975_22_8_False_retraite.pdf  used on i
-nput line 1919.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[38 <./fig/ProfEcoles_1975_22_8_True_retraite.pdf> <./fig/ProfEcoles_1975_22_8_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfEcoles_1975_22_8_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfEcoles_1980_22_8_True_retraite.pdf, id=4088, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_1980_22_8_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1980_22_8_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1980_22_8_True_retraite.pdf  used on in
-put line 1951.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfEcoles_1980_22_8_False_retraite.pdf, id=4089, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_1980_22_8_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1980_22_8_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1980_22_8_False_retraite.pdf  used on i
-nput line 1980.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[39 <./fig/ProfEcoles_1980_22_8_True_retraite.pdf> <./fig/ProfEcoles_1980_22_8_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfEcoles_1980_22_8_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfEcoles_1990_22_8_True_retraite.pdf, id=4208, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_1990_22_8_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1990_22_8_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1990_22_8_True_retraite.pdf  used on in
-put line 2012.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfEcoles_1990_22_8_False_retraite.pdf, id=4209, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_1990_22_8_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1990_22_8_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1990_22_8_False_retraite.pdf  used on i
-nput line 2041.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[40 <./fig/ProfEcoles_1990_22_8_True_retraite.pdf> <./fig/ProfEcoles_1990_22_8_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfEcoles_1990_22_8_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfEcoles_2003_22_8_True_retraite.pdf, id=4328, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_2003_22_8_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_2003_22_8_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_2003_22_8_True_retraite.pdf  used on in
-put line 2073.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfEcoles_2003_22_8_False_retraite.pdf, id=4329, 1156.32pt x 433.62pt>
-File: fig/ProfEcoles_2003_22_8_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_2003_22_8_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_2003_22_8_False_retraite.pdf  used on i
-nput line 2102.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[41 <./fig/ProfEcoles_2003_22_8_True_retraite.pdf> <./fig/ProfEcoles_2003_22_8_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfEcoles_2003_22_8_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 9.
-<fig/grille_ProfCertifie_9.pdf, id=4446, 462.52798pt x 346.89601pt>
-File: fig/grille_ProfCertifie_9.pdf Graphic file (type pdf)
-<use fig/grille_ProfCertifie_9.pdf>
-Package pdftex.def Info: fig/grille_ProfCertifie_9.pdf  used on input line 2107
-.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc9) [42
-
- <./fig/grille_ProfCertifie_9.pdf>]
-<fig/ProfCertifie_1975_22_9_True_retraite.pdf, id=4500, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_1975_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1975_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1975_22_9_True_retraite.pdf  used on 
-input line 2153.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfCertifie_1975_22_9_False_retraite.pdf, id=4501, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_1975_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1975_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1975_22_9_False_retraite.pdf  used on
- input line 2182.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[43 <./fig/ProfCertifie_1975_22_9_True_retraite.pdf> <./fig/ProfCertifie_1975_2
-2_9_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfCertifie_1975_22_9_False_retraite.pdf)
-: PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfCertifie_1980_22_9_True_retraite.pdf, id=4620, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_1980_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1980_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1980_22_9_True_retraite.pdf  used on 
-input line 2214.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfCertifie_1980_22_9_False_retraite.pdf, id=4621, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_1980_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1980_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1980_22_9_False_retraite.pdf  used on
- input line 2243.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[44 <./fig/ProfCertifie_1980_22_9_True_retraite.pdf> <./fig/ProfCertifie_1980_2
-2_9_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfCertifie_1980_22_9_False_retraite.pdf)
-: PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfCertifie_1990_22_9_True_retraite.pdf, id=4741, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_1990_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1990_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1990_22_9_True_retraite.pdf  used on 
-input line 2275.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfCertifie_1990_22_9_False_retraite.pdf, id=4742, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_1990_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1990_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1990_22_9_False_retraite.pdf  used on
- input line 2304.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[45 <./fig/ProfCertifie_1990_22_9_True_retraite.pdf> <./fig/ProfCertifie_1990_2
-2_9_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfCertifie_1990_22_9_False_retraite.pdf)
-: PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfCertifie_2003_22_9_True_retraite.pdf, id=4860, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_2003_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_2003_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_2003_22_9_True_retraite.pdf  used on 
-input line 2336.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfCertifie_2003_22_9_False_retraite.pdf, id=4861, 1156.32pt x 433.62pt>
-File: fig/ProfCertifie_2003_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_2003_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_2003_22_9_False_retraite.pdf  used on
- input line 2365.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[46 <./fig/ProfCertifie_2003_22_9_True_retraite.pdf> <./fig/ProfCertifie_2003_2
-2_9_False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfCertifie_2003_22_9_False_retraite.pdf)
-: PDF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 10.
-<fig/grille_ProfAgrege_9.pdf, id=4978, 462.52798pt x 346.89601pt>
-File: fig/grille_ProfAgrege_9.pdf Graphic file (type pdf)
-<use fig/grille_ProfAgrege_9.pdf>
-Package pdftex.def Info: fig/grille_ProfAgrege_9.pdf  used on input line 2370.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc10) [47
-
- <./fig/grille_ProfAgrege_9.pdf>]
-<fig/ProfAgrege_1975_22_9_True_retraite.pdf, id=5033, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_1975_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1975_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1975_22_9_True_retraite.pdf  used on in
-put line 2416.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfAgrege_1975_22_9_False_retraite.pdf, id=5034, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_1975_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1975_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1975_22_9_False_retraite.pdf  used on i
-nput line 2445.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[48 <./fig/ProfAgrege_1975_22_9_True_retraite.pdf> <./fig/ProfAgrege_1975_22_9_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfAgrege_1975_22_9_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfAgrege_1980_22_9_True_retraite.pdf, id=5154, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_1980_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1980_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1980_22_9_True_retraite.pdf  used on in
-put line 2477.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfAgrege_1980_22_9_False_retraite.pdf, id=5155, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_1980_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1980_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1980_22_9_False_retraite.pdf  used on i
-nput line 2506.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[49 <./fig/ProfAgrege_1980_22_9_True_retraite.pdf> <./fig/ProfAgrege_1980_22_9_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfAgrege_1980_22_9_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfAgrege_1990_22_9_True_retraite.pdf, id=5274, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_1990_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1990_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1990_22_9_True_retraite.pdf  used on in
-put line 2538.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfAgrege_1990_22_9_False_retraite.pdf, id=5275, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_1990_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1990_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1990_22_9_False_retraite.pdf  used on i
-nput line 2567.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[50 <./fig/ProfAgrege_1990_22_9_True_retraite.pdf> <./fig/ProfAgrege_1990_22_9_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfAgrege_1990_22_9_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/ProfAgrege_2003_22_9_True_retraite.pdf, id=5395, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_2003_22_9_True_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_2003_22_9_True_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_2003_22_9_True_retraite.pdf  used on in
-put line 2599.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/ProfAgrege_2003_22_9_False_retraite.pdf, id=5396, 1156.32pt x 433.62pt>
-File: fig/ProfAgrege_2003_22_9_False_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_2003_22_9_False_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_2003_22_9_False_retraite.pdf  used on i
-nput line 2628.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51 <./fig/ProfAgrege_2003_22_9_True_retraite.pdf> <./fig/ProfAgrege_2003_22_9_
-False_retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/ProfAgrege_2003_22_9_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 11.
-<fig/grille_BIATSS_10.pdf, id=5513, 462.52798pt x 346.89601pt>
-File: fig/grille_BIATSS_10.pdf Graphic file (type pdf)
-<use fig/grille_BIATSS_10.pdf>
-Package pdftex.def Info: fig/grille_BIATSS_10.pdf  used on input line 2633.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc11) [52
-
- <./fig/grille_BIATSS_10.pdf>]
-<fig/BIATSS_1975_22_10_True_retraite.pdf, id=5568, 1156.32pt x 433.62pt>
-File: fig/BIATSS_1975_22_10_True_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1975_22_10_True_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1975_22_10_True_retraite.pdf  used on input
- line 2679.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/BIATSS_1975_22_10_False_retraite.pdf, id=5569, 1156.32pt x 433.62pt>
-File: fig/BIATSS_1975_22_10_False_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1975_22_10_False_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1975_22_10_False_retraite.pdf  used on inpu
-t line 2708.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[53 <./fig/BIATSS_1975_22_10_True_retraite.pdf> <./fig/BIATSS_1975_22_10_False_
-retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/BIATSS_1975_22_10_False_retraite.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->]
-<fig/BIATSS_1980_22_10_True_retraite.pdf, id=5694, 1156.32pt x 433.62pt>
-File: fig/BIATSS_1980_22_10_True_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1980_22_10_True_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1980_22_10_True_retraite.pdf  used on input
- line 2740.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/BIATSS_1980_22_10_False_retraite.pdf, id=5695, 1156.32pt x 433.62pt>
-File: fig/BIATSS_1980_22_10_False_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1980_22_10_False_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1980_22_10_False_retraite.pdf  used on inpu
-t line 2769.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[54 <./fig/BIATSS_1980_22_10_True_retraite.pdf> <./fig/BIATSS_1980_22_10_False_
-retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/BIATSS_1980_22_10_False_retraite.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->]
-<fig/BIATSS_1990_22_10_True_retraite.pdf, id=5820, 1156.32pt x 433.62pt>
-File: fig/BIATSS_1990_22_10_True_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1990_22_10_True_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1990_22_10_True_retraite.pdf  used on input
- line 2801.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/BIATSS_1990_22_10_False_retraite.pdf, id=5821, 1156.32pt x 433.62pt>
-File: fig/BIATSS_1990_22_10_False_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1990_22_10_False_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1990_22_10_False_retraite.pdf  used on inpu
-t line 2830.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[55 <./fig/BIATSS_1990_22_10_True_retraite.pdf> <./fig/BIATSS_1990_22_10_False_
-retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/BIATSS_1990_22_10_False_retraite.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->]
-<fig/BIATSS_2003_22_10_True_retraite.pdf, id=5946, 1156.32pt x 433.62pt>
-File: fig/BIATSS_2003_22_10_True_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_2003_22_10_True_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_2003_22_10_True_retraite.pdf  used on input
- line 2862.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/BIATSS_2003_22_10_False_retraite.pdf, id=5947, 1156.32pt x 433.62pt>
-File: fig/BIATSS_2003_22_10_False_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_2003_22_10_False_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_2003_22_10_False_retraite.pdf  used on inpu
-t line 2891.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[56 <./fig/BIATSS_2003_22_10_True_retraite.pdf> <./fig/BIATSS_2003_22_10_False_
-retraite.pdf
-
-pdfTeX warning: pdflatex (file ./fig/BIATSS_2003_22_10_False_retraite.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
->]
-Chapitre 12.
-<fig/grille_MCF_3.pdf, id=6070, 462.52798pt x 346.89601pt>
-File: fig/grille_MCF_3.pdf Graphic file (type pdf)
-<use fig/grille_MCF_3.pdf>
-Package pdftex.def Info: fig/grille_MCF_3.pdf  used on input line 2896.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc12) [57
-
- <./fig/grille_MCF_3.pdf>]
-<fig/MCF_1975_28_3_True_retraite.pdf, id=6128, 1156.32pt x 433.62pt>
-File: fig/MCF_1975_28_3_True_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1975_28_3_True_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1975_28_3_True_retraite.pdf  used on input lin
-e 2942.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/MCF_1975_28_3_False_retraite.pdf, id=6129, 1156.32pt x 433.62pt>
-File: fig/MCF_1975_28_3_False_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1975_28_3_False_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1975_28_3_False_retraite.pdf  used on input li
-ne 2971.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.51453pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[58 <./fig/MCF_1975_28_3_True_retraite.pdf> <./fig/MCF_1975_28_3_False_retraite
-.pdf
-
-pdfTeX warning: pdflatex (file ./fig/MCF_1975_28_3_False_retraite.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->]
-<fig/MCF_1980_28_3_True_retraite.pdf, id=6254, 1156.32pt x 433.62pt>
-File: fig/MCF_1980_28_3_True_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1980_28_3_True_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1980_28_3_True_retraite.pdf  used on input lin
-e 3003.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/MCF_1980_28_3_False_retraite.pdf, id=6255, 1156.32pt x 433.62pt>
-File: fig/MCF_1980_28_3_False_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1980_28_3_False_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1980_28_3_False_retraite.pdf  used on input li
-ne 3032.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.51453pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[59 <./fig/MCF_1980_28_3_True_retraite.pdf> <./fig/MCF_1980_28_3_False_retraite
-.pdf
-
-pdfTeX warning: pdflatex (file ./fig/MCF_1980_28_3_False_retraite.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->]
-<fig/MCF_1990_28_3_True_retraite.pdf, id=6380, 1156.32pt x 433.62pt>
-File: fig/MCF_1990_28_3_True_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1990_28_3_True_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1990_28_3_True_retraite.pdf  used on input lin
-e 3064.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/MCF_1990_28_3_False_retraite.pdf, id=6381, 1156.32pt x 433.62pt>
-File: fig/MCF_1990_28_3_False_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1990_28_3_False_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1990_28_3_False_retraite.pdf  used on input li
-ne 3093.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.51453pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[60 <./fig/MCF_1990_28_3_True_retraite.pdf> <./fig/MCF_1990_28_3_False_retraite
-.pdf
-
-pdfTeX warning: pdflatex (file ./fig/MCF_1990_28_3_False_retraite.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
->]
-Chapitre 13.
-<fig/grille_CR_3.pdf, id=6507, 462.52798pt x 346.89601pt>
-File: fig/grille_CR_3.pdf Graphic file (type pdf)
-<use fig/grille_CR_3.pdf>
-Package pdftex.def Info: fig/grille_CR_3.pdf  used on input line 3098.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc13) [61
-
- <./fig/grille_CR_3.pdf>]
-<fig/CR_1975_28_3_True_retraite.pdf, id=6564, 1156.32pt x 433.62pt>
-File: fig/CR_1975_28_3_True_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1975_28_3_True_retraite.pdf>
-Package pdftex.def Info: fig/CR_1975_28_3_True_retraite.pdf  used on input line
- 3144.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/CR_1975_28_3_False_retraite.pdf, id=6565, 1156.32pt x 433.62pt>
-File: fig/CR_1975_28_3_False_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1975_28_3_False_retraite.pdf>
-Package pdftex.def Info: fig/CR_1975_28_3_False_retraite.pdf  used on input lin
-e 3173.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[62 <./fig/CR_1975_28_3_True_retraite.pdf> <./fig/CR_1975_28_3_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/CR_1975_28_3_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-<fig/CR_1980_28_3_True_retraite.pdf, id=6688, 1156.32pt x 433.62pt>
-File: fig/CR_1980_28_3_True_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1980_28_3_True_retraite.pdf>
-Package pdftex.def Info: fig/CR_1980_28_3_True_retraite.pdf  used on input line
- 3205.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/CR_1980_28_3_False_retraite.pdf, id=6689, 1156.32pt x 433.62pt>
-File: fig/CR_1980_28_3_False_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1980_28_3_False_retraite.pdf>
-Package pdftex.def Info: fig/CR_1980_28_3_False_retraite.pdf  used on input lin
-e 3234.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[63 <./fig/CR_1980_28_3_True_retraite.pdf> <./fig/CR_1980_28_3_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/CR_1980_28_3_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-<fig/CR_1990_28_3_True_retraite.pdf, id=6813, 1156.32pt x 433.62pt>
-File: fig/CR_1990_28_3_True_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1990_28_3_True_retraite.pdf>
-Package pdftex.def Info: fig/CR_1990_28_3_True_retraite.pdf  used on input line
- 3266.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/CR_1990_28_3_False_retraite.pdf, id=6814, 1156.32pt x 433.62pt>
-File: fig/CR_1990_28_3_False_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1990_28_3_False_retraite.pdf>
-Package pdftex.def Info: fig/CR_1990_28_3_False_retraite.pdf  used on input lin
-e 3295.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[64 <./fig/CR_1990_28_3_True_retraite.pdf> <./fig/CR_1990_28_3_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/CR_1990_28_3_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-Chapitre 14.
-<fig/grille_PR_7.pdf, id=6937, 462.52798pt x 346.89601pt>
-File: fig/grille_PR_7.pdf Graphic file (type pdf)
-<use fig/grille_PR_7.pdf>
-Package pdftex.def Info: fig/grille_PR_7.pdf  used on input line 3300.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc14) [65
-
- <./fig/grille_PR_7.pdf>]
-<fig/PR_1975_28_7_True_retraite.pdf, id=6998, 1156.32pt x 433.62pt>
-File: fig/PR_1975_28_7_True_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1975_28_7_True_retraite.pdf>
-Package pdftex.def Info: fig/PR_1975_28_7_True_retraite.pdf  used on input line
- 3346.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/PR_1975_28_7_False_retraite.pdf, id=6999, 1156.32pt x 433.62pt>
-File: fig/PR_1975_28_7_False_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1975_28_7_False_retraite.pdf>
-Package pdftex.def Info: fig/PR_1975_28_7_False_retraite.pdf  used on input lin
-e 3375.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[66 <./fig/PR_1975_28_7_True_retraite.pdf> <./fig/PR_1975_28_7_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/PR_1975_28_7_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-<fig/PR_1980_28_7_True_retraite.pdf, id=7125, 1156.32pt x 433.62pt>
-File: fig/PR_1980_28_7_True_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1980_28_7_True_retraite.pdf>
-Package pdftex.def Info: fig/PR_1980_28_7_True_retraite.pdf  used on input line
- 3407.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/PR_1980_28_7_False_retraite.pdf, id=7126, 1156.32pt x 433.62pt>
-File: fig/PR_1980_28_7_False_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1980_28_7_False_retraite.pdf>
-Package pdftex.def Info: fig/PR_1980_28_7_False_retraite.pdf  used on input lin
-e 3436.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[67 <./fig/PR_1980_28_7_True_retraite.pdf> <./fig/PR_1980_28_7_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/PR_1980_28_7_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-<fig/PR_1990_28_7_True_retraite.pdf, id=7251, 1156.32pt x 433.62pt>
-File: fig/PR_1990_28_7_True_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1990_28_7_True_retraite.pdf>
-Package pdftex.def Info: fig/PR_1990_28_7_True_retraite.pdf  used on input line
- 3468.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/PR_1990_28_7_False_retraite.pdf, id=7252, 1156.32pt x 433.62pt>
-File: fig/PR_1990_28_7_False_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1990_28_7_False_retraite.pdf>
-Package pdftex.def Info: fig/PR_1990_28_7_False_retraite.pdf  used on input lin
-e 3497.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[68 <./fig/PR_1990_28_7_True_retraite.pdf> <./fig/PR_1990_28_7_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/PR_1990_28_7_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-Chapitre 15.
-<fig/grille_DR_7.pdf, id=7377, 462.52798pt x 346.89601pt>
-File: fig/grille_DR_7.pdf Graphic file (type pdf)
-<use fig/grille_DR_7.pdf>
-Package pdftex.def Info: fig/grille_DR_7.pdf  used on input line 3502.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc15) [69
-
- <./fig/grille_DR_7.pdf>]
-<fig/DR_1975_28_7_True_retraite.pdf, id=7434, 1156.32pt x 433.62pt>
-File: fig/DR_1975_28_7_True_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1975_28_7_True_retraite.pdf>
-Package pdftex.def Info: fig/DR_1975_28_7_True_retraite.pdf  used on input line
- 3548.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/DR_1975_28_7_False_retraite.pdf, id=7435, 1156.32pt x 433.62pt>
-File: fig/DR_1975_28_7_False_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1975_28_7_False_retraite.pdf>
-Package pdftex.def Info: fig/DR_1975_28_7_False_retraite.pdf  used on input lin
-e 3577.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[70 <./fig/DR_1975_28_7_True_retraite.pdf> <./fig/DR_1975_28_7_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/DR_1975_28_7_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-<fig/DR_1980_28_7_True_retraite.pdf, id=7557, 1156.32pt x 433.62pt>
-File: fig/DR_1980_28_7_True_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1980_28_7_True_retraite.pdf>
-Package pdftex.def Info: fig/DR_1980_28_7_True_retraite.pdf  used on input line
- 3609.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/DR_1980_28_7_False_retraite.pdf, id=7558, 1156.32pt x 433.62pt>
-File: fig/DR_1980_28_7_False_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1980_28_7_False_retraite.pdf>
-Package pdftex.def Info: fig/DR_1980_28_7_False_retraite.pdf  used on input lin
-e 3638.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[71 <./fig/DR_1980_28_7_True_retraite.pdf> <./fig/DR_1980_28_7_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/DR_1980_28_7_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-<fig/DR_1990_28_7_True_retraite.pdf, id=7679, 1156.32pt x 433.62pt>
-File: fig/DR_1990_28_7_True_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1990_28_7_True_retraite.pdf>
-Package pdftex.def Info: fig/DR_1990_28_7_True_retraite.pdf  used on input line
- 3670.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/DR_1990_28_7_False_retraite.pdf, id=7680, 1156.32pt x 433.62pt>
-File: fig/DR_1990_28_7_False_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1990_28_7_False_retraite.pdf>
-Package pdftex.def Info: fig/DR_1990_28_7_False_retraite.pdf  used on input lin
-e 3699.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[72 <./fig/DR_1990_28_7_True_retraite.pdf> <./fig/DR_1990_28_7_False_retraite.p
-df
-
-pdfTeX warning: pdflatex (file ./fig/DR_1990_28_7_False_retraite.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
-Chapitre 16.
-<fig/grille_Magistrat_52.pdf, id=7802, 462.52798pt x 346.89601pt>
-File: fig/grille_Magistrat_52.pdf Graphic file (type pdf)
-<use fig/grille_Magistrat_52.pdf>
-Package pdftex.def Info: fig/grille_Magistrat_52.pdf  used on input line 3704.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc16) [73
-
  <./fig/grille_Magistrat_52.pdf>]
-<fig/Magistrat_1975_22_52_True_retraite.pdf, id=7857, 1156.32pt x 433.62pt>
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3]
+Overfull \hbox (12.01976pt too wide) in paragraph at lines 171--195
+ [] 
+ []
+
+<fig/Magistrat_1975_22_52_True_retraite.pdf, id=96, 1156.32pt x 433.62pt>
 File: fig/Magistrat_1975_22_52_True_retraite.pdf Graphic file (type pdf)
 <use fig/Magistrat_1975_22_52_True_retraite.pdf>
 Package pdftex.def Info: fig/Magistrat_1975_22_52_True_retraite.pdf  used on in
-put line 3750.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Magistrat_1975_22_52_False_retraite.pdf, id=7858, 1156.32pt x 433.62pt>
+put line 197.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./fig/Magistrat_1975_22_52_True_retraite.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5]
+Overfull \hbox (16.0049pt too wide) in paragraph at lines 312--336
+ [] 
+ []
+
+<fig/Magistrat_1975_22_52_False_retraite.pdf, id=158, 1156.32pt x 433.62pt>
 File: fig/Magistrat_1975_22_52_False_retraite.pdf Graphic file (type pdf)
 <use fig/Magistrat_1975_22_52_False_retraite.pdf>
 Package pdftex.def Info: fig/Magistrat_1975_22_52_False_retraite.pdf  used on i
-nput line 3779.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
+nput line 338.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <./fig/Magistrat_1975_22_52_False_retraite.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2665,24 +1041,55 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[74 <./fig/Magistrat_1975_22_52_True_retraite.pdf> <./fig/Magistrat_1975_22_52_
-False_retraite.pdf
+[7]
+Overfull \hbox (12.01976pt too wide) in paragraph at lines 455--479
+ [] 
+ []
 
-pdfTeX warning: pdflatex (file ./fig/Magistrat_1975_22_52_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Magistrat_1980_22_52_True_retraite.pdf, id=7975, 1156.32pt x 433.62pt>
+<fig/Magistrat_1980_22_52_True_retraite.pdf, id=221, 1156.32pt x 433.62pt>
 File: fig/Magistrat_1980_22_52_True_retraite.pdf Graphic file (type pdf)
 <use fig/Magistrat_1980_22_52_True_retraite.pdf>
 Package pdftex.def Info: fig/Magistrat_1980_22_52_True_retraite.pdf  used on in
-put line 3811.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Magistrat_1980_22_52_False_retraite.pdf, id=7976, 1156.32pt x 433.62pt>
+put line 481.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <./fig/Magistrat_1980_22_52_True_retraite.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+Overfull \hbox (12.01976pt too wide) in paragraph at lines 596--620
+ [] 
+ []
+
+<fig/Magistrat_1980_22_52_False_retraite.pdf, id=283, 1156.32pt x 433.62pt>
 File: fig/Magistrat_1980_22_52_False_retraite.pdf Graphic file (type pdf)
 <use fig/Magistrat_1980_22_52_False_retraite.pdf>
 Package pdftex.def Info: fig/Magistrat_1980_22_52_False_retraite.pdf  used on i
-nput line 3840.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
+nput line 622.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <./fig/Magistrat_1980_22_52_False_retraite.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2690,24 +1097,55 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[75 <./fig/Magistrat_1980_22_52_True_retraite.pdf> <./fig/Magistrat_1980_22_52_
-False_retraite.pdf
+[11]
+Overfull \hbox (12.01976pt too wide) in paragraph at lines 739--763
+ [] 
+ []
 
-pdfTeX warning: pdflatex (file ./fig/Magistrat_1980_22_52_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Magistrat_1990_22_52_True_retraite.pdf, id=8093, 1156.32pt x 433.62pt>
+<fig/Magistrat_1990_22_52_True_retraite.pdf, id=345, 1156.32pt x 433.62pt>
 File: fig/Magistrat_1990_22_52_True_retraite.pdf Graphic file (type pdf)
 <use fig/Magistrat_1990_22_52_True_retraite.pdf>
 Package pdftex.def Info: fig/Magistrat_1990_22_52_True_retraite.pdf  used on in
-put line 3872.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Magistrat_1990_22_52_False_retraite.pdf, id=8094, 1156.32pt x 433.62pt>
+put line 765.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <./fig/Magistrat_1990_22_52_True_retraite.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+Overfull \hbox (16.0049pt too wide) in paragraph at lines 880--904
+ [] 
+ []
+
+<fig/Magistrat_1990_22_52_False_retraite.pdf, id=408, 1156.32pt x 433.62pt>
 File: fig/Magistrat_1990_22_52_False_retraite.pdf Graphic file (type pdf)
 <use fig/Magistrat_1990_22_52_False_retraite.pdf>
 Package pdftex.def Info: fig/Magistrat_1990_22_52_False_retraite.pdf  used on i
-nput line 3901.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
+nput line 906.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14 <./fig/Magistrat_1990_22_52_False_retraite.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2715,24 +1153,27 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[76 <./fig/Magistrat_1990_22_52_True_retraite.pdf> <./fig/Magistrat_1990_22_52_
-False_retraite.pdf
+[15]
+Overfull \hbox (12.01976pt too wide) in paragraph at lines 1023--1047
+ [] 
+ []
 
-pdfTeX warning: pdflatex (file ./fig/Magistrat_1990_22_52_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->]
-<fig/Magistrat_2003_22_52_True_retraite.pdf, id=8211, 1156.32pt x 433.62pt>
+<fig/Magistrat_2003_22_52_True_retraite.pdf, id=471, 1156.32pt x 433.62pt>
 File: fig/Magistrat_2003_22_52_True_retraite.pdf Graphic file (type pdf)
 <use fig/Magistrat_2003_22_52_True_retraite.pdf>
 Package pdftex.def Info: fig/Magistrat_2003_22_52_True_retraite.pdf  used on in
-put line 3933.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
-<fig/Magistrat_2003_22_52_False_retraite.pdf, id=8212, 1156.32pt x 433.62pt>
-File: fig/Magistrat_2003_22_52_False_retraite.pdf Graphic file (type pdf)
-<use fig/Magistrat_2003_22_52_False_retraite.pdf>
-Package pdftex.def Info: fig/Magistrat_2003_22_52_False_retraite.pdf  used on i
-nput line 3962.
-(pdftex.def)             Requested size: 236.44481pt x 88.66109pt.
+put line 1049.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16 <./fig/Magistrat_2003_22_52_True_retraite.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2740,12 +1181,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[77 <./fig/Magistrat_2003_22_52_True_retraite.pdf> <./fig/Magistrat_2003_22_52_
-False_retraite.pdf
+[17]
+Overfull \hbox (12.01976pt too wide) in paragraph at lines 1164--1188
+ [] 
+ []
 
-pdfTeX warning: pdflatex (file ./fig/Magistrat_2003_22_52_False_retraite.pdf): 
-PDF inclusion: multiple pdfs with page group included in a single page
->])
+<fig/Magistrat_2003_22_52_False_retraite.pdf, id=532, 1156.32pt x 433.62pt>
+File: fig/Magistrat_2003_22_52_False_retraite.pdf Graphic file (type pdf)
+<use fig/Magistrat_2003_22_52_False_retraite.pdf>
+Package pdftex.def Info: fig/Magistrat_2003_22_52_False_retraite.pdf  used on i
+nput line 1190.
+(pdftex.def)             Requested size: 788.14136pt x 295.55243pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18 <./fig/Magistrat_2003_22_52_False_retraite.pdf>])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the book.maf file.
@@ -2769,13 +1222,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 70.
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 4DF57DE0BEC52AC798587BF80254DB4A;1120.
+(rerunfilecheck)             Checksum: 073F328B98C2143C277532658BFEC0B4;74.
  ) 
 Here is how much of TeX's memory you used:
- 12158 strings out of 494780
- 193984 string characters out of 6176875
- 318594 words of memory out of 5000000
- 14727 multiletter control sequences out of 15000+600000
+ 11293 strings out of 494780
+ 161931 string characters out of 6176875
+ 343594 words of memory out of 5000000
+ 14209 multiletter control sequences out of 15000+600000
  19792 words of font info for 43 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  37i,11n,48p,843b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2794,10 +1247,10 @@ ar/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/scherrer/.texlive2017/tex
 mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/scherrer/.texlive2017
 /texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf
 -dist/fonts/type1/public/eurosym/feymr10.pfb>
-Output written on book.pdf (78 pages, 3335873 bytes).
+Output written on book.pdf (19 pages, 394464 bytes).
 PDF statistics:
- 8829 PDF objects out of 8907 (max. 8388607)
- 1338 compressed objects within 14 object streams
- 170 named destinations out of 1000 (max. 500000)
- 814 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 986 PDF objects out of 1000 (max. 8388607)
+ 201 compressed objects within 3 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
 

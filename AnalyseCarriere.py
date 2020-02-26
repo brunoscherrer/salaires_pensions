@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# coding:utf-8
+# -*- coding: utf-8 -*-
 
 #################################################################################
 ### Simulateur micro de carrière (salaire et retraite à points), Partie Analyse
@@ -10,7 +10,6 @@
 import sys
 from tools import *
 import matplotlib.pyplot as plt
-import prettytable as pt
 import SimulateurCarriere as sim
 import math
 
@@ -20,232 +19,127 @@ class AnalyseCarriere:
         
         self.c = c  
 
-        
-    def affiche_carriere(self, style="text", f=None): # flux: pour l'écriture dans un fichier (tex)
+
+    # affichage de tableaux
+
+    def affiche_pension_macron(self, tex=False, f=sys.stdout):
 
         c = self.c
         m = c.m   
 
-        if style == "tex":
+        eurcst="("+euroconst(c.m,tex)+")"
+        l = [ [ "Retraite en", "Âge", "Âge pivot", "Décote/Surcote", "Retraite "+eurcst, "Tx de remplacement (\\%)", "SMIC "+eurcst, "Retraite/SMIC", "Rev70/SMIC", "Rev75/SMIC", "Rev80/SMIC", "Rev85/SMIC", "Rev90/SMIC" ] ]
 
-            pass
-
-        else: # default style="text"
-
-            x = pt.PrettyTable()
-            
-            print(c.nom_metier)
-            x.field_names = [ "Annee","Age","Salaire ms","Pts","Ach.Pt","Vte.Pt" ]
-
-            for i in range(sim.Carriere.age_max - c.age_debut + 1):
-                an = c.annee_debut+i
-                x.add_row( [ "%d"%an, "%d ans"%(c.age_debut+i),"%.2f"%(c.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ c.m.annee_ref - m.debut]),"%.2f"%(c.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),"%.2f"%(m.vente_pt[ an - m.debut]) ] )
-
-            print(x)
-            
-            
-    def affiche_pension_macron(self, style="text", f=None):
-
-        c = self.c
-        m = c.m   
-        
-        if style == "tex":
-
-            #f.write("\\newpage \n\n")
-            #f.write(dec("\\paragraph{Différents départs à la retraite (pension, taux de remplacement), et ratios Revenu/SMIC pendant la retraite (à 70, 75, 80, 85, 90 ans)} ~\\\\ \n\n"))
-            f.write("{ \\scriptsize \\begin{center} \\begin{tabular}{|c|c||c|c||c|c||c||c|c|c|c|c|c|} \n")
-            f.write("\\hline \n")
-            f.write(dec("Retraite en & Âge & Âge Pivot &  décote/surcote & Retraite(\\euro{}cst) & Taux remplacement (\\%) & SMIC(\\euro{}cst) & Retraite/SMIC & Rev70/SMIC & Rev75/SMIC & Rev80/SMIC & Rev85/SMIC & Rev90/SMIC \\\\ \n"))
-            f.write("\\hline \\hline \n")
-
-            i=0
-            for (a,d,p,t) in c.pension_macron:
-                an = c.annee_debut+a-c.age_debut
-                ap = int(m.age_pivot[ an - m.debut])
-                
-                l = [ str(an),
-                      str(a),
-                      "%d ans %d mois"%(ap, round((m.age_pivot[ an - m.debut]-ap)*12)),
-                      "%.2f"%(d*100)+"\\%",
-                      #"%.2f"%(p/12),
-                      "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]),
-                      "%.2f"%(t*100),
-                      "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
-                      seuil(p/m.smic[ an - m.debut ], 1.0)       
-                ]
-                for j in range(sim.Carriere.age_mort+1 - a):
-                    if a+j in [70,75,80,85,90]:
-                        an = c.annee_debut+a-c.age_debut + j
-                        p = c.revenus_retraite_macron[i][j]
-                        l.append( seuil(p/m.smic[ an - m.debut ], 1.0) )
-                
-                f.write(tex_row(l))
-                i=i+1
-                        
-                f.write("\\hline \n")
-            f.write("\\end{tabular} \\end{center} } \n\n")
-
-            fic = "fig/%s_%d_%d_%d_%s_retraite.pdf"%(c.id_metier, c.annee_debut-c.age_debut, c.age_debut, int(c.part_prime*100), str(c.m.trucage))
-            print(fic)
-            fig = plt.figure(figsize=(16,6),dpi=72)
-            ax = fig.add_subplot(121)
-            an=AnalyseCarriere(c)
-            an.plot_evolution_carriere_corr(ax, c.m.prix, c.annee_debut, [c.annee_debut], "Euros constants (2019)", 12, 1)
-            ax = fig.add_subplot(122)
-            an.plot_evolution_carriere_corr(ax, c.m.smic, c.annee_debut, [c.annee_debut], "Ratio Revenu/SMIC", 1,1)
-            plt.savefig("./tex/"+fic)
-
-            f.write("\n \\begin{center}\\includegraphics[width=0.3\\textwidth]{%s}\\end{center} \n\n"%(fic))
-            plt.close('all')
-            
-#            f.write("\\newpage {\\tiny \n\n")
-#            f.write(dec("\\begin{multicols}{3} \n"))
-#            i=0
-#            for (a,_,_,_) in c.pension_macron:
-#                an = c.annee_debut+a-c.age_debut
-#                f.write(dec("\\vbox{ \\paragraph{Hypothèse d'un départ à %d ans (en %d)} ~\\\\ \n\n"%(a, an)))
-#                f.write("{\\small \\centering \\begin{tabular}{|*{6}{c|}} \n")
-#                f.write("\\hline \n")
-#                f.write(dec("Année & Age & Revenu(\euro{}cst) & SMIC(\euro{}cst) &Rev/SMIC \\\\ \n"))
-#                f.write("\\hline \n")
-#                for j in range(carriere.age_mort+1 - a):
-#                    an = c.annee_debut+a-c.age_debut + j
-#                    p = c.revenus_retraite_macron[i][j]
-#                    l = [ str(an),
-#                          str(a+j),
-#                          #"%.2f"%(p/12),
-#                          "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]),
-#                          "%.2f"%(m.smic[ an - m.debut ]/12/m.corr_prix_annee_ref[ an - m.debut]),
-#                          "{\\bf %.2f}"%(p/m.smic[ an - m.debut ]) ]
-#                    f.write(tex_row(l))
-#                f.write("\\hline \n")
-#                f.write("\\end{tabular}}} \n\n")
-#                i=i+1
-#            f.write(dec("\\end{multicols} }"))
-#
-#            f.write("\\newpage \n\n")
-            
-            
-        else: # default style="text"
-        
-            x = pt.PrettyTable()
-            print("Retraite Macron (Synthèse départs)")
-            x.field_names = ["Année", "Age", "AgePivot", "+/-cote", "Brut ms", "Brut ms EC", "Tx rempl.", "%/SMIC" ]
-            for (a,d,p,t) in c.pension_macron:
-                an = c.annee_debut+a-c.age_debut
-                ap = int(m.age_pivot[ an - m.debut])
-                x.add_row( [ an, a, "%d ans %d mois"%(ap, round((m.age_pivot[ an - m.debut]-ap)*12)), "%.2f%%"%(d*100), "%.2f"%(p/12), "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]), "%.2f"%(t*100), "%.2f"%(p/m.smic[ an - m.debut ]) ])
-            print(x)
-
-            print("Retraite Macron (détaillée selon départ)")
-            i=0
-            for (a,_,_,_) in c.pension_macron:
-                an = c.annee_debut+a-c.age_debut
-                print("Départ à %d ans (en %d)"%(a, an))
-                x = pt.PrettyTable()
-                x.field_names = ["Année", "Age", "Brut ms", "Brut ms EC", "%/SMIC" ]
-                for j in range(carriere.age_mort+1 - a):
-                    an = c.annee_debut+a-c.age_debut + j
+        i=0
+        for (a,d,p,t) in c.pension_macron:
+            an = c.annee_debut+a-c.age_debut
+            ap = int(m.age_pivot[ an - m.debut])
+            x=[ str(an),
+                str(a),
+                "%d ans %d mois"%(ap, round((m.age_pivot[ an - m.debut]-ap)*12)),
+                "%.2f"%(d*100)+"\\%",
+                "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]),
+                "%.2f"%(t*100),
+                "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
+                seuil_tex(p/m.smic[ an - m.debut ], 1.0)       
+            ]
+            for j in range(sim.Carriere.age_mort+1 - a):
+                if a+j in [70,75,80,85,90]:
+                    an = c.annee_debut + a - c.age_debut + j
                     p = c.revenus_retraite_macron[i][j]
-                    x.add_row( [ an, a+j, "%.2f"%(p/12), "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]), "%.2f"%(p/m.smic[ an - m.debut ]) ] ) 
-                #####
-                print(x)
-                i=i+1
-            
+                    x.append( seuil_tex(p/m.smic[ an - m.debut ], 1.0) )
+            l.append(x)
+            i=i+1
 
-    def affiche_carriere(self, style="text", f=sys.stdout):
+        print_table(l, f, tex, "{|c|c||c|c||c|c||c||c|c|c|c|c|c|}",[7,8,9,10,11,12])
+                        
+
+    def affiche_carriere(self, tex=False, f=sys.stdout):
 
         if self.c.public:
-            self.affiche_carriere_public(style, f)
+            self.affiche_carriere_public(tex, f)
         else:
-            self.affiche_carriere_prive(style, f)
+            self.affiche_carriere_prive(tex, f)
 
 
-    def affiche_carriere_public(self, style="text", f=None):
+    def affiche_carriere_public(self, tex, f=sys.stdout):
 
         c = self.c
         
-        if style == "tex":
+        #f.write(dec("\\paragraph{Synthèse de la carrière} \n\n"))
+        #f.write("\\newpage")
+        #f.write(dec("\\begin{table}[htb]\\centering\\caption{Synthèse de la carrière} \n"))
 
-            #f.write(dec("\\paragraph{Synthèse de la carrière} \n\n"))
-            #f.write("\\newpage")
-            #f.write(dec("\\begin{table}[htb]\\centering\\caption{Synthèse de la carrière} \n"))
-            f.write("{\\scriptsize \\begin{center} \\begin{tabular}{|c|c||c|c|c|c|c|c||c|c||c|c|c||} \n")
-            f.write("\\hline \n")
-            f.write(dec("Année & Âge & Ind Maj & Pt Ind(\\euro{}cst) &  Hors-Primes(\\euro{}cst) & Tx Primes & GIPA(\\euro{}cst) & Brut(\\euro{}cst) & SMIC(\\euro{}cst) & Rev/SMIC & Cumul Pts & Achat Pt(\\euro{}cst) & Vente Pt(\\euro{}cst)  \\\\ \n"))
-            f.write("\\hline \\hline\n")
-
-            for i in range(carriere.age_max - c.age_debut + 1):
-                an = c.annee_debut+i
-                m = c.m
-                sal_cst = c.sal[i] / m.corr_prix_annee_ref[ an - m.debut]  
-
-                l = [ str(an),
-                      str(c.age_debut+i),
-                      "%.1f"%c.indm[i],
-                      #"%.2f"%m.indfp[ an - m.debut ],
-                      "%.2f"%(m.indfp[ an - m.debut ]/12/m.corr_prix_annee_ref[ an - m.debut]),
-                      #"%.2f"%c.sal_hp[i],
-                      "%.2f"%(c.sal_hp[i]/12/m.corr_prix_annee_ref[ an - m.debut]),
-                      "%.2f"%(c.prime[i]*100),
-                      "%.2f"%(c.gipa[i]/12/m.corr_prix_annee_ref[ an - m.debut]),
-                      #"%.2f"%c.sal[i],
-                      #"%.2f"%sal_cst,
-                      "%.2f"%(sal_cst/12),
-                      "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
-                      "{\\bf %.2f}"%(c.sal[i] / m.smic[ an - m.debut ]),
-                      "%.2f"%c.nb_pts[i],
-                      "%.2f"%(m.achat_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut]),
-                      "%.2f"%(m.vente_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut])
-                      #"%.2f"%m.prix[ an - m.debut ]
-                ]
-                f.write(tex_row(l))
-                f.write("\\hline \n")
-
-            f.write("\\end{tabular} \\end{center} } \n\n")
-            #f.write("\\end{table}")
-            
-        else: # default style="text"
+        eurcst="("+euroconst(c.m,tex)+")"
+        l = [ [ "Année","Âge","Ind Maj","Pt Ind"+eurcst," Hors-Primes"+eurcst,"Tx Primes","GIPA"+eurcst,"Brut"+eurcst,"SMIC"+eurcst,"Rev/SMIC","Cumul Pts","Achat Pt"+eurcst,"Service Pt"+eurcst ] ]
         
-            print(c.nom_metier," - an=annuel, ms=mensuel, HP=Hors Prime, EC=euros constants",c.m.annee_ref)
+        #f.write("{\\scriptsize \\begin{center} \\begin{tabular}{|c|c||c|c|c|c|c|c||c|c||c|c|c|} \n")
+        #f.write("\\hline \n")
+        #f.write(dec("Année & Âge & Ind Maj & Pt Ind(\\euro{}cst) &  Hors-Primes(\\euro{}cst) & Tx Primes & GIPA(\\euro{}cst) & Brut(\\euro{}cst) & SMIC(\\euro{}cst) & Rev/SMIC & Cumul Pts & Achat Pt(\\euro{}cst) & Vente Pt(\\euro{}cst)  \\\\ \n"))
+        #f.write("\\hline \\hline\n")
 
-            x = pt.PrettyTable()
+        for i in range(c.age_max - c.age_debut + 1):
 
-            x.field_names = ["Année", "Age", "Ind. Maj", "Val Ind an", "VInd ms", "BrutHP an", "BrutHP ms", "TxPrime", "GIPA ms", "Brut an", "Brut an EC", "Brut ms EC", "%/SMIC", "Tot Pts", "AchPt", "VtePt","Prix" ]
+            an = c.annee_debut+i
+            m = c.m
+            sal_cst = c.sal[i] / m.corr_prix_annee_ref[ an - m.debut]  
 
+            l.append([ str(an),
+                       str(c.age_debut+i),
+                       "%.1f"%c.indm[i],
+                       "%.2f"%(m.indfp[ an - m.debut ]/12/m.corr_prix_annee_ref[ an - m.debut]),
+                       "%.2f"%(c.sal_hp[i]/12/m.corr_prix_annee_ref[ an - m.debut]),
+                       "%.2f"%(c.prime[i]*100),
+                       "%.2f"%(c.gipa[i]/12/m.corr_prix_annee_ref[ an - m.debut]),
+                       "%.2f"%(sal_cst/12),
+                       "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
+                       "%.2f"%(c.sal[i] / m.smic[ an - m.debut ]),
+                       "%.2f"%c.nb_pts[i],
+                       "%.2f"%(m.achat_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut]),
+                       "%.2f"%(m.vente_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut])
+            ])
+
+        print_table(l, f, tex, "{|c|c||c|c|c|c|c|c||c|c||c|c|c||}",[9])
+        
+
+    def affiche_carriere_prive(self, tex=False, f=sys.stdout):
+
+        c = self.c
+        m = c.m   
+
+        l=[]
             
-            for i in range(sim.Carriere.age_max - c.age_debut + 1):
-                an = c.annee_debut+i
-                m = c.m
-                sal_cst = c.sal[i] / m.corr_prix_annee_ref[ an - m.debut]  #m.prix[ an - m.debut ]*m.prix[ ANNEE_REF - m.debut]
+        print(c.nom_metier)
+        l.append([ "Annee","Age","Salaire ms","Pts","Ach.Pt","Vte.Pt" ])
 
-                x.add_row( [ an,
-                             c.age_debut+i,
-                             "%.1f"%c.indm[i],
-                             "%.2f"%m.indfp[ an - m.debut ],
-                             "%.2f"%(m.indfp[ an - m.debut ]/12),
-                             "%.2f"%c.sal_hp[i],
-                             "%.2f"%(c.sal_hp[i]/12),
-                             "%.2f"%(c.prime[i]*100),
-                             "%.2f"%(c.gipa[i]/12),
-                             "%.2f"%c.sal[i],
-                             "%.2f"%sal_cst,
-                             "%.2f"%(sal_cst/12),
-                             "%.2f"%(c.sal[i] / m.smic[ an - m.debut ]),
-                             "%.2f"%c.nb_pts[i],
-                             "%.2f"%m.achat_pt[ an - m.debut],
-                             "%.2f"%m.vente_pt[ an - m.debut],
-                             "%.2f"%m.prix[ an - m.debut ]
-                ] )
+        for i in range(1, sim.Carriere.age_max - c.age_debut + 1):
+            an = c.annee_debut+i
+            l.append([ "%d"%an, "%d ans"%(c.age_debut+i),"%.2f"%(c.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ c.m.annee_ref - m.debut]),"%.2f"%(c.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),"%.2f"%(m.vente_pt[ an - m.debut]) ])
 
-            print(x)
+        print_table(l, f, tex)
+
+
+    # affichage de graphiques
+    
+        
+    def affiche_grille(self, tex=False, f=sys.stdout):
+
+        c=self.c
+        
+        if not c.public:
+            raise Exception("La fonction affiche_grille_tex() ne doit pas être appelée pour une carrière privée!")
+
+        l = [ ["Indice majoré","Durée (années)"] ]
+        g = sim.CarrierePublic.grilles[c.n_metier[0]][1]
+        for i,d in g:
+            if d!=100:
+                l.append([ "%d"%i, "%.2f"%d ])
+            else:
+                l.append([ "%d"%i, "" ])
             
+        print_table(l,f,tex,"{|c|c|}")
 
-    def affiche_carriere_prive(self,style="text",f=sys.stdout):
-
-        print("Warning: affiche_carriere_prive pas implémenté!")
-        pass
-
+        
 
     def plot_grille(self):
 
@@ -275,24 +169,6 @@ class AnalyseCarriere:
         plt.title(dec("Grille indiciaire ("+c.nom_metier)+")",fontsize=11)
         
 
-    def affiche_grille_tex(self,f):
-
-        c=self.c
-        
-        if not c.public:
-            raise Exception("La fonction affiche_grille_tex() ne doit pas être appelée pour une carrière privée!")
-        
-        f.write("\\begin{tabular}{|c|c|} \n")
-        f.write(dec("\\hline \n Indice majoré & Durée (années) \\\\ \\hline \\hline"))
-        g = sim.CarrierePublic.grilles[c.n_metier[0]][1]
-        for i,d in g:
-            if d!=100:
-                f.write("%d & %.2f "%(i,d))
-            else:
-                f.write("%d & "%(i))
-            f.write("\\\\ \\hline")
-        f.write("\\end{tabular} \n\n")
-
         
     def plot_grille_prime(self):
 
@@ -321,7 +197,6 @@ class AnalyseCarriere:
         # plot_retraite: 0:rien, 1:retraite macron, 2:retraite actuelle
 
         plt.plot( range( c.annee_debut, c.annee_debut + sim.Carriere.age_max+1 - c.age_debut)  ,  [ c.sal[i] / div / corr[c.annee_debut + i - m.debut] for i in range(len(c.sal)) ], color=couleur, label=label  )
-
         if plot_retraite==1:
             for i in range(0,len(c.pension_macron),2):
                 (age,_,pens,t) = c.pension_macron[i]
@@ -341,10 +216,11 @@ class AnalyseCarriere:
                 plt.text( p1[0]+1,p1[1]+1, dec( "%d ans, %.2f%%"%(age,t*100)), transform=None, rotation=rotn, fontsize=8)
 
     @classmethod
-    def plot_evolution_carriere_corr(cls, ax, corr, focus, carrieres, a2, labely, div, plot_retraite=0, posproj=0.95):
-        
-        m=carrieres[0].m
-        annee0 = carrieres[0].annee_debut
+    def plot_evolution_carriere_corr(cls, ax, corr, focus, carrieres, a2, labely, div, plot_retraite=0):
+
+        c = carrieres[0]
+        m = c.m
+        annee0 = c.annee_debut
 
         # Courbes du SMIC et du SMPT
         rg = range( annee0, a2 )
@@ -378,6 +254,8 @@ class AnalyseModele():
 
         self.m = m
         
+
+    # affichage de graphiques
     
     def plot_modele(self, f=sys.stdout, tit="", r=[]):
 
