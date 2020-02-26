@@ -26,20 +26,21 @@ def genere_anim( carrieres,  plot_retraite=0, filename="", dir="./", ):
         c=carrieres[i]
         m=c.m
 
-        print(c.annee_debut)
-        
+        titre=dec(c.nom_metier+" débutant en %d"%c.annee_debut)
+        print(titre)
+
         fig = plt.figure( figsize=(7, 5) )
         plt.xlim( (a1, a2) )
         ax = fig.add_subplot(111)
-                
-        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, i, carrieres, a2, "Revenu/SMIC", 1, plot_retraite)
+                dec(carrieres[focus].nom_metier+" débutant en %d"%carrieres[focus].annee_debut)
+        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, i, carrieres, a2, "Revenu/SMIC", titre, 1, plot_retraite)
         if filename!="":
             plt.savefig(tmp_dir+"ratio_"+filename+"_%d.png"%c.annee_debut)
                 
         fig = plt.figure( figsize=(7, 5) )
         plt.xlim( (a1, a2) )
         ax = fig.add_subplot(111)
-        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.corr_prix_annee_ref, i, carrieres, a2, "Revenu \texteuro"+str(c.m.annee_ref), 12, plot_retraite)
+        AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.corr_prix_annee_ref, i, carrieres, a2, "Revenu \texteuro"+str(c.m.annee_ref), titre, 12, plot_retraite)
         if filename!="":
             plt.savefig(tmp_dir+"salaire_"+filename+"_%d.png"%c.annee_debut)
                     
@@ -151,17 +152,19 @@ def simu3():
     c = CarrierePublic(m1, 22, 2020, id_metier, prime)
     AnalyseCarriere(c).plot_grille_prime()
     plt.savefig(dir+"grille.png")
+
+    titre=dec(c.nom_metier+" débutant en %d"%c.annee_debut)
     
-    fig=plt.figure()
+    fig = plt.figure()
     plt.xlim( (2020,2070) )
     ax = fig.add_subplot(111)
-    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.prix, 0, [c], "Revenu \texteuro "+str(c.m.annee_ref), 12)
+    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.prix, 0, [c], "Revenu \texteuro "+str(c.m.annee_ref), titre, 12)
     plt.savefig(dir+"salaireEC.png")
     
     fig=plt.figure()
     plt.xlim( (2020,2070) )
     ax = fig.add_subplot(111)
-    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, 0, [c], "Revenu/SMIC", 1)
+    AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, 0, [c], "Revenu/SMIC", titre, 1)
     plt.savefig(dir+"salaireRel.png")
     
     # animations

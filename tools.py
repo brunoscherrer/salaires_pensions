@@ -51,7 +51,7 @@ def print_table(l, f=sys.stdout, tex=False, texparams="", colemph=[]): # fonctio
 
         f.write("\\begin{tabular}[htb]"+texparams+" \n")
         f.write("\\hline \n")
-        f.write(tex_row(l[0]))
+        f.write(tex_row(l[0])) #,range(len(l[0]))))
         f.write("\\hline \hline \n")
 
         for i in range(1,len(l)):

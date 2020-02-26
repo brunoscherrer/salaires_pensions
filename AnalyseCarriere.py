@@ -28,7 +28,7 @@ class AnalyseCarriere:
         m = c.m   
 
         eurcst="("+euroconst(c.m,tex)+")"
-        l = [ [ "Retraite en", "Âge", "Âge pivot", "Décote/Surcote", "Retraite "+eurcst, "Tx de remplacement (\\%)", "SMIC "+eurcst, "Retraite/SMIC", "Rev70/SMIC", "Rev75/SMIC", "Rev80/SMIC", "Rev85/SMIC", "Rev90/SMIC" ] ]
+        l = [ [ "Retraite en", "Âge", "Âge pivot", "Décote/Surcote", "Retraite "+eurcst, "Tx Rempl(\\%)", "SMIC "+eurcst, "Retraite/SMIC", "Rev70/SMIC", "Rev75/SMIC", "Rev80/SMIC", "Rev85/SMIC", "Rev90/SMIC" ] ]
 
         i=0
         for (a,d,p,t) in c.pension_macron:
@@ -66,18 +66,9 @@ class AnalyseCarriere:
 
         c = self.c
         
-        #f.write(dec("\\paragraph{Synthèse de la carrière} \n\n"))
-        #f.write("\\newpage")
-        #f.write(dec("\\begin{table}[htb]\\centering\\caption{Synthèse de la carrière} \n"))
-
         eurcst="("+euroconst(c.m,tex)+")"
-        l = [ [ "Année","Âge","Ind Maj","Pt Ind"+eurcst," Hors-Primes"+eurcst,"Tx Primes","GIPA"+eurcst,"Brut"+eurcst,"SMIC"+eurcst,"Rev/SMIC","Cumul Pts","Achat Pt"+eurcst,"Service Pt"+eurcst ] ]
+        l = [ [ "Année","Âge","Ind Maj","Pt Ind"+eurcst," Hors-Primes"+eurcst,"Tx Primes","GIPA"+eurcst,"Brut"+eurcst,"SMIC"+eurcst,"Rev/SMIC","Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ] ]
         
-        #f.write("{\\scriptsize \\begin{center} \\begin{tabular}{|c|c||c|c|c|c|c|c||c|c||c|c|c|} \n")
-        #f.write("\\hline \n")
-        #f.write(dec("Année & Âge & Ind Maj & Pt Ind(\\euro{}cst) &  Hors-Primes(\\euro{}cst) & Tx Primes & GIPA(\\euro{}cst) & Brut(\\euro{}cst) & SMIC(\\euro{}cst) & Rev/SMIC & Cumul Pts & Achat Pt(\\euro{}cst) & Vente Pt(\\euro{}cst)  \\\\ \n"))
-        #f.write("\\hline \\hline\n")
-
         for i in range(c.age_max - c.age_debut + 1):
 
             an = c.annee_debut+i
@@ -99,7 +90,7 @@ class AnalyseCarriere:
                        "%.2f"%(m.vente_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut])
             ])
 
-        print_table(l, f, tex, "{|c|c||c|c|c|c|c|c||c|c||c|c|c||}",[9])
+        print_table(l, f, tex, "{|c|c||c|c|c|c|c|c||c|c||c|c|c|}",[9])
         
 
     def affiche_carriere_prive(self, tex=False, f=sys.stdout):
@@ -109,14 +100,14 @@ class AnalyseCarriere:
 
         l=[]
             
-        print(c.nom_metier)
-        l.append([ "Annee","Age","Salaire ms","Pts","Ach.Pt","Vte.Pt" ])
+        eurcst="("+euroconst(c.m,tex)+")"
+        l.append([ "Année","Âge","Revenu "+eurcst,"Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ])
 
         for i in range(1, sim.Carriere.age_max - c.age_debut + 1):
             an = c.annee_debut+i
             l.append([ "%d"%an, "%d ans"%(c.age_debut+i),"%.2f"%(c.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ c.m.annee_ref - m.debut]),"%.2f"%(c.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),"%.2f"%(m.vente_pt[ an - m.debut]) ])
 
-        print_table(l, f, tex)
+        print_table(l, f, tex, "{|c|c|c||c|c|c|}")
 
 
     # affichage de graphiques
@@ -198,7 +189,7 @@ class AnalyseCarriere:
 
         plt.plot( range( c.annee_debut, c.annee_debut + sim.Carriere.age_max+1 - c.age_debut)  ,  [ c.sal[i] / div / corr[c.annee_debut + i - m.debut] for i in range(len(c.sal)) ], color=couleur, label=label  )
         if plot_retraite==1:
-            for i in range(0,len(c.pension_macron),2):
+            for i in range(0,len(c.pension_macron)):
                 (age,_,pens,t) = c.pension_macron[i]
                 lx = [ c.annee_debut + a - c.age_debut   for a in range(age, sim.Carriere.age_mort+1) ]  # années de retraite
                 ly = [ c.revenus_retraite_macron[i][j] / div / corr[ lx[j] - m.debut ]   for j in range(sim.Carriere.age_mort+1 - age) ]  # revenus de retraite
@@ -216,7 +207,7 @@ class AnalyseCarriere:
                 plt.text( p1[0]+1,p1[1]+1, dec( "%d ans, %.2f%%"%(age,t*100)), transform=None, rotation=rotn, fontsize=8)
 
     @classmethod
-    def plot_evolution_carriere_corr(cls, ax, corr, focus, carrieres, a2, labely, div, plot_retraite=0):
+    def plot_evolution_carriere_corr(cls, ax, corr, focus, carrieres, a2, labely, titre, div, plot_retraite=0):
 
         c = carrieres[0]
         m = c.m
@@ -241,8 +232,8 @@ class AnalyseCarriere:
             plt.text(m.annee_ref-2, y, dec("Données réelles"), ha='right', va='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5), fontsize=8)
         
         plt.axvline(m.annee_ref, color="grey", linestyle="dashed")
-        plt.title( dec(carrieres[focus].nom_metier+" débutant en %d"%carrieres[focus].annee_debut) )
-        
+        plt.title(titre)
+            
         plt.ylabel(labely)
         plt.legend(loc="upper right")
 
@@ -274,11 +265,11 @@ class AnalyseModele():
     @classmethod
     def plot_modeles(cls,lm,r):
 
-        for i in range(6):
-            label = ["Prix (Inflation intégrée)","SMIC annuel","SMPT annuel","Valeur du point d'indice de la Fonction Publique","Valeur d'achat du point Macron","Valeur de vente du point Macron"][i]
-            plt.subplot(3,2,i+1)
+        for i in range(7):
+            label = ["Prix (Inflation intégrée)","SMIC annuel","SMPT annuel","Valeur du point d'indice de la Fonction Publique","Valeur d'achat du point Macron","Valeur de vente du point Macron","Âge pivot"][i]
+            plt.subplot(3,3,i+1)
             for m in lm:
-                var = [m.prix, m.smic, m.smpt, m.indfp, m.achat_pt, m.vente_pt][i]
+                var = [m.prix, m.smic, m.smpt, m.indfp, m.achat_pt, m.vente_pt, m.age_pivot][i]
                 a=AnalyseModele(m)
                 a.plot_modele(var, dec(label),r)
             plt.legend(loc='upper right')

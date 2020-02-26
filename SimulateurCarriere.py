@@ -20,7 +20,7 @@ class ModeleAbs(object):  # classe abstraite
         self.trucage = trucage
         
         if self.trucage:
-            self.age_pivot = [65]*(fin-debut)
+            self.age_pivot = [ max( 62+1./3., 62+1./3. + (i-2022)*1./3.) for i in range(debut,2027) ] + [ (64 + (i-2027)*1./12.) for i in range(2027,2039) ] + [ 65 ]*(fin-2039) 
         else:
             self.age_pivot = [ max( 62+1./3., 62+1./3. + (i-2022)*1./3.) for i in range(debut,2027) ] + [ (64 + (i-2027)*1./12.) for i in range(2027,fin) ]
         
@@ -70,20 +70,22 @@ class ModeleAbs(object):  # classe abstraite
 
         # Doit être lancé après l'initialisation pour calculer les valeurs du points, des corrections
         
-        # calcul du point par rapport au valeurs 2020 (indexation sur inflation+smpt)
+        # calcul du point par rapport au valeurs 2020 (indexation sur interpolation inflation/smpt)
         n = self.fin+1-self.debut
         self.achat_pt = [0.0]*n
         self.vente_pt = [0.0]*n
-        self.corr_part_prime = [0.0]*n
         self.corr_prix_annee_ref = [0.0]*n
 
         # indexation progressive du point sur l'inflation vers le smpt (calcul du coef d'évolution
         coef=[1.0]*n
 
         for i in range(self.debut+1,self.fin+1):
-            alpha=max( 0, min (1, (i-2025)/17.) )
-            if self.trucage:
-                alpha=1.0  ### décommenter pour annuler l'indexation progressive
+
+            #if self.trucage: #### VIRER ?
+            #    alpha=1.0  
+            #else:
+            alpha=max( 0, min (1, (i-2028)/17.) )  # évolution entre 2028 et 2045
+            
             #print i-1, self.smpt[i-1-self.debut] 
             coef[i-self.debut] = coef[i-1-self.debut]*(
                 alpha        * self.smpt[i-self.debut] / self.smpt[i-1-self.debut]  # interpolation linéaire du taux
@@ -92,11 +94,10 @@ class ModeleAbs(object):  # classe abstraite
             
         for i in range(self.debut,self.fin+1):
 
-            tmp = coef[i-self.debut] / coef[2028-self.debut]  # 1.0 en 2022
+            tmp = coef[i-self.debut] / coef[2025-self.debut]  # 1.0 en 2025 (date de mise en place des points)
             self.achat_pt[i-self.debut] = 10.0 / 0.9 / 0.2812 * tmp
             self.vente_pt[i-self.debut] = 0.55 * tmp
                         
-            self.corr_part_prime[i-self.debut] = 0.0023*(i-self.annee_ref)        
             self.corr_prix_annee_ref[i-self.debut] = self.prix[ i - self.debut ] / self.prix[ self.annee_ref-self.debut ]
 
             
@@ -104,7 +105,7 @@ class ModeleAbs(object):  # classe abstraite
 
 class ModeleGouv(ModeleAbs):
     
-    def __init__(self, deb, fin, croissance=1.3, trucage=False):
+    def __init__(self, deb, fin, croissance=1.3, trucage=True):
 
         self.annee_ref=2019
         super(ModeleGouv,self).__init__(deb, fin, trucage)
@@ -113,7 +114,7 @@ class ModeleGouv(ModeleAbs):
             self.nom="Gouvernement"
             self.id_modele="gouv"
         else:
-            self.nom="Gouvernement corrigé"
+            self.nom="Modèle corrigé (âge pivot glissant)"
             self.id_modele="corr"
                 
         inflation=1.75
@@ -138,15 +139,15 @@ class ModeleGouv(ModeleAbs):
 
 class ModeleDestinie(ModeleAbs):
 
-    def __init__(self, deb, fin):
+    def __init__(self, deb, fin, trucage=False):
 
         self.annee_ref = 2018
-        super(ModeleDestinie,self).__init__(deb,fin)
+        super(ModeleDestinie,self).__init__(deb,fin,trucage)
 
         self.nom="Destinie2"
         
         i,j = self.annee_ref+1-deb, fin+1-deb
-        self.prix[i:j], self.smic[i:j], self.smpt[i:j], self.indfp[i:j] = self.charge_donnees(self.annee_ref+1, fin)
+        self.prix[i:j], self.smic[i:j], self.smpt[i:j], self.indfp[i:j] = self.charge_donnees()
 
         self.post_init()
 
@@ -161,18 +162,19 @@ class Carriere(object):
 
     # données générales
 
-    age_max = 68   # age limite pour travailler (pour les simus)
+    age_max = 67   # age limite pour travailler (pour les simus)
     age_mort = 95  # age jusqu'auquel on simule la retraite
 
 
-    def __init__(self, m, age_debut, annee_debut, nom_metier="Travailleur/Travailleuse"):
+    def __init__(self, m, age_debut, annee_debut, id_metier, nom_metier):
     
         self.m = m
+        self.id_metier = id_metier
+        self.nom_metier = nom_metier
         self.age_debut = age_debut
         self.annee_debut = annee_debut
         self.pension = []
         self.nb_pts = [0.0]*(Carriere.age_max+1-age_debut)
-        self.nom_metier = nom_metier
         
         
     def calcule_retraite_macron(self):
@@ -193,7 +195,7 @@ class Carriere(object):
             
             # calcul de la pension (si possible)
             age = self.age_debut + i
-            if age in range(60, Carriere.age_max+1):
+            if age in range(62, Carriere.age_max+1):
                 
                 d = .05*(age - self.m.age_pivot[ an - self.m.debut ] )
                 p = (1.0+d) * pts * self.m.vente_pt[ an - self.m.debut ]
@@ -233,16 +235,14 @@ class Carriere(object):
 
 class CarrierePrive(Carriere):
     
-    def __init__(self, m, age_debut, annee_debut, nom_metier="Privé", coefs=[]):
+    def __init__(self, m, age_debut, annee_debut, id_metier="Travailleur", nom_metier="Travailleur", coefs=[]):
 
         self.public = False
-        
-        self.nom_metier= nom_metier
         
         if coefs == []:
             coefs=[1.0]*(Carriere.age_max+1-age_debut)
         
-        super(CarrierePrive,self).__init__(m, age_debut, annee_debut, nom_metier)
+        super(CarrierePrive,self).__init__(m, age_debut, annee_debut, id_metier, nom_metier)
         self.sal = [ coefs[i] * m.smpt[ i + annee_debut - m.debut ] for i in range(Carriere.age_max+1-age_debut) ]
 
         self.calcule_retraite_macron()
@@ -295,15 +295,13 @@ class CarrierePublic(Carriere):
 
         self.public = True
         
-        super(CarrierePublic,self).__init__(m, age_debut, annee_debut)
-
         n_metier = CarrierePublic.numero_metier_public(id_metier)
         if n_metier == (-1,0):
             raise Exception("L'identifiant "+id_metier+" n'a pas été trouvé dans la liste des métiers publics!")
-
-        self.id_metier = id_metier
         self.n_metier = n_metier
-        self.nom_metier = CarrierePublic.grilles[ n_metier[0] ][0][n_metier[1]][1]
+        nom_metier = CarrierePublic.grilles[ n_metier[0] ][0][n_metier[1]][1]
+
+        super(CarrierePublic,self).__init__(m, age_debut, annee_debut, id_metier, nom_metier)
         
         grille = CarrierePublic.grilles[n_metier[0]][1]
         
@@ -327,15 +325,14 @@ class CarrierePublic(Carriere):
 
             sal_hp = indm * self.m.indfp[annee-self.m.debut] 
         
-            prime = max( 0, part_prime + self.m.corr_part_prime[annee-self.m.debut] )
+            prime = max( 0, part_prime - 0.0023*(43-i) )
 
             sal = (sal_hp*(1+prime))
 
             # calcul de l'indemnité GIPA pour suivre au moins l'inflation
             self.gipa.append( 0.0 )
             if i>=4 and self.CORRECTION_GIPA:
-                #print annee+i - self.m.debut, len(self.m.prix)
-                sal2 = (self.sal[i-1]/self.m.prix[annee+i-1 -self.m.debut]
+                sal2 = (  self.sal[i-1]/self.m.prix[annee+i-1 -self.m.debut]
                         + self.sal[i-2]/self.m.prix[annee+i-2 -self.m.debut]
                         + self.sal[i-3]/self.m.prix[annee+i-3 -self.m.debut]
                         + self.sal[i-4]/self.m.prix[annee+i-4 -self.m.debut]) / 4. * self.m.prix[annee+i - self.m.debut] # salaire lié au maintien du pouvoir d'achat 
