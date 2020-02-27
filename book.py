@@ -11,12 +11,15 @@ import matplotlib.pyplot as plt
 
 just_tex = True # pour simplement regénerer le tex
 
+
 ####################################################
 # Partie principale
 ####################################################
 
+synthese = True # pour ne pas avoir les tableaux détaillés
+synthese = False
 
-version_courte = False 
+version_courte = False # pour avoir moins de cas
 #version_courte = True
 
 if version_courte:
@@ -136,12 +139,20 @@ for (id_metier, metier, age, profil, base) in cas_prive:
 #### Génération du corps du fichier LateX
 
 if version_courte:
-    file="corps"
+    if synthese:
+        file="corps"
+    else:
+        file="corps2"
 else:
-    file="corps-long"
+    if synthese:
+        file="corps3"
+    else:
+        file="corps4"
 f = codecs.open("tex/"+file+".tex", "w", "utf-8")
 
-    
+
+print file
+
 ### Génération de la comparaison des modèles
 
 deb,fin=2000,2070
@@ -156,11 +167,12 @@ if not just_tex:
 f.write("\n \\begin{center}\\includegraphics[width=1\\textwidth]{%s}\\end{center} \n\n"%(fic))
 f.write("\\newpage \n \n")  
 
-for m in modeles:
-    f.write(dec("\paragraph{Description détaillée du modèle \emph{"+(m.nom)+"}} \n \n "))
-    f.write("{ \\tiny \\begin{center} \n")
-    AnalyseModele(m).affiche_modele(True,f,deb,fin)
-    f.write("\\end{center} } \n\\newpage \n \n") 
+if not synthese:
+    for m in modeles:
+        f.write(dec("\paragraph{Description détaillée du modèle \emph{"+(m.nom)+"}} \n \n "))
+        f.write("{ \\tiny \\begin{center} \n")
+        AnalyseModele(m).affiche_modele(True,f,deb,fin)
+        f.write("\\end{center} } \n\\newpage \n \n") 
     
     
 ### Génération des simulations
@@ -202,7 +214,6 @@ for i in range(len(carrieres)): # metiers
                 f.write(dec("\\paragraph{Retraites possibles et ratios Revenu/SMIC à 70, 75, 80, 85, 90 ans avec le modèle \\emph{"+modeles[j].nom+"}}  \n \n"))
                 ana = AnalyseCarriere(c)
                 
-                #f.write(dec("\\paragraph{Différents départs à la retraite (pension, taux de remplacement), et ratios Revenu/SMIC pendant la retraite (à 70, 75, 80, 85, 90 ans)} \n\n"))
                 f.write("{ \\scriptsize \\begin{center} \n")
                 ana.affiche_pension_macron(True, f)
                 f.write("\\end{center} } \n")
@@ -221,18 +232,18 @@ for i in range(len(carrieres)): # metiers
             f.write("\n \\begin{center}\\includegraphics[width=0.9\\textwidth]{%s}\\end{center} \\label{%s} \n\n"%(fic,fic))
             f.write("\\newpage \n \n")                 
 
-            # Affichage détaillé
-            for j in range(len(carrieres[i][a][g])): # modèles
+            if not synthese:
+                # Affichage détaillé
+                for j in range(len(carrieres[i][a][g])): # modèles
                 
-                c = carrieres[i][a][g][j]
-                f.write(dec("\\paragraph{Revenus et points pour le modèle \emph{"+modeles[j].nom+"}} \n \n"))
-                ana = AnalyseCarriere(c)
+                    c = carrieres[i][a][g][j]
+                    f.write(dec("\\paragraph{Revenus et points pour le modèle \emph{"+modeles[j].nom+"}} \n \n"))
+                    ana = AnalyseCarriere(c)
                 
-                #f.write(dec("\\subparagraph{Evolution de la rémunération et des points retraites au cours de la carrière} \n \n"))
-                f.write("{ \\scriptsize \\begin{center} \n")
-                ana.affiche_carriere(True, f)
-                f.write("\\end{center} } \n")
-                f.write("\\newpage \n \n")
+                    f.write("{ \\scriptsize \\begin{center} \n")
+                    ana.affiche_carriere(True, f)
+                    f.write("\\end{center} } \n")
+                    f.write("\\newpage \n \n")
             
 
 f.close()
