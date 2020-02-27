@@ -9,13 +9,15 @@ from tools import *
 import matplotlib.pyplot as plt
 
 
+just_tex = True # pour simplement regénerer le tex
+
 ####################################################
 # Partie principale
 ####################################################
 
 
 version_courte = False 
-#version_courte = True
+version_courte = True
 
 if version_courte:
     variation_age=1
@@ -86,10 +88,11 @@ for (ide,p,age) in cas_public:
     
     fic="grille_%s.pdf"%(ide)
     c=CarrierePublic(modeles[0], age, 1980, ide, p)
-    AnalyseCarriere(c).plot_grille()
-    print fic
-    plt.savefig("./tex/fig/"+fic)
-    plt.close('all')
+    if not just_tex:
+        AnalyseCarriere(c).plot_grille()
+        print fic
+        plt.savefig("./tex/fig/"+fic)
+        plt.close('all')
     
     ages=range(age,age+variation_age) # pour avoir éventuellement la variabilité par rapport à l'âge de départ
     
@@ -143,12 +146,13 @@ f = codecs.open("tex/"+file+".tex", "w", "utf-8")
 
 deb,fin=2000,2070
 
-fig=plt.figure(figsize=(18,12))
-AnalyseModele.plot_modeles( modeles, [deb,fin] )
 fic="fig/comparaison_modeles.pdf"
-print(fic)
-plt.savefig("./tex/"+fic)
-plt.close('all')
+if not just_tex:
+    fig=plt.figure(figsize=(18,12))
+    AnalyseModele.plot_modeles( modeles, [deb,fin] )
+    print(fic)
+    plt.savefig("./tex/"+fic)
+    plt.close('all')
 f.write("\n \\begin{center}\\includegraphics[width=1\\textwidth]{%s}\\end{center} \n\n"%(fic))
 f.write("\\newpage \n \n")  
 
@@ -188,30 +192,32 @@ for i in range(len(carrieres)): # metiers
             c = carrieres[i][a][g][0]
             f.write(dec("\\subsection{Génération %d (début en %d)} \n\n"%(c.annee_debut-c.age_debut, c.annee_debut)))
 
-            fig = plt.figure(figsize=(8*len(modeles),6),dpi=72)
+            if not just_tex:
+                fig = plt.figure(figsize=(8*len(modeles),6),dpi=72)
 
             # Affichage synthétique
             for j in range(len(carrieres[i][a][g])): # modèles
 
                 c = carrieres[i][a][g][j]
-                f.write(dec("\\paragraph{Retraites possibles dans le modèle \\emph{"+modeles[j].nom+"}}  \n \n"))
+                f.write(dec("\\paragraph{Retraites possibles et ratios Revenu/SMIC à 70, 75, 80, 85, 90 ans avec le modèle \\emph{"+modeles[j].nom+"}}  \n \n"))
                 ana = AnalyseCarriere(c)
                 
                 #f.write(dec("\\paragraph{Différents départs à la retraite (pension, taux de remplacement), et ratios Revenu/SMIC pendant la retraite (à 70, 75, 80, 85, 90 ans)} \n\n"))
                 f.write("{ \\scriptsize \\begin{center} \n")
                 ana.affiche_pension_macron(True, f)
                 f.write("\\end{center} } \n")
-                    
-                # Affichage des graphiques synthétiques
+
                 fic = "fig/%s_%d_%d_%s_retraite.pdf"%(c.id_metier, c.annee_debut-c.age_debut, c.age_debut, c.m.id_modele)
-                print(fic)
-                
-                ax = fig.add_subplot(1,len(modeles),j+1)
-                lc = [carrieres[i][a][h][j] for h in range(len(carrieres[i][a]))]
-                AnalyseCarriere.plot_evolution_carriere_corr(ax, c.m.smic, g, lc, lc[-1].annee_debut + lc[-1].age_mort-lc[-1].age_debut, "Revenu/SMIC", dec(modeles[j].nom), 1, 1)
-                
-            plt.savefig("./tex/"+fic)
-            plt.close('all')
+                if not just_tex:
+                    # Affichage des graphiques synthétiques
+                    print(fic)
+                    ax = fig.add_subplot(1,len(modeles),j+1)
+                    lc = [carrieres[i][a][h][j] for h in range(len(carrieres[i][a]))]
+                    AnalyseCarriere.plot_evolution_carriere_corr(ax, c.m.smic, g, lc, lc[-1].annee_debut + lc[-1].age_mort-lc[-1].age_debut, "Revenu/SMIC", dec(modeles[j].nom), 1, 1)
+
+            if not just_tex:
+                plt.savefig("./tex/"+fic)
+                plt.close('all')
             f.write("\n \\begin{center}\\includegraphics[width=0.9\\textwidth]{%s}\\end{center} \\label{%s} \n\n"%(fic,fic))
             f.write("\\newpage \n \n")                 
 
