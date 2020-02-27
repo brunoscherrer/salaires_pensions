@@ -14,13 +14,14 @@ import matplotlib.pyplot as plt
 ####################################################
 
 
-version_courte=True
+version_courte = False 
+#version_courte = True
 
-
-variation_age=4
 if version_courte:
     variation_age=1
-
+else:
+    variation_age=3
+    
 ########################
 # Modèles de projection
 
@@ -31,9 +32,10 @@ modeles = [ ModeleGouv(debut,fin,1.3,True), ModeleGouv(debut,fin,1.3,False), Mod
 ##############
 # Générations
 
-generations = [1975,1980,1985,1990,1995,2000,2003]
 if version_courte:
-    generations = [1975, 1980, 1990, 2003]
+    generations = [1975, 1980, 1990, 2003] # générations de l'étude d'impact
+else:
+    generations = range(1975,2006,1) # de 1975 à 2005
 
 #############
 ## Carrières
@@ -51,9 +53,9 @@ cas_public = [ ("Infirmier",0.299, 22),
                ("ProfCertifie",0.096, 22),
                ("ProfAgrege",0.096, 22),
                ("BIATSS",0.1,22),
-               ("MCF",0.034,28),
-               ("CR",0.034,28),
-               ("PR",0.071,28), ("DR",0.071,28),
+               ("MCF",0.034,25),
+               ("CR",0.034,25),
+               ("PR",0.071,25), ("DR",0.071,25),
                ("Magistrat",0.547,22)  ]
 
 
@@ -130,13 +132,17 @@ for (id_metier, metier, age, profil, base) in cas_prive:
 ###########################################
 #### Génération du corps du fichier LateX
 
-f = codecs.open("tex/corps.tex", "w", "utf-8")
+if version_courte:
+    file="corps"
+else:
+    file="corps-long"
+f = codecs.open("tex/"+file+".tex", "w", "utf-8")
 
+    
 ### Génération de la comparaison des modèles
 
 deb,fin=2000,2070
 
-f.write(dec("\\chapter{Description des modèles macro-économiques considérés} \\label{modeles} \n\n \\newpage \n\n"))
 fig=plt.figure(figsize=(18,12))
 AnalyseModele.plot_modeles( modeles, [deb,fin] )
 fic="fig/comparaison_modeles.pdf"

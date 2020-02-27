@@ -7,8 +7,8 @@
 ###################################################################
 
 
-###################################################################        
-# classes pour décrire le contexte macro passé et futur
+####################################################################        
+# classes pour décrire les contextes/modèles macro passés et futurs
 
 import math
 
@@ -20,7 +20,7 @@ class ModeleAbs(object):  # classe abstraite
         self.age_legal = 62
         self.trucage = trucage
         
-        if self.trucage:
+        if self.trucage: # trucage du gouvernement (age pivot bloqué à 65 ans)
             self.age_pivot = [ max( 62+1./3., 62+1./3. + (i-2022)*1./3.) for i in range(debut,2027) ] + [ (64 + (i-2027)*1./12.) for i in range(2027,2039) ] + [ 65 ]*(fin-2039) 
         else:
             self.age_pivot = [ max( 62+1./3., 62+1./3. + (i-2022)*1./3.) for i in range(debut,2027) ] + [ (64 + (i-2027)*1./12.) for i in range(2027,fin) ]
@@ -104,6 +104,8 @@ class ModeleGouv(ModeleAbs):
 
         self.annee_ref=2019
         super(ModeleGouv,self).__init__(deb, fin, trucage)
+
+        self.variation_prime_fp=0.0023 # +0.23 points par an
         
         if self.trucage:
             self.nom="Gouvernement truqué (âge-pivot bloqué à 65 ans)"
@@ -135,6 +137,8 @@ class ModeleDestinie(ModeleAbs):
         self.annee_ref = 2019
         super(ModeleDestinie,self).__init__(deb,fin,trucage)
 
+        self.variation_prime_fp=0.0 # taux de prime fixe
+        
         self.nom="Destinie2 (revalorisation de la fonction publique)"
         self.id_modele="dest"
         
@@ -254,8 +258,8 @@ class CarrierePublic(Carriere):
     HEA1,HEA2,HEA3,HEB1,HEB2,HEB3,HEBb1, HEBb2, HEBb3 = 890, 925,972, 972, 1013, 1067, 1067, 1095, 1124  # indices hors échelle
     grilles = [
         ( [("ATSEM","ATSEM (C2 puis C1)"),("AdjAdm","Adjoint Administratif (C2 puis C1)")], [ (329,1), (330,2), (333,2), (336, 2), (345,2), (351,2), (364,2), (380,2), (390,3), (402,3), (411,4), (415, 3), (430,3), (450,3), (466,100) ] ),
-        ( [("CR","Chargé de Recherche (CN puis HC)"), ("MCF","Maître de Conférences (CN puis HC)")], [ (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,5), (HEA1,1), (HEA2,1), (HEA3,100) ] ),
-        ( [("DR","Directeur de Recherche (CRCN, DR2 puis DR1)"), ("PR","Professeur d'Université (MCF, PR2 puis PR1)") ], [ (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 1+3./12), (830, 3), (972,3), (1013,100) ] ),
+        ( [("CR","Chargé de Recherche (thèse, CN puis HC)"), ("MCF","Maître de Conférences (thèse, CN puis HC)")], [ (430,3), (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,5), (HEA1,1), (HEA2,1), (HEA3,100) ] ),
+        ( [("DR","Directeur de Recherche (thèse, CRCN, DR2 puis DR1)"), ("PR","Professeur d'Université (thèse, MCF, PR2 puis PR1)") ], [ (430,3), (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 1+3./12), (830, 3), (972,3), (1013,100) ] ),
         ( [("ProfCertifie","Professeur certifié"), ("ProfEcoles","Professeur des écoles")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,2), (800, 2), (830,100) ] ) ,
         ( [("Infirmier","Infirmière en soins généraux (CN, CS, puis HC)")], [(390,2), (404,3), (422,3), (446,3), (469,3), (501,3), (520,4), (544,4), (571,4), (594,4), (627,100) ] ),
         ( [("AideSoignant","Aide-soignante (CN puis HC)")], [(327,1), (328,2), (329,2), (330,2), (332,2), (334,2), (338,2), (342,2), (346,3), (356,3), (368,3+1./3), (380,2), (390,3), (402,3), (411,4), (418,100) ] ),
@@ -319,7 +323,7 @@ class CarrierePublic(Carriere):
 
             sal_hp = indm * self.m.indfp[annee-self.m.debut] 
         
-            prime = max( 0, part_prime - 0.0023*(43-i) )
+            prime = max( 0, part_prime - m.variation_prime_fp*(43-i) )
 
             sal = (sal_hp*(1+prime))
 

@@ -10,7 +10,7 @@ def euroconst(m, tex=False):
     if tex:
         return "\\euro{} "+str(m.annee_ref)
     else:
-        return "Euro"+str(m.annee_ref)
+        return "Euros"+str(m.annee_ref)
 
 def shell_command(com,verbose=True):
     if verbose:

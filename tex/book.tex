@@ -57,50 +57,9 @@
 
 
 
-Ce document présente des simulations (sous forme de graphes synthétiques et de tableaux) de l'évolution de la carrière et des possibles retraites (dans un système à points) pour plusieurs métiers de la fonction publique et trajectoires du privé.
+\input{intro.tex}
 
-~\\
 
-Nous avons considéré 3 cadres macro-économiques:
-\begin{itemize}
-\item un modèle truqué (âge-pivot bloqué), qui se veut aussi près que possible de celui utilisé par le gouvernement Philippe pour la génération de ses cas-types ;
-\item une version corrigée (âge pivot glissant) du modèle du gouvernement Philippe, ce qui permet de mesurer l'effet du trucage ;
-\item un modèle indépendant, issu du simulateur Destinie2, également utilisé pour étudier les retraites par le COR (Conseil d'Orientation des Retraites), évidemment sans trucage (âge pivot glissant); par rapport aux deux précédents modèles, ce dernier a pour principale différence de prévoir une revalorisation sérieuse de la fonction publique (via une indexation proche de l'évolution de salaire moyen).
-\end{itemize}
-Ces modèles ont en commun de considérer l'hypothèse (par ailleurs discutable) d'une croissance de 1.3\% par an et d'une inflation de 1.75\% par an, et une indexation des retraites sur l'indice des prix (nous nous plaçons au plus proche des hypothèses du gouvernement Philippe).
-
-~\\
-
-De ces simulations, on peut tirer les enseignements suivants:
-\begin{itemize}
-\item {\bf Le trucage des simulations diffusées par le gouvernement Philippe est significatif sur le niveau des pensions (entre 10 et 20\% pour les générations les plus récentes)}. 
-\item Pour la fonction publique:
-  \begin{itemize}
-  \item Pour les deux premiers modèles qui se basent sur des projections régressives des salaires dans la fonction publique (décrochage de 1.3\% par an par rapport au SMIC), on observe, de plus en plus fort au cours du temps,  une {\bf smicardisation de l'ensemble des salaires de la fonction publique}, qui induit une retraite minimum pour les fonctionnaires en bas et en milieu de l'échelle (catégories C, mais aussi B).
-  \item Dans le dernier modèle qui est moins régressif sur la rémunération dans le public, le système de retraites par points fait que {\bf le taux de remplacement est d'autant plus faible que la carrière est revalorisée} c'est-à-dire recouvre son profil croissant (voulu par les grilles indiciaires). Par exemple, une telle revalorisation pour un professeur certifié fait baisser son taux de remplacement brut jusqu'environ 35\% s'il part à 62 ans, 45\% s'il part à 65 ans, 52\% même s'il part à 67 ans.
-  \end{itemize}
-\item Dans le privé (situation pour laquelle les deux derniers modèles sont très proches):
-  \begin{itemize}
-  \item {\bf La retraite par points est anti-redistributive}: pour des rémunérations évoluant au cours de la carrière entre $i \times$SMIC et $(i+1) \times$ SMIC, on observe que {\bf le taux de remplacement est d'autant plus grand que le salaire est globalement élevé} (que $i$ est grand). Le meilleur taux de remplacement (et donc le meilleur rendement du système) est notamment obtenu pour les salariés étant toute leur vie au plafond (10 SMIC).
-  \end{itemize}
-\item Enfin, globalement, le choix d'une indexation des retraites sur l'indice des prix fait chuter le revenu des retraités par rapport au SMIC, entraînant ceux qui sont partis avec les plus retraites les plus faibles vers la pauvreté. En particulier, {\bf au cours de leur vieillesse, beaucoup de retraités se retrouvent très en dessous du seuil ``85\% du SMIC'', même s'ils ont effectué une ``carrière complète.'}
-\end{itemize}
-
-~\\
-
-{\small
-Toutes les simulations sont fournies avec les détails (notamment tableaus détaillés) qui permettent de vérifier tous les calculs. Ces simulations ont été produites à l'aide d'un code source informatique qui est publiquement accessible à l'adresse \url{https://github.com/brunoscherrer/salaires_pensions}. Je remercie d'avance ceux qui pourraient trouver des erreurs de me les signaler pour que je les corrige. 
-}
-
-\newpage
-
-{\small
-\setcounter{tocdepth}{0}
-\begingroup
-\let\clearpage\relax
-\tableofcontents
-\endgroup
-}
 
 \input{corps}
 

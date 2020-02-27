@@ -262,10 +262,14 @@ class AnalyseModele():
         l = [ [ "Année",
                 "Indice Prix (réf=%d)"%(m.annee_ref),
                 "SMIC"+eurcst,
+                "Variation SMIC (\\%)",
                 "SMPT"+eurcst,
+                "Variation SMPT (\\%)",
                 "Indice FP"+eurcst,
+                "Variation Indice FP (\\%)",
                 "Achat Pt"+eurcst,
                 "Serv. Pt"+eurcst,
+                "Variation Pt (\\%)",
                 "Âge pivot"
         ] ]
 
@@ -274,14 +278,23 @@ class AnalyseModele():
             l.append( [str(a),
                        "%.2f"%(m.corr_prix_annee_ref[i]),
                        "%.2f"%(m.smic[i]/12/m.corr_prix_annee_ref[i]),
+                       "%.2f"%( ( (m.smic[i]/m.corr_prix_annee_ref[i])/(m.smic[i-1]/m.corr_prix_annee_ref[i-1])  -1.0 ) *100),
                        "%.2f"%(m.smpt[i]/12/m.corr_prix_annee_ref[i]),
+                       "%.2f"%( ( (m.smpt[i]/m.corr_prix_annee_ref[i])/(m.smpt[i-1]/m.corr_prix_annee_ref[i-1])  -1.0 ) *100),
                        "%.2f"%(m.indfp[i]/12/m.corr_prix_annee_ref[i]),
+                       "%.2f"%( ( (m.indfp[i]/m.corr_prix_annee_ref[i])/(m.indfp[i-1]/m.corr_prix_annee_ref[i-1])  -1.0 ) *100),
                        "%.2f"%(m.achat_pt[i]/m.corr_prix_annee_ref[i]),
-                       "%.2f"%(m.vente_pt[i]/m.corr_prix_annee_ref[i]),
+                       "%.2f"%( (m.vente_pt[i]/m.corr_prix_annee_ref[i]) ),
+                       "%.2f"%( ( (m.vente_pt[i]/m.corr_prix_annee_ref[i]) / (m.vente_pt[i-1]/m.corr_prix_annee_ref[i-1]) -1.0 ) *100),
                        "%.2f"%(m.age_pivot[i])
-                       ] )                      
+                       ] )
+            if a==deb:
+                l[-1][3]="-"
+                l[-1][5]="-"
+                l[-1][7]="-"
+                l[-1][10]="-"
 
-        print_table(l, f, tex, "{|c||c|c|c|c|c|c|c||c|}")
+        print_table(l, f, tex, "{|c||c||c|c||c|c||c|c||c|c|c||c|}")
             
     # affichage de graphiques
     
@@ -303,7 +316,7 @@ class AnalyseModele():
     def plot_modeles(cls,lm,r):
         
         for i in range(7):
-            eurcst="("+euroconst(lm[0],True)+")"
+            eurcst="("+euroconst(lm[0],False)+")"
             label = [ "Indice Prix (réf=%d)"%(lm[0].annee_ref),
                       "SMIC"+eurcst,
                       "SMPT"+eurcst,
