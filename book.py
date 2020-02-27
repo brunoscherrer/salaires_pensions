@@ -14,18 +14,26 @@ import matplotlib.pyplot as plt
 ####################################################
 
 
+version_courte=True
+
+
+variation_age=4
+if version_courte:
+    variation_age=1
+
 ########################
 # Modèles de projection
 
-debut, fin = 1980, 2130
+debut, fin = 1980, 2120
 
-modeles = [ ModeleGouv(debut,fin,1.3,True), ModeleGouv(debut,fin,1.3,False) ] #, ModeleDestinie(debut,fin)]
-mod_titres = [ 'Reproduction des simulations du gouvernement', 'Simulations corrigées (âge pivot glissant)', 'Simulations du modèle Destinie2' ]
+modeles = [ ModeleGouv(debut,fin,1.3,True), ModeleGouv(debut,fin,1.3,False), ModeleDestinie(debut,fin)]
 
 ##############
 # Générations
 
-generations = [1975,1980,1990,2003]
+generations = [1975,1980,1985,1990,1995,2000,2003]
+if version_courte:
+    generations = [1975, 1980, 1990, 2003]
 
 #############
 ## Carrières
@@ -42,19 +50,23 @@ cas_public = [ ("Infirmier",0.299, 22),
                ("ProfEcoles",0.081, 22),
                ("ProfCertifie",0.096, 22),
                ("ProfAgrege",0.096, 22),
-#               ("BIATSS",0.1,22),
+               ("BIATSS",0.1,22),
                ("MCF",0.034,28),
                ("CR",0.034,28),
                ("PR",0.071,28), ("DR",0.071,28),
                ("Magistrat",0.547,22)  ]
 
-# cas_public = [("Magistrat",0.52,22)]
-
 
 # dans le privé
 
-cas_prive = [ ("SMPT","Salarié privé au salaire moyen durant toute sa carrière",22)#,
-#              ("SMIC","Salarié privé au SMIC",22,)
+cas_prive = [ ("SMPT","Salarié privé au salaire moyen durant toute sa carrière", 22, [1.0]*50, "SMPT"),
+              ("SMIC","Salarié privé au SMIC durant toute sa carrière", 22, [1.0]*50, "SMIC"),
+              ("Ascendant12","Salarié privé évoluant du SMIC à 2*SMIC", 22, [ 1.0 + i/43. for i in range(50) ],"SMIC"),
+              ("Ascendant1525","Salarié privé évoluant de 1.5*SMIC à 2.5*SMIC", 22, [ 1.5 + i/43. for i in range(50) ],"SMIC"),
+              ("Ascendant23","Salarié privé évoluant de 2*SMIC à 3*SMIC", 22, [ 2.0 + i/43. for i in range(50) ],"SMIC"),
+              ("Ascendant34","Salarié privé évoluant du 3*SMIC à 4*SMIC", 22, [ 3.0 + i/43. for i in range(50) ],"SMIC"),
+              ("Ascendant45","Salarié privé évoluant du 4*SMIC à 5*SMIC", 22, [ 4.0 + i/43. for i in range(50) ],"SMIC"),
+              ("Riche","Salarié privé à 10*SMIC durant toute sa carrière", 22, [10.0]*50, "SMIC")
 ]
 
 
@@ -62,7 +74,7 @@ cas_prive = [ ("SMPT","Salarié privé au salaire moyen durant toute sa carrièr
 # génération des simulations et des pensions
 
 carrieres = []
-variation_age=4
+
 
 # public
 
@@ -84,18 +96,17 @@ for (ide,p,age) in cas_public:
         l_gen = []
         for gn in generations:
             an = gn + a  # année de début
-            if an<=2030: # après c'est trop loin
-                l_mod = []
-                for j in range(len(modeles)):
-                    l_mod.append( CarrierePublic(modeles[j], a, an, ide, p) )
-                l_gen.append(l_mod)
+            l_mod = []
+            for j in range(len(modeles)):
+                l_mod.append( CarrierePublic(modeles[j], a, an, ide, p) )
+            l_gen.append(l_mod)
         l_age.append(l_gen)
     carrieres.append(l_age)
 
         
 # privé
 
-for (id_metier,metier,age) in cas_prive:
+for (id_metier, metier, age, profil, base) in cas_prive:
 
     ages=range(age,age+variation_age) # pour avoir éventuellement la variabilité par rapport à l'âge de départ
 
@@ -104,16 +115,17 @@ for (id_metier,metier,age) in cas_prive:
         l_gen = []
         for gn in generations:
             an = gn + a  # année de début
-            if an<=2030: # après c'est trop loin
-                l_mod = []
-                for j in range(len(modeles)):
-                    l_mod.append( CarrierePrive(modeles[j], a, an, id_metier, metier) )
-                l_gen.append(l_mod)
+            l_mod = []
+            for j in range(len(modeles)):
+                l_mod.append( CarrierePrive(modeles[j], a, an, id_metier, metier, profil, base) )
+            l_gen.append(l_mod)
         l_age.append(l_gen)
     carrieres.append(l_age)
 
 
 
+
+###########################################################################################
     
 ###########################################
 #### Génération du corps du fichier LateX
@@ -122,8 +134,11 @@ f = codecs.open("tex/corps.tex", "w", "utf-8")
 
 ### Génération de la comparaison des modèles
 
+deb,fin=2000,2070
+
+f.write(dec("\\chapter{Description des modèles macro-économiques considérés} \\label{modeles} \n\n \\newpage \n\n"))
 fig=plt.figure(figsize=(18,12))
-AnalyseModele.plot_modeles( modeles, [1980,2090] )
+AnalyseModele.plot_modeles( modeles, [deb,fin] )
 fic="fig/comparaison_modeles.pdf"
 print(fic)
 plt.savefig("./tex/"+fic)
@@ -131,9 +146,14 @@ plt.close('all')
 f.write("\n \\begin{center}\\includegraphics[width=1\\textwidth]{%s}\\end{center} \n\n"%(fic))
 f.write("\\newpage \n \n")  
 
-
+for m in modeles:
+    f.write(dec("\paragraph{Description détaillée du modèle \emph{"+(m.nom)+"}} \n \n "))
+    f.write("{ \\tiny \\begin{center} \n")
+    AnalyseModele(m).affiche_modele(True,f,deb,fin)
+    f.write("\\end{center} } \n\\newpage \n \n") 
+    
+    
 ### Génération des simulations
-
 
 
 for i in range(len(carrieres)): # metiers
@@ -162,26 +182,13 @@ for i in range(len(carrieres)): # metiers
             c = carrieres[i][a][g][0]
             f.write(dec("\\subsection{Génération %d (début en %d)} \n\n"%(c.annee_debut-c.age_debut, c.annee_debut)))
 
-            fig = plt.figure(figsize=(16,6),dpi=72)
-
-            # Affichage détaillé
-            for j in [0]:#range(len(carrieres[i][a][g])): # modèles
-                
-                c = carrieres[i][a][g][j]
-                #f.write(dec("\\paragraph{"+mod_titres[j]+" (carrière détaillée)}  \n \n"))
-                ana = AnalyseCarriere(c)
-                
-                #f.write(dec("\\subparagraph{Evolution de la rémunération et des points retraites au cours de la carrière} \n \n"))
-                f.write("{ \\scriptsize \\begin{center} \n")
-                ana.affiche_carriere(True, f)
-                f.write("\\end{center} } \n")
-                f.write("\\newpage \n \n")
+            fig = plt.figure(figsize=(8*len(modeles),6),dpi=72)
 
             # Affichage synthétique
             for j in range(len(carrieres[i][a][g])): # modèles
 
                 c = carrieres[i][a][g][j]
-                f.write(dec("\\paragraph{"+mod_titres[j]+"}  \n \n"))
+                f.write(dec("\\paragraph{Retraites possibles dans le modèle \\emph{"+modeles[j].nom+"}}  \n \n"))
                 ana = AnalyseCarriere(c)
                 
                 #f.write(dec("\\paragraph{Différents départs à la retraite (pension, taux de remplacement), et ratios Revenu/SMIC pendant la retraite (à 70, 75, 80, 85, 90 ans)} \n\n"))
@@ -190,18 +197,31 @@ for i in range(len(carrieres)): # metiers
                 f.write("\\end{center} } \n")
                     
                 # Affichage des graphiques synthétiques
-                fic = "fig/%s_%d_%d_%s_retraite.pdf"%(c.id_metier, c.annee_debut-c.age_debut, c.age_debut, str(c.m.trucage))
+                fic = "fig/%s_%d_%d_%s_retraite.pdf"%(c.id_metier, c.annee_debut-c.age_debut, c.age_debut, c.m.id_modele)
                 print(fic)
                 
-                ax = fig.add_subplot(1,2,j+1)
+                ax = fig.add_subplot(1,len(modeles),j+1)
                 lc = [carrieres[i][a][h][j] for h in range(len(carrieres[i][a]))]
-                AnalyseCarriere.plot_evolution_carriere_corr(ax, c.m.smic, g, lc, lc[-1].annee_debut + lc[-1].age_mort-lc[-1].age_debut, "Revenu/SMIC", dec(mod_titres[j]), 1, 1)
-
+                AnalyseCarriere.plot_evolution_carriere_corr(ax, c.m.smic, g, lc, lc[-1].annee_debut + lc[-1].age_mort-lc[-1].age_debut, "Revenu/SMIC", dec(modeles[j].nom), 1, 1)
+                
             plt.savefig("./tex/"+fic)
             plt.close('all')
-            f.write("\n \\begin{center}\\includegraphics[width=1\\textwidth]{%s}\\end{center} \n\n"%(fic))
+            f.write("\n \\begin{center}\\includegraphics[width=0.9\\textwidth]{%s}\\end{center} \\label{%s} \n\n"%(fic,fic))
             f.write("\\newpage \n \n")                 
+
+            # Affichage détaillé
+            for j in range(len(carrieres[i][a][g])): # modèles
                 
+                c = carrieres[i][a][g][j]
+                f.write(dec("\\paragraph{Revenus et points pour le modèle \emph{"+modeles[j].nom+"}} \n \n"))
+                ana = AnalyseCarriere(c)
+                
+                #f.write(dec("\\subparagraph{Evolution de la rémunération et des points retraites au cours de la carrière} \n \n"))
+                f.write("{ \\scriptsize \\begin{center} \n")
+                ana.affiche_carriere(True, f)
+                f.write("\\end{center} } \n")
+                f.write("\\newpage \n \n")
+            
 
 f.close()
 

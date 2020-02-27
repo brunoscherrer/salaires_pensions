@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import SimulateurCarriere as sim
 import math
 
+
 class AnalyseCarriere:
 
     def __init__(self,c):
@@ -51,7 +52,7 @@ class AnalyseCarriere:
             l.append(x)
             i=i+1
 
-        print_table(l, f, tex, "{|c|c||c|c||c|c||c||c|c|c|c|c|c|}",[7,8,9,10,11,12])
+        print_table(l, f, tex, "{|c|c||c|c||c|c||c||c|c|c|c|c|c|}",[5, 7,8,9,10,11,12])
                         
 
     def affiche_carriere(self, tex=False, f=sys.stdout):
@@ -62,12 +63,12 @@ class AnalyseCarriere:
             self.affiche_carriere_prive(tex, f)
 
 
-    def affiche_carriere_public(self, tex, f=sys.stdout):
+    def affiche_carriere_public(self, tex=False, f=sys.stdout):
 
         c = self.c
         
         eurcst="("+euroconst(c.m,tex)+")"
-        l = [ [ "Année","Âge","Ind Maj","Pt Ind"+eurcst," Hors-Primes"+eurcst,"Tx Primes","GIPA"+eurcst,"Brut"+eurcst,"SMIC"+eurcst,"Rev/SMIC","Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ] ]
+        l = [ [ "Année", "Âge", "Ind Maj", "Pt Ind"+eurcst, "Rev HP"+eurcst, "Tx Primes","GIPA"+eurcst,"Revenu"+eurcst,"SMIC"+eurcst,"Rev/SMIC","Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ] ]
         
         for i in range(c.age_max - c.age_debut + 1):
 
@@ -75,7 +76,7 @@ class AnalyseCarriere:
             m = c.m
             sal_cst = c.sal[i] / m.corr_prix_annee_ref[ an - m.debut]  
 
-            l.append([ str(an),
+            l.append( [ str(an),
                        str(c.age_debut+i),
                        "%.1f"%c.indm[i],
                        "%.2f"%(m.indfp[ an - m.debut ]/12/m.corr_prix_annee_ref[ an - m.debut]),
@@ -88,7 +89,7 @@ class AnalyseCarriere:
                        "%.2f"%c.nb_pts[i],
                        "%.2f"%(m.achat_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut]),
                        "%.2f"%(m.vente_pt[ an - m.debut]/m.corr_prix_annee_ref[ an - m.debut])
-            ])
+            ] )
 
         print_table(l, f, tex, "{|c|c||c|c|c|c|c|c||c|c||c|c|c|}",[9])
         
@@ -101,13 +102,19 @@ class AnalyseCarriere:
         l=[]
             
         eurcst="("+euroconst(c.m,tex)+")"
-        l.append([ "Année","Âge","Revenu "+eurcst,"Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ])
+        l.append( [ "Année","Âge","Revenu "+eurcst,"SMIC "+eurcst,"Rev/SMIC","Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ] )
 
         for i in range(1, sim.Carriere.age_max - c.age_debut + 1):
             an = c.annee_debut+i
-            l.append([ "%d"%an, "%d ans"%(c.age_debut+i),"%.2f"%(c.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ c.m.annee_ref - m.debut]),"%.2f"%(c.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),"%.2f"%(m.vente_pt[ an - m.debut]) ])
+            l.append([ "%d"%an,
+                       "%d ans"%(c.age_debut+i),
+                       "%.2f"%(c.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ c.m.annee_ref - m.debut]),
+                       "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
+                       "%.2f"%(c.sal[i] / m.smic[ an - m.debut ]),
+                       "%.2f"%(c.nb_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),
+                       "%.2f"%(m.vente_pt[ an - m.debut]) ])
 
-        print_table(l, f, tex, "{|c|c|c||c|c|c|}")
+        print_table(l, f, tex, "{|c|c|c|c|c||c|c|c|}",[4])
 
 
     # affichage de graphiques
@@ -244,11 +251,41 @@ class AnalyseModele():
     def __init__(self,m):
 
         self.m = m
-        
 
+
+    def affiche_modele(self, tex=False, f=sys.stdout, deb=2000, fin=2070):
+
+        m = self.m
+        
+        eurcst="("+euroconst(m,tex)+")"
+
+        l = [ [ "Année",
+                "Indice Prix (réf=%d)"%(m.annee_ref),
+                "SMIC"+eurcst,
+                "SMPT"+eurcst,
+                "Indice FP"+eurcst,
+                "Achat Pt"+eurcst,
+                "Serv. Pt"+eurcst,
+                "Âge pivot"
+        ] ]
+
+        for a in range(deb,fin+1):
+            i = a-m.debut
+            l.append( [str(a),
+                       "%.2f"%(m.corr_prix_annee_ref[i]),
+                       "%.2f"%(m.smic[i]/12/m.corr_prix_annee_ref[i]),
+                       "%.2f"%(m.smpt[i]/12/m.corr_prix_annee_ref[i]),
+                       "%.2f"%(m.indfp[i]/12/m.corr_prix_annee_ref[i]),
+                       "%.2f"%(m.achat_pt[i]/m.corr_prix_annee_ref[i]),
+                       "%.2f"%(m.vente_pt[i]/m.corr_prix_annee_ref[i]),
+                       "%.2f"%(m.age_pivot[i])
+                       ] )                      
+
+        print_table(l, f, tex, "{|c||c|c|c|c|c|c|c||c|}")
+            
     # affichage de graphiques
     
-    def plot_modele(self, f=sys.stdout, tit="", r=[]):
+    def plot_modele(self, f, tit="", r=[], lw=1):
 
         m=self.m
         
@@ -256,7 +293,7 @@ class AnalyseModele():
             r=[m.debut, m.fin]
         r2 = [ r[0]-m.debut, r[1]+1-m.debut ]
         r  = range(r[0],r[1]+1)
-        plt.plot(r,f[r2[0]:r2[1]], label=dec(m.nom))
+        plt.plot(r,f[r2[0]:r2[1]], label=dec(m.nom), linewidth=lw)
 
         plt.axvline(m.annee_ref, color="grey", linestyle="dashed")
         plt.title(tit)
@@ -264,13 +301,31 @@ class AnalyseModele():
 
     @classmethod
     def plot_modeles(cls,lm,r):
-
+        
         for i in range(7):
-            label = ["Prix (Inflation intégrée)","SMIC annuel","SMPT annuel","Valeur du point d'indice de la Fonction Publique","Valeur d'achat du point Macron","Valeur de vente du point Macron","Âge pivot"][i]
+            eurcst="("+euroconst(lm[0],True)+")"
+            label = [ "Indice Prix (réf=%d)"%(lm[0].annee_ref),
+                      "SMIC"+eurcst,
+                      "SMPT"+eurcst,
+                      "Indice FP"+eurcst,
+                      "Achat Pt"+eurcst,
+                      "Serv. Pt"+eurcst,
+                      "Âge pivot" ][i]
+            
             plt.subplot(3,3,i+1)
-            for m in lm:
-                var = [m.prix, m.smic, m.smpt, m.indfp, m.achat_pt, m.vente_pt, m.age_pivot][i]
+            k=0
+            for m in lm:                
+                
+                n = m.fin-m.debut
+                var = [ [ m.corr_prix_annee_ref[j] for j in range(n) ],
+                        [ m.smic[j]/12/m.corr_prix_annee_ref[j] for j in range(n) ],
+                        [ m.smpt[j]/12/m.corr_prix_annee_ref[j] for j in range(n) ],
+                        [ m.indfp[j]/12/m.corr_prix_annee_ref[j] for j in range(n) ],
+                        [ m.achat_pt[j]/m.corr_prix_annee_ref[j] for j in range(n) ],
+                        [ m.vente_pt[j]/m.corr_prix_annee_ref[j] for j in range(n) ],
+                        [ m.age_pivot[j] for j in range(n) ] ][i]
                 a=AnalyseModele(m)
-                a.plot_modele(var, dec(label),r)
+                a.plot_modele(var, dec(label), r, len(lm)-k)
+                k=k+1
             plt.legend(loc='upper right')
         plt.tight_layout()

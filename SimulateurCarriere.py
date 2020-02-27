@@ -10,6 +10,7 @@
 ###################################################################        
 # classes pour décrire le contexte macro passé et futur
 
+import math
 
 class ModeleAbs(object):  # classe abstraite
 
@@ -34,8 +35,7 @@ class ModeleAbs(object):  # classe abstraite
         self.smpt = [0.0]*n
         self.indfp = [0.0]*n
                 
-        # charge l'historique des données passées (entre debut et debut_proj)
-        n = self.annee_ref + 1 - debut
+        # charge l'historique des données (passé et futures)
         self.prix[0:n], self.smic[0:n], self.smpt[0:n], self.indfp[0:n] = self.charge_donnees()
 
         
@@ -43,7 +43,7 @@ class ModeleAbs(object):  # classe abstraite
 
         with open("./destinie2_1.3.csv","r") as f:
 
-            n=self.annee_ref + 1 - self.debut
+            n = self.fin + 1 - self.debut
             prix, smic, indfp, smpt = [0.0]*n, [0.0]*n, [0.0]*n, [0.0]*n
 
             f.readline() # on vire la première ligne
@@ -54,7 +54,7 @@ class ModeleAbs(object):  # classe abstraite
                     break
                 l = l.split("|")
                 a = int( l[1] ) # annee
-                if a > self.annee_ref:
+                if a > self.fin + 1:
                     break
                 if a >= self.debut: # si l'année est bien dans la plage
                     b = a - self.debut
@@ -76,21 +76,16 @@ class ModeleAbs(object):  # classe abstraite
         self.vente_pt = [0.0]*n
         self.corr_prix_annee_ref = [0.0]*n
 
-        # indexation progressive du point sur l'inflation vers le smpt (calcul du coef d'évolution
+        # indexation progressive du point sur l'inflation vers le smpt
         coef=[1.0]*n
 
         for i in range(self.debut+1,self.fin+1):
 
-            #if self.trucage: #### VIRER ?
-            #    alpha=1.0  
-            #else:
-            alpha=max( 0, min (1, (i-2028)/17.) )  # évolution entre 2028 et 2045
+            alpha=max( 0, min (1, (i-2028)/17.) )  # transition entre 2028 et 2045
             
-            #print i-1, self.smpt[i-1-self.debut] 
-            coef[i-self.debut] = coef[i-1-self.debut]*(
-                alpha        * self.smpt[i-self.debut] / self.smpt[i-1-self.debut]  # interpolation linéaire du taux
-                +(1.0-alpha) * self.prix[i-self.debut] / self.prix[i-1-self.debut]
-                )
+            coef[i-self.debut] = coef[i-1-self.debut] * (
+                math.pow( self.smpt[i-self.debut] / self.smpt[i-1-self.debut], alpha ) * # moyenne géométrique (c'est ce qui est le plus naturel pour des taux)
+                math.pow( self.prix[i-self.debut] / self.prix[i-1-self.debut], 1.0-alpha ) )
             
         for i in range(self.debut,self.fin+1):
 
@@ -111,11 +106,11 @@ class ModeleGouv(ModeleAbs):
         super(ModeleGouv,self).__init__(deb, fin, trucage)
         
         if self.trucage:
-            self.nom="Gouvernement"
+            self.nom="Gouvernement truqué (âge-pivot bloqué à 65 ans)"
             self.id_modele="gouv"
         else:
-            self.nom="Modèle corrigé (âge pivot glissant)"
-            self.id_modele="corr"
+            self.nom="Gouvernement corrigé (âge-pivot glissant)"
+            self.id_modele="gouvcorr"
                 
         inflation=1.75
         n = self.annee_ref-deb
@@ -125,13 +120,9 @@ class ModeleGouv(ModeleAbs):
             smic *= (1+inflation/100.)*(1+croissance/100.)
             smpt *= (1+inflation/100.)*(1+croissance/100.)
             indfp *= (1+inflation/100.)
-            n = i-deb
-            self.prix[n],self.smic[n],self.smpt[n],self.indfp[n] = prix, smic, smpt, indfp
+            j = i-deb
+            self.prix[j],self.smic[j],self.smpt[j],self.indfp[j] = prix, smic, smpt, indfp
 
-#            print "- ",i,deb,fin,self.smpt[i-deb]
-
-#        print "1)", self.smpt
-            
         self.post_init()
 
             
@@ -141,14 +132,12 @@ class ModeleDestinie(ModeleAbs):
 
     def __init__(self, deb, fin, trucage=False):
 
-        self.annee_ref = 2018
+        self.annee_ref = 2019
         super(ModeleDestinie,self).__init__(deb,fin,trucage)
 
-        self.nom="Destinie2"
+        self.nom="Destinie2 (revalorisation de la fonction publique)"
+        self.id_modele="dest"
         
-        i,j = self.annee_ref+1-deb, fin+1-deb
-        self.prix[i:j], self.smic[i:j], self.smpt[i:j], self.indfp[i:j] = self.charge_donnees()
-
         self.post_init()
 
 
@@ -235,15 +224,20 @@ class Carriere(object):
 
 class CarrierePrive(Carriere):
     
-    def __init__(self, m, age_debut, annee_debut, id_metier="Travailleur", nom_metier="Travailleur", coefs=[]):
+    def __init__(self, m, age_debut, annee_debut, id_metier="Travailleur", nom_metier="Travailleur", coefs=[], ref="SMIC"):
 
         self.public = False
         
         if coefs == []:
             coefs=[1.0]*(Carriere.age_max+1-age_debut)
-        
+
+        if ref=="SMIC":
+            base = m.smic
+        elif ref=="SMPT":
+            base = m.smpt
+            
         super(CarrierePrive,self).__init__(m, age_debut, annee_debut, id_metier, nom_metier)
-        self.sal = [ coefs[i] * m.smpt[ i + annee_debut - m.debut ] for i in range(Carriere.age_max+1-age_debut) ]
+        self.sal = [ coefs[i] * base[ i + annee_debut - m.debut ] for i in range(Carriere.age_max+1-age_debut) ]
 
         self.calcule_retraite_macron()
         
