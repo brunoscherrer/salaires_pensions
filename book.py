@@ -17,7 +17,7 @@ just_tex = True # pour simplement regénerer le tex
 
 
 version_courte = False 
-version_courte = True
+#version_courte = True
 
 if version_courte:
     variation_age=1
