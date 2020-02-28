@@ -29,14 +29,15 @@ class AnalyseCarriere:
         m = c.m   
 
         eurcst="("+euroconst(c.m,tex)+")"
-        l = [ [ "Retraite en", "Âge", "Âge pivot", "Décote/Surcote", "Retraite "+eurcst, "Tx Rempl(\\%)", "SMIC "+eurcst, "Retraite/SMIC", "Rev70/SMIC", "Rev75/SMIC", "Rev80/SMIC", "Rev85/SMIC", "Rev90/SMIC" ] ]
+        l = [ [ "Retraite en", "Âge", "\\%(43ans)", "Âge pivot",  "Décote/Surcote", "Retraite "+eurcst, "Tx Rempl(\\%)", "SMIC "+eurcst, "Retraite/SMIC", "Rev70/SMIC", "Rev75/SMIC", "Rev80/SMIC", "Rev85/SMIC", "Rev90/SMIC" ] ]
 
         i=0
-        for (a,d,p,t) in c.pension_macron:
+        for (a,d,p,t,r) in c.pension_macron:
             an = c.annee_debut+a-c.age_debut
             ap = int(m.age_pivot[ an - m.debut])
             x=[ str(an),
                 str(a),
+                "%.2f"%(r*100)+"\\%",
                 "%d ans %d mois"%(ap, round((m.age_pivot[ an - m.debut]-ap)*12)),
                 "%.2f"%(d*100)+"\\%",
                 "%.2f"%(p/12/m.corr_prix_annee_ref[ an - m.debut]),
@@ -52,7 +53,7 @@ class AnalyseCarriere:
             l.append(x)
             i=i+1
 
-        print_table(l, f, tex, "{|c|c||c|c||c|c||c||c|c|c|c|c|c|}",[5, 7,8,9,10,11,12])
+        print_table(l, f, tex, "{|c|c||c|c|c||c|c||c||c|c|c|c|c|c|}",[6, 8, 9, 10, 11, 12, 13])
                         
 
     def affiche_carriere(self, tex=False, f=sys.stdout):
@@ -196,8 +197,8 @@ class AnalyseCarriere:
 
         plt.plot( range( c.annee_debut, c.annee_debut + sim.Carriere.age_max+1 - c.age_debut)  ,  [ c.sal[i] / div / corr[c.annee_debut + i - m.debut] for i in range(len(c.sal)) ], color=couleur, label=label  )
         if plot_retraite==1:
-            for i in range(0,len(c.pension_macron)):
-                (age,_,pens,t) = c.pension_macron[i]
+            for i in range(0,len(c.pension_macron),1):
+                (age,_,pens,t,_) = c.pension_macron[i]
                 lx = [ c.annee_debut + a - c.age_debut   for a in range(age, sim.Carriere.age_mort+1) ]  # années de retraite
                 ly = [ c.revenus_retraite_macron[i][j] / div / corr[ lx[j] - m.debut ]   for j in range(sim.Carriere.age_mort+1 - age) ]  # revenus de retraite
 
@@ -207,7 +208,7 @@ class AnalyseCarriere:
                 plt.plot( lx, ly, color=couleur, linestyle="dashed", label=dec("Retraites") )
 
                 p1 = ax.transData.transform_point((lx[1], ly[1]))
-                p2 = ax.transData.transform_point((lx[-1], ly[-1]))
+                p2 = ax.transData.transform_point((lx[2], ly[2]))
                 dy = (p2[1] - p1[1])
                 dx = (p2[0] - p1[0])
                 rotn = math.degrees(math.atan2(dy, dx))
@@ -220,11 +221,12 @@ class AnalyseCarriere:
         m = c.m
         annee0 = c.annee_debut
 
-        # Courbes du SMIC et du SMPT
+        # Courbes du SMIC, du SMPT et de 85%MIC
         rg = range( annee0, a2 )
         plt.plot(rg, [m.smic[i-m.debut]/div/corr[i-m.debut] for i in rg], label="SMIC", color="red")
         plt.plot(rg, [m.smpt[i-m.debut]/div/corr[i-m.debut] for i in rg], label="Salaire moyen", color="blue")
-            
+        plt.plot(rg, [0.85*m.smic[i-m.debut]/div/corr[i-m.debut] for i in rg], label="85% SMIC", color="grey", linestyle=":")
+        
         # Evolution de carrière en fonction de l'année de départ
         for i in range(len(carrieres)):
             if i!=focus:
@@ -242,7 +244,7 @@ class AnalyseCarriere:
         plt.title(titre)
             
         plt.ylabel(labely)
-        plt.legend(loc="upper right")
+        plt.legend(loc="lower left")
 
     
 
@@ -298,7 +300,7 @@ class AnalyseModele():
             
     # affichage de graphiques
     
-    def plot_modele(self, f, tit="", r=[], lw=1):
+    def plot_modele(self, f, tit="", r=[], ls=1):
 
         m=self.m
         
@@ -306,7 +308,7 @@ class AnalyseModele():
             r=[m.debut, m.fin]
         r2 = [ r[0]-m.debut, r[1]+1-m.debut ]
         r  = range(r[0],r[1]+1)
-        plt.plot(r,f[r2[0]:r2[1]], label=dec(m.nom), linewidth=lw)
+        plt.plot(r,f[r2[0]:r2[1]], label=dec(m.nom), linestyle=ls)
 
         plt.axvline(m.annee_ref, color="grey", linestyle="dashed")
         plt.title(tit)
@@ -316,7 +318,7 @@ class AnalyseModele():
     def plot_modeles(cls,lm,r):
         
         for i in range(7):
-            eurcst="("+euroconst(lm[0],False)+")"
+            eurcst=" ("+euroconst(lm[0],False)+")"
             label = [ "Indice Prix (réf=%d)"%(lm[0].annee_ref),
                       "SMIC"+eurcst,
                       "SMPT"+eurcst,
@@ -338,7 +340,7 @@ class AnalyseModele():
                         [ m.vente_pt[j]/m.corr_prix_annee_ref[j] for j in range(n) ],
                         [ m.age_pivot[j] for j in range(n) ] ][i]
                 a=AnalyseModele(m)
-                a.plot_modele(var, dec(label), r, len(lm)-k)
+                a.plot_modele(var, dec(label), r, ['--','-.',':'][k] )
                 k=k+1
             plt.legend(loc='upper right')
         plt.tight_layout()

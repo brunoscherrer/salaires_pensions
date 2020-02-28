@@ -108,7 +108,7 @@ class ModeleGouv(ModeleAbs):
         self.variation_prime_fp=0.0023 # +0.23 points par an
         
         if self.trucage:
-            self.nom="Gouvernement truqué (âge-pivot bloqué à 65 ans)"
+            self.nom="Gouvernement (âge-pivot bloqué à 65 ans)"
             self.id_modele="gouv"
         else:
             self.nom="Gouvernement corrigé (âge-pivot glissant)"
@@ -186,17 +186,18 @@ class Carriere(object):
             pts += self.sal[i] / self.m.achat_pt[ an - self.m.debut ] 
             nb_pts.append ( pts )
             
-            # calcul de la pension (si possible)
+            # calcul de la pension si possible
             age = self.age_debut + i
             if age in range(62, Carriere.age_max+1):
                 
                 d = .05*(age - self.m.age_pivot[ an - self.m.debut ] )
                 p = (1.0+d) * pts * self.m.vente_pt[ an - self.m.debut ]
 
-                if age - self.age_debut >= 43:  # retraite à "1000 euros" (85% du SMIC) si au moins 43 annuités
-                    p = max(p, 0.85*self.m.smic[ an - self.m.debut ])
+                r = min(1.0, (age-self.age_debut)/43.)  # proportion de carrière complète
+
+                p = max(p, r*0.85*self.m.smic[ an - self.m.debut ]) # matelas pro-rata de la carrière complète (43 ans)
                 
-                pension.append( (age, d, p, p/self.sal[i]) )
+                pension.append( (age, d, p, p/self.sal[i], r ) )
                 
         self.pension_macron = pension
         self.nb_pts = nb_pts
@@ -209,13 +210,14 @@ class Carriere(object):
         
         for i in range(0,len(self.pension_macron)):
             
-            (age,_,pens,_) = self.pension_macron[i]
+            (age,_,pens,_,r) = self.pension_macron[i]
 
             revenus_retraite.append([])
             annee0 = self.annee_debut + age - self.age_debut
             for a in range(age, Carriere.age_mort+1):   # années de retraites
                 annee = self.annee_debut + a - self.age_debut
                 p = pens / m.prix[ annee0 - m.debut ] * m.prix[ annee - m.debut ]  # hypothèse de revalorisation de la pension par rapport à l'inflation (ref=age de départ à la retraite)
+                #### p = max(p, r * 0.85 * self.m.smic[ annee - m.debut ]) #### non: y'a pas de matelas
                 revenus_retraite[-1].append( p )
                 
         self.revenus_retraite_macron = revenus_retraite
@@ -258,8 +260,10 @@ class CarrierePublic(Carriere):
     HEA1,HEA2,HEA3,HEB1,HEB2,HEB3,HEBb1, HEBb2, HEBb3 = 890, 925,972, 972, 1013, 1067, 1067, 1095, 1124  # indices hors échelle
     grilles = [
         ( [("ATSEM","ATSEM (C2 puis C1)"),("AdjAdm","Adjoint Administratif (C2 puis C1)")], [ (329,1), (330,2), (333,2), (336, 2), (345,2), (351,2), (364,2), (380,2), (390,3), (402,3), (411,4), (415, 3), (430,3), (450,3), (466,100) ] ),
-        ( [("CR","Chargé de Recherche (thèse, CN puis HC)"), ("MCF","Maître de Conférences (thèse, CN puis HC)")], [ (430,3), (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,5), (HEA1,1), (HEA2,1), (HEA3,100) ] ),
-        ( [("DR","Directeur de Recherche (thèse, CRCN, DR2 puis DR1)"), ("PR","Professeur d'Université (thèse, MCF, PR2 puis PR1)") ], [ (430,3), (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 1+3./12), (830, 3), (972,3), (1013,100) ] ),
+#        ( [("CR","Chargé de Recherche (thèse, CN puis HC)"), ("MCF","Maître de Conférences (thèse, CN puis HC)")], [ (430,3), (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,5), (HEA1,1), (HEA2,1), (HEA3,100) ] ),
+#        ( [("DR","Directeur de Recherche (thèse, CRCN, DR2 puis DR1)"), ("PR","Professeur d'Université (thèse, MCF, PR2 puis PR1)") ], [ (430,3), (474,1), (510,2), (560,2+3./12), (600,2.5), (643,2.5), (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 1+3./12), (830, 3), (972,3), (1013,100) ] ),
+        ( [("CR","Chargé de Recherche (thèse, CN puis HC)"), ("MCF","Maître de Conférences (thèse, CN puis HC)")], [ (430,3), (474,1), (560,2+3./12), (600,2.5), (643,2.5), (693,2.5), (739,3), (769,3), (803,2+9./12), (830,5), (HEA1,1), (HEA2,1), (HEA3,100) ] ), # rentrée au 3ème échelon
+        ( [("DR","Directeur de Recherche (thèse, CRCN, DR2 puis DR1)"), ("PR","Professeur d'Université (thèse, MCF, PR2 puis PR1)") ], [ (430,3), (560,2+3./12), (600,2.5), (643,2.5), (667, 1+3./12), (705, 1+3./12), (743, 1+3./12), (830, 3), (972,3), (1013,100) ] ), # rentrée au 3ème échelon, passage Rang A après 12 ans
         ( [("ProfCertifie","Professeur certifié"), ("ProfEcoles","Professeur des écoles")], [(450,1), (498,1), (513,2), (542,2), (579,2.5), (618,3), (710,3.5), (757,2), (800, 2), (830,100) ] ) ,
         ( [("Infirmier","Infirmière en soins généraux (CN, CS, puis HC)")], [(390,2), (404,3), (422,3), (446,3), (469,3), (501,3), (520,4), (544,4), (571,4), (594,4), (627,100) ] ),
         ( [("AideSoignant","Aide-soignante (CN puis HC)")], [(327,1), (328,2), (329,2), (330,2), (332,2), (334,2), (338,2), (342,2), (346,3), (356,3), (368,3+1./3), (380,2), (390,3), (402,3), (411,4), (418,100) ] ),
@@ -327,13 +331,13 @@ class CarrierePublic(Carriere):
 
             sal = (sal_hp*(1+prime))
 
-            # calcul de l'indemnité GIPA pour suivre au moins l'inflation
+            # calcul de l'indemnité GIPA pour suivre au moins l'inflation (sur les 4 dernières années)
             self.gipa.append( 0.0 )
             if i>=4 and self.CORRECTION_GIPA:
                 sal2 = (  self.sal[i-1]/self.m.prix[annee+i-1 -self.m.debut]
                         + self.sal[i-2]/self.m.prix[annee+i-2 -self.m.debut]
                         + self.sal[i-3]/self.m.prix[annee+i-3 -self.m.debut]
-                        + self.sal[i-4]/self.m.prix[annee+i-4 -self.m.debut]) / 4. * self.m.prix[annee+i - self.m.debut] # salaire lié au maintien du pouvoir d'achat 
+                        + self.sal[i-4]/self.m.prix[annee+i-4 -self.m.debut] ) / 4. * self.m.prix[annee+i - self.m.debut] # salaire lié au maintien du pouvoir d'achat 
                 if sal2 > sal:
                     delta = sal2-sal
                     sal += delta

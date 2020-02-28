@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.20)  27 FEB 2020 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.20)  28 FEB 2020 15:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**book.tex
+**book
 (./book.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 11 language(s) loaded.
@@ -96,7 +96,7 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 (/usr/share/texlive/texmf-dist/tex/latex/doclicense/doclicense-english.ldf
 File: doclicense-english.ldf 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(./preambule.tex (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
@@ -461,6 +461,76 @@ Package babel Info: Making ? an active character on input line 414.
 \FBfnindent=\skip51
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks20
+\XKV@tempa@toks=\toks21
+)
+\XKV@depth=\count102
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen108
+\Gin@req@width=\dimen109
+)
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box26
+)
+\tc@llx=\dimen110
+\tc@lly=\dimen111
+\tc@urx=\dimen112
+\tc@ury=\dimen113
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen114
+\adjbox@Height=\dimen115
+\adjbox@Depth=\dimen116
+\adjbox@Totalheight=\dimen117
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count103
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box27
+\sift@deathcycles=\count104
+\@vwid@loff=\dimen118
+\@vwid@roff=\dimen119
+))
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -474,18 +544,18 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count102
-\Gm@cntv=\count103
-\c@Gm@tempcnt=\count104
-\Gm@bindingoffset=\dimen108
-\Gm@wd@mp=\dimen109
-\Gm@odd@mp=\dimen110
-\Gm@even@mp=\dimen111
-\Gm@layoutwidth=\dimen112
-\Gm@layoutheight=\dimen113
-\Gm@layouthoffset=\dimen114
-\Gm@layoutvoffset=\dimen115
-\Gm@dimlist=\toks20
+\Gm@cnth=\count105
+\Gm@cntv=\count106
+\c@Gm@tempcnt=\count107
+\Gm@bindingoffset=\dimen120
+\Gm@wd@mp=\dimen121
+\Gm@odd@mp=\dimen122
+\Gm@even@mp=\dimen123
+\Gm@layoutwidth=\dimen124
+\Gm@layoutheight=\dimen125
+\Gm@layouthoffset=\dimen126
+\Gm@layoutvoffset=\dimen127
+\Gm@dimlist=\toks22
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
@@ -502,29 +572,27 @@ s
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count105
-\mult@box=\box26
-\multicol@leftmargin=\dimen116
-\c@unbalance=\count106
-\c@collectmore=\count107
-\doublecol@number=\count108
-\multicoltolerance=\count109
-\multicolpretolerance=\count110
-\full@width=\dimen117
-\page@free=\dimen118
-\premulticols=\dimen119
-\postmulticols=\dimen120
+\c@tracingmulticols=\count108
+\mult@box=\box28
+\multicol@leftmargin=\dimen128
+\c@unbalance=\count109
+\c@collectmore=\count110
+\doublecol@number=\count111
+\multicoltolerance=\count112
+\multicolpretolerance=\count113
+\full@width=\dimen129
+\page@free=\dimen130
+\premulticols=\dimen131
+\postmulticols=\dimen132
 \multicolsep=\skip61
 \multicolbaselineskip=\skip62
-\partial@page=\box27
-\last@line=\box28
-\maxbalancingoverflow=\dimen121
-\mult@rightbox=\box29
-\mult@grightbox=\box30
-\mult@gfirstbox=\box31
-\mult@firstbox=\box32
-\@tempa=\box33
-\@tempa=\box34
+\partial@page=\box29
+\last@line=\box30
+\maxbalancingoverflow=\dimen133
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
 \@tempa=\box35
 \@tempa=\box36
 \@tempa=\box37
@@ -540,14 +608,16 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
-\c@columnbadness=\count111
-\c@finalcolumnbadness=\count112
-\last@try=\dimen122
-\multicolovershoot=\dimen123
-\multicolundershoot=\dimen124
-\mult@nat@firstbox=\box50
-\colbreak@box=\box51
-\mc@col@check@num=\count113
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count114
+\c@finalcolumnbadness=\count115
+\last@try=\dimen134
+\multicolovershoot=\dimen135
+\multicolundershoot=\dimen136
+\mult@nat@firstbox=\box52
+\colbreak@box=\box53
+\mc@col@check@num=\count116
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
@@ -592,16 +662,16 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen125
-\Hy@linkcounter=\count114
-\Hy@pagecounter=\count115
+\@linkdim=\dimen137
+\Hy@linkcounter=\count117
+\Hy@pagecounter=\count118
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count116
+\Hy@SavedSpaceFactor=\count119
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -613,17 +683,17 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count117
+\c@Hy@tempcnt=\count120
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen126
-\Fld@menulength=\count118
-\Field@Width=\dimen127
-\Fld@charsize=\dimen128
+\XeTeXLinkMargin=\dimen138
+\Fld@menulength=\count121
+\Field@Width=\dimen139
+\Fld@charsize=\dimen140
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -633,16 +703,16 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count119
-\c@Item=\count120
-\c@Hfootnote=\count121
+\Hy@abspage=\count122
+\c@Item=\count123
+\c@Hfootnote=\count124
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count122
-\c@bookmark@seq@number=\count123
+\Fld@listcount=\count125
+\c@bookmark@seq@number=\count126
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -653,27 +723,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box52
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen129
-\Gin@req@width=\dimen130
+\@eurobox=\box54
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -712,9 +762,9 @@ Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks21
-\mtc@strutbox=\box53
-\mtc@hstrutbox=\box54
+\mtc@toks=\toks23
+\mtc@strutbox=\box55
+\mtc@hstrutbox=\box56
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout3 = `book.mtc0'.
@@ -731,10 +781,10 @@ Package minitoc Info: I0031
 
 \openout3 = `book.mtc0'.
 
-\c@mtc=\count124
-\c@minitocdepth=\count125
-\c@ptc=\count126
-\c@parttocdepth=\count127
+\c@mtc=\count127
+\c@minitocdepth=\count128
+\c@ptc=\count129
+\c@parttocdepth=\count130
 \ptcindent=\skip66
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
@@ -748,25 +798,25 @@ File: english.mld 2006/01/13
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
-\ttl@box=\box55
+\ttl@box=\box57
 \beforetitleunit=\skip67
 \aftertitleunit=\skip68
-\ttl@plus=\dimen131
-\ttl@minus=\dimen132
-\ttl@toksa=\toks22
-\titlewidth=\dimen133
-\titlewidthlast=\dimen134
-\titlewidthfirst=\dimen135
-)
+\ttl@plus=\dimen141
+\ttl@minus=\dimen142
+\ttl@toksa=\toks24
+\titlewidth=\dimen143
+\titlewidthlast=\dimen144
+\titlewidthfirst=\dimen145
+))
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2018/02/11 v5.2c context-sensitive quotations (JAW)
-\csq@reset=\count128
-\csq@gtype=\count129
-\csq@glevel=\count130
-\csq@qlevel=\count131
-\csq@maxlvl=\count132
-\csq@tshold=\count133
-\csq@ltx@everypar=\toks23
+\csq@reset=\count131
+\csq@gtype=\count132
+\csq@glevel=\count133
+\csq@qlevel=\count134
+\csq@maxlvl=\count135
+\csq@tshold=\count136
+\csq@ltx@everypar=\toks25
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2018/02/11 v5.2c csquotes generic definitions (JAW)
@@ -779,38 +829,57 @@ File: csquotes.cfg
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/ccicons/ccicons.sty
 Package: ccicons 2017/10/30 v1.6 LaTeX support for Creative Commons icons
-
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
-)
-\XKV@depth=\count134
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))) (./book.aux)
+) (./book.aux)
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Info: Redefining \degres on input line 43.
-LaTeX Info: Redefining \dots on input line 43.
-LaTeX Info: Redefining \up on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Info: Redefining \degres on input line 18.
+LaTeX Info: Redefining \dots on input line 18.
+LaTeX Info: Redefining \up on input line 18.
 
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count137
+\scratchdimen=\dimen146
+\scratchbox=\box58
+\nofMPsegments=\count138
+\nofMParguments=\count139
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen147
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -845,55 +914,24 @@ LaTeX Info: Redefining \up on input line 43.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 43.
+\AtBeginShipoutBox=\box59
+Package hyperref Info: Link coloring OFF on input line 18.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count135
+\c@section@level=\count143
 )
-LaTeX Info: Redefining \ref on input line 43.
-LaTeX Info: Redefining \pageref on input line 43.
-LaTeX Info: Redefining \nameref on input line 43.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 (./book.out) (./book.out)
 \@outlinefile=\write4
 \openout4 = `book.out'.
 
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
-\scratchdimen=\dimen136
-\scratchbox=\box57
-\nofMPsegments=\count137
-\nofMParguments=\count138
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count139
-\MPscratchDim=\dimen137
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
-\everyMPtoPDFconversion=\toks27
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
@@ -925,7 +963,7 @@ Package minitoc(hints) Warning: W0023
 (minitoc(hints))                of loading the ``hyperref'' package.
 
 Package minitoc Info: I0024
-(minitoc)             PREPARING MINITOCS FROM book.toc on input line 53.
+(minitoc)             PREPARING MINITOCS FROM book.toc on input line 28.
 Package minitoc Info: I0033
 (minitoc)             Writing book.mtc1.
 \openout3 = `book.mtc1'.
@@ -1023,39 +1061,26 @@ Package minitoc Info: I0033
 \openout3 = `book.mtc24'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 56.
+(Font)              <12> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 56.
+(Font)              <8> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 56.
+(Font)              <6> on input line 31.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 57.
+(Font)              <7> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 57.
-<doclicense-CC-by-nc-sa.pdf, id=111, 121.45375pt x 43.16125pt>
+(Font)              <5> on input line 33.
+<doclicense-CC-by-nc-sa.pdf, id=112, 121.45375pt x 43.16125pt>
 File: doclicense-CC-by-nc-sa.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-sa.pdf>
-Package pdftex.def Info: doclicense-CC-by-nc-sa.pdf  used on input line 57.
+Package pdftex.def Info: doclicense-CC-by-nc-sa.pdf  used on input line 33.
 (pdftex.def)             Requested size: 99.97559pt x 35.5281pt.
  (./intro.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 36.
+
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1065,21 +1090,21 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \newpage
+l.40 \newpage
               [1 </usr/share/texlive/texmf-dist/tex/latex/doclicense/images/doc
 license-CC-by-nc-sa.pdf>] (./book.toc)
 \tf@toc=\write5
 \openout5 = `book.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 [3
 
 ]) (./corps.tex
-<fig/comparaison_modeles.pdf, id=161, 1300.86pt x 867.24pt>
+<fig/comparaison_modeles.pdf, id=175, 1300.86pt x 867.24pt>
 File: fig/comparaison_modeles.pdf Graphic file (type pdf)
 <use fig/comparaison_modeles.pdf>
 Package pdftex.def Info: fig/comparaison_modeles.pdf  used on input line 2.
@@ -1090,7 +1115,7 @@ Overfull \vbox (13.2931pt too high) has occurred while \output is active []
 
 [4 <./fig/comparaison_modeles.pdf>]
 Chapitre 1.
-<fig/grille_Infirmier.pdf, id=225, 462.52798pt x 346.89601pt>
+<fig/grille_Infirmier.pdf, id=239, 462.52798pt x 346.89601pt>
 File: fig/grille_Infirmier.pdf Graphic file (type pdf)
 <use fig/grille_Infirmier.pdf>
 Package pdftex.def Info: fig/grille_Infirmier.pdf  used on input line 8.
@@ -1102,12 +1127,11 @@ Package pdftex.def Info: fig/grille_Infirmier.pdf  used on input line 8.
 (./book.mtc1) [5
 
  <./fig/grille_Infirmier.pdf>]
-<fig/Infirmier_1975_22_dest_retraite.pdf, id=285, 1734.48pt x 433.62pt>
-File: fig/Infirmier_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1975_22_dest_retraite.pdf  used on input
- line 118.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+<fig/Infirmier_1975_22.pdf, id=299, 1734.48pt x 433.62pt>
+File: fig/Infirmier_1975_22.pdf Graphic file (type pdf)
+<use fig/Infirmier_1975_22.pdf>
+Package pdftex.def Info: fig/Infirmier_1975_22.pdf  used on input line 124.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1115,13 +1139,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./fig/Infirmier_1975_22_dest_retraite.pdf>]
-<fig/Infirmier_1980_22_dest_retraite.pdf, id=353, 1734.48pt x 433.62pt>
-File: fig/Infirmier_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1980_22_dest_retraite.pdf  used on input
- line 191.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[6 <./fig/Infirmier_1975_22.pdf>]
+<fig/Infirmier_1980_22.pdf, id=364, 1734.48pt x 433.62pt>
+File: fig/Infirmier_1980_22.pdf Graphic file (type pdf)
+<use fig/Infirmier_1980_22.pdf>
+Package pdftex.def Info: fig/Infirmier_1980_22.pdf  used on input line 203.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1129,13 +1152,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./fig/Infirmier_1980_22_dest_retraite.pdf>]
-<fig/Infirmier_1990_22_dest_retraite.pdf, id=414, 1734.48pt x 433.62pt>
-File: fig/Infirmier_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_1990_22_dest_retraite.pdf  used on input
- line 264.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[7 <./fig/Infirmier_1980_22.pdf>]
+<fig/Infirmier_1990_22.pdf, id=425, 1734.48pt x 433.62pt>
+File: fig/Infirmier_1990_22.pdf Graphic file (type pdf)
+<use fig/Infirmier_1990_22.pdf>
+Package pdftex.def Info: fig/Infirmier_1990_22.pdf  used on input line 282.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1143,13 +1165,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./fig/Infirmier_1990_22_dest_retraite.pdf>]
-<fig/Infirmier_2003_22_dest_retraite.pdf, id=475, 1734.48pt x 433.62pt>
-File: fig/Infirmier_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Infirmier_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Infirmier_2003_22_dest_retraite.pdf  used on input
- line 337.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[8 <./fig/Infirmier_1990_22.pdf>]
+<fig/Infirmier_2003_22.pdf, id=486, 1734.48pt x 433.62pt>
+File: fig/Infirmier_2003_22.pdf Graphic file (type pdf)
+<use fig/Infirmier_2003_22.pdf>
+Package pdftex.def Info: fig/Infirmier_2003_22.pdf  used on input line 361.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1157,12 +1178,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./fig/Infirmier_2003_22_dest_retraite.pdf>]
+[9 <./fig/Infirmier_2003_22.pdf>]
 Chapitre 2.
-<fig/grille_AideSoignant.pdf, id=536, 462.52798pt x 346.89601pt>
+<fig/grille_AideSoignant.pdf, id=547, 462.52798pt x 346.89601pt>
 File: fig/grille_AideSoignant.pdf Graphic file (type pdf)
 <use fig/grille_AideSoignant.pdf>
-Package pdftex.def Info: fig/grille_AideSoignant.pdf  used on input line 343.
+Package pdftex.def Info: fig/grille_AideSoignant.pdf  used on input line 367.
 (pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
 \openout3 = `book.mtc'.
 
@@ -1171,12 +1192,11 @@ Package pdftex.def Info: fig/grille_AideSoignant.pdf  used on input line 343.
 (./book.mtc2) [10
 
  <./fig/grille_AideSoignant.pdf>]
-<fig/AideSoignant_1975_22_dest_retraite.pdf, id=591, 1734.48pt x 433.62pt>
-File: fig/AideSoignant_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1975_22_dest_retraite.pdf  used on in
-put line 463.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+<fig/AideSoignant_1975_22.pdf, id=602, 1734.48pt x 433.62pt>
+File: fig/AideSoignant_1975_22.pdf Graphic file (type pdf)
+<use fig/AideSoignant_1975_22.pdf>
+Package pdftex.def Info: fig/AideSoignant_1975_22.pdf  used on input line 493.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1184,13 +1204,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./fig/AideSoignant_1975_22_dest_retraite.pdf>]
-<fig/AideSoignant_1980_22_dest_retraite.pdf, id=652, 1734.48pt x 433.62pt>
-File: fig/AideSoignant_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1980_22_dest_retraite.pdf  used on in
-put line 536.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[11 <./fig/AideSoignant_1975_22.pdf>]
+<fig/AideSoignant_1980_22.pdf, id=663, 1734.48pt x 433.62pt>
+File: fig/AideSoignant_1980_22.pdf Graphic file (type pdf)
+<use fig/AideSoignant_1980_22.pdf>
+Package pdftex.def Info: fig/AideSoignant_1980_22.pdf  used on input line 572.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1198,13 +1217,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./fig/AideSoignant_1980_22_dest_retraite.pdf>]
-<fig/AideSoignant_1990_22_dest_retraite.pdf, id=714, 1734.48pt x 433.62pt>
-File: fig/AideSoignant_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_1990_22_dest_retraite.pdf  used on in
-put line 609.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[12 <./fig/AideSoignant_1980_22.pdf>]
+<fig/AideSoignant_1990_22.pdf, id=725, 1734.48pt x 433.62pt>
+File: fig/AideSoignant_1990_22.pdf Graphic file (type pdf)
+<use fig/AideSoignant_1990_22.pdf>
+Package pdftex.def Info: fig/AideSoignant_1990_22.pdf  used on input line 651.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1212,13 +1230,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13 <./fig/AideSoignant_1990_22_dest_retraite.pdf>]
-<fig/AideSoignant_2003_22_dest_retraite.pdf, id=776, 1734.48pt x 433.62pt>
-File: fig/AideSoignant_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AideSoignant_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AideSoignant_2003_22_dest_retraite.pdf  used on in
-put line 682.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[13 <./fig/AideSoignant_1990_22.pdf>]
+<fig/AideSoignant_2003_22.pdf, id=787, 1734.48pt x 433.62pt>
+File: fig/AideSoignant_2003_22.pdf Graphic file (type pdf)
+<use fig/AideSoignant_2003_22.pdf>
+Package pdftex.def Info: fig/AideSoignant_2003_22.pdf  used on input line 730.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1226,12 +1243,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./fig/AideSoignant_2003_22_dest_retraite.pdf>]
+[14 <./fig/AideSoignant_2003_22.pdf>]
 Chapitre 3.
-<fig/grille_TechHosp.pdf, id=837, 462.52798pt x 346.89601pt>
+<fig/grille_TechHosp.pdf, id=848, 462.52798pt x 346.89601pt>
 File: fig/grille_TechHosp.pdf Graphic file (type pdf)
 <use fig/grille_TechHosp.pdf>
-Package pdftex.def Info: fig/grille_TechHosp.pdf  used on input line 688.
+Package pdftex.def Info: fig/grille_TechHosp.pdf  used on input line 736.
 (pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
 \openout3 = `book.mtc'.
 
@@ -1240,12 +1257,11 @@ Package pdftex.def Info: fig/grille_TechHosp.pdf  used on input line 688.
 (./book.mtc3) [15
 
  <./fig/grille_TechHosp.pdf>]
-<fig/TechHosp_1975_22_dest_retraite.pdf, id=888, 1734.48pt x 433.62pt>
-File: fig/TechHosp_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1975_22_dest_retraite.pdf  used on input 
-line 802.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+<fig/TechHosp_1975_22.pdf, id=899, 1734.48pt x 433.62pt>
+File: fig/TechHosp_1975_22.pdf Graphic file (type pdf)
+<use fig/TechHosp_1975_22.pdf>
+Package pdftex.def Info: fig/TechHosp_1975_22.pdf  used on input line 856.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1253,13 +1269,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16 <./fig/TechHosp_1975_22_dest_retraite.pdf>]
-<fig/TechHosp_1980_22_dest_retraite.pdf, id=949, 1734.48pt x 433.62pt>
-File: fig/TechHosp_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1980_22_dest_retraite.pdf  used on input 
-line 875.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[16 <./fig/TechHosp_1975_22.pdf>]
+<fig/TechHosp_1980_22.pdf, id=960, 1734.48pt x 433.62pt>
+File: fig/TechHosp_1980_22.pdf Graphic file (type pdf)
+<use fig/TechHosp_1980_22.pdf>
+Package pdftex.def Info: fig/TechHosp_1980_22.pdf  used on input line 935.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1267,13 +1282,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17 <./fig/TechHosp_1980_22_dest_retraite.pdf>]
-<fig/TechHosp_1990_22_dest_retraite.pdf, id=1010, 1734.48pt x 433.62pt>
-File: fig/TechHosp_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_1990_22_dest_retraite.pdf  used on input 
-line 948.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[17 <./fig/TechHosp_1980_22.pdf>]
+<fig/TechHosp_1990_22.pdf, id=1021, 1734.48pt x 433.62pt>
+File: fig/TechHosp_1990_22.pdf Graphic file (type pdf)
+<use fig/TechHosp_1990_22.pdf>
+Package pdftex.def Info: fig/TechHosp_1990_22.pdf  used on input line 1014.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1281,13 +1295,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18 <./fig/TechHosp_1990_22_dest_retraite.pdf>]
-<fig/TechHosp_2003_22_dest_retraite.pdf, id=1072, 1734.48pt x 433.62pt>
-File: fig/TechHosp_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/TechHosp_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/TechHosp_2003_22_dest_retraite.pdf  used on input 
-line 1021.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+[18 <./fig/TechHosp_1990_22.pdf>]
+<fig/TechHosp_2003_22.pdf, id=1083, 1734.48pt x 433.62pt>
+File: fig/TechHosp_2003_22.pdf Graphic file (type pdf)
+<use fig/TechHosp_2003_22.pdf>
+Package pdftex.def Info: fig/TechHosp_2003_22.pdf  used on input line 1093.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1295,12 +1308,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./fig/TechHosp_2003_22_dest_retraite.pdf>]
+[19 <./fig/TechHosp_2003_22.pdf>]
 Chapitre 4.
-<fig/grille_AdjTech.pdf, id=1133, 462.52798pt x 346.89601pt>
+<fig/grille_AdjTech.pdf, id=1144, 462.52798pt x 346.89601pt>
 File: fig/grille_AdjTech.pdf Graphic file (type pdf)
 <use fig/grille_AdjTech.pdf>
-Package pdftex.def Info: fig/grille_AdjTech.pdf  used on input line 1027.
+Package pdftex.def Info: fig/grille_AdjTech.pdf  used on input line 1099.
 (pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
 \openout3 = `book.mtc'.
 
@@ -1309,12 +1322,11 @@ Package pdftex.def Info: fig/grille_AdjTech.pdf  used on input line 1027.
 (./book.mtc4) [20
 
  <./fig/grille_AdjTech.pdf>]
-<fig/AdjTech_1975_22_dest_retraite.pdf, id=1188, 1734.48pt x 433.62pt>
-File: fig/AdjTech_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1975_22_dest_retraite.pdf  used on input l
-ine 1153.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
+<fig/AdjTech_1975_22.pdf, id=1199, 1734.48pt x 433.62pt>
+File: fig/AdjTech_1975_22.pdf Graphic file (type pdf)
+<use fig/AdjTech_1975_22.pdf>
+Package pdftex.def Info: fig/AdjTech_1975_22.pdf  used on input line 1231.
+(pdftex.def)             Requested size: 748.73187pt x 187.18077pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1322,1390 +1334,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21 <./fig/AdjTech_1975_22_dest_retraite.pdf>]
-<fig/AdjTech_1980_22_dest_retraite.pdf, id=1249, 1734.48pt x 433.62pt>
-File: fig/AdjTech_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1980_22_dest_retraite.pdf  used on input l
-ine 1226.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22 <./fig/AdjTech_1980_22_dest_retraite.pdf>]
-<fig/AdjTech_1990_22_dest_retraite.pdf, id=1311, 1734.48pt x 433.62pt>
-File: fig/AdjTech_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_1990_22_dest_retraite.pdf  used on input l
-ine 1299.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[23 <./fig/AdjTech_1990_22_dest_retraite.pdf>]
-<fig/AdjTech_2003_22_dest_retraite.pdf, id=1372, 1734.48pt x 433.62pt>
-File: fig/AdjTech_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/AdjTech_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/AdjTech_2003_22_dest_retraite.pdf  used on input l
-ine 1372.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[24 <./fig/AdjTech_2003_22_dest_retraite.pdf>]
-Chapitre 5.
-<fig/grille_Redacteur.pdf, id=1434, 462.52798pt x 346.89601pt>
-File: fig/grille_Redacteur.pdf Graphic file (type pdf)
-<use fig/grille_Redacteur.pdf>
-Package pdftex.def Info: fig/grille_Redacteur.pdf  used on input line 1378.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc5) [25
-
- <./fig/grille_Redacteur.pdf>]
-<fig/Redacteur_1975_22_dest_retraite.pdf, id=1485, 1734.48pt x 433.62pt>
-File: fig/Redacteur_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1975_22_dest_retraite.pdf  used on input
- line 1498.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[26 <./fig/Redacteur_1975_22_dest_retraite.pdf>]
-<fig/Redacteur_1980_22_dest_retraite.pdf, id=1546, 1734.48pt x 433.62pt>
-File: fig/Redacteur_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1980_22_dest_retraite.pdf  used on input
- line 1571.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[27 <./fig/Redacteur_1980_22_dest_retraite.pdf>]
-<fig/Redacteur_1990_22_dest_retraite.pdf, id=1607, 1734.48pt x 433.62pt>
-File: fig/Redacteur_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_1990_22_dest_retraite.pdf  used on input
- line 1644.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[28 <./fig/Redacteur_1990_22_dest_retraite.pdf>]
-<fig/Redacteur_2003_22_dest_retraite.pdf, id=1668, 1734.48pt x 433.62pt>
-File: fig/Redacteur_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Redacteur_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Redacteur_2003_22_dest_retraite.pdf  used on input
- line 1717.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[29 <./fig/Redacteur_2003_22_dest_retraite.pdf>]
-Chapitre 6.
-<fig/grille_SecretaireAdmin.pdf, id=1729, 462.52798pt x 346.89601pt>
-File: fig/grille_SecretaireAdmin.pdf Graphic file (type pdf)
-<use fig/grille_SecretaireAdmin.pdf>
-Package pdftex.def Info: fig/grille_SecretaireAdmin.pdf  used on input line 172
-3.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc6) [30
-
- <./fig/grille_SecretaireAdmin.pdf>]
-<fig/SecretaireAdmin_1975_22_dest_retraite.pdf, id=1780, 1734.48pt x 433.62pt>
-File: fig/SecretaireAdmin_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1975_22_dest_retraite.pdf  used on
- input line 1837.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[31 <./fig/SecretaireAdmin_1975_22_dest_retraite.pdf>]
-<fig/SecretaireAdmin_1980_22_dest_retraite.pdf, id=1842, 1734.48pt x 433.62pt>
-File: fig/SecretaireAdmin_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1980_22_dest_retraite.pdf  used on
- input line 1910.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[32 <./fig/SecretaireAdmin_1980_22_dest_retraite.pdf>]
-<fig/SecretaireAdmin_1990_22_dest_retraite.pdf, id=1903, 1734.48pt x 433.62pt>
-File: fig/SecretaireAdmin_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_1990_22_dest_retraite.pdf  used on
- input line 1983.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[33 <./fig/SecretaireAdmin_1990_22_dest_retraite.pdf>]
-<fig/SecretaireAdmin_2003_22_dest_retraite.pdf, id=1964, 1734.48pt x 433.62pt>
-File: fig/SecretaireAdmin_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SecretaireAdmin_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SecretaireAdmin_2003_22_dest_retraite.pdf  used on
- input line 2056.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[34 <./fig/SecretaireAdmin_2003_22_dest_retraite.pdf>]
-Chapitre 7.
-<fig/grille_ATSEM.pdf, id=2025, 462.52798pt x 346.89601pt>
-File: fig/grille_ATSEM.pdf Graphic file (type pdf)
-<use fig/grille_ATSEM.pdf>
-Package pdftex.def Info: fig/grille_ATSEM.pdf  used on input line 2062.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc7) [35
-
- <./fig/grille_ATSEM.pdf>]
-<fig/ATSEM_1975_22_dest_retraite.pdf, id=2080, 1734.48pt x 433.62pt>
-File: fig/ATSEM_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1975_22_dest_retraite.pdf  used on input lin
-e 2180.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[36 <./fig/ATSEM_1975_22_dest_retraite.pdf>]
-<fig/ATSEM_1980_22_dest_retraite.pdf, id=2142, 1734.48pt x 433.62pt>
-File: fig/ATSEM_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1980_22_dest_retraite.pdf  used on input lin
-e 2253.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[37 <./fig/ATSEM_1980_22_dest_retraite.pdf>]
-<fig/ATSEM_1990_22_dest_retraite.pdf, id=2203, 1734.48pt x 433.62pt>
-File: fig/ATSEM_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_1990_22_dest_retraite.pdf  used on input lin
-e 2326.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[38 <./fig/ATSEM_1990_22_dest_retraite.pdf>]
-<fig/ATSEM_2003_22_dest_retraite.pdf, id=2264, 1734.48pt x 433.62pt>
-File: fig/ATSEM_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ATSEM_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ATSEM_2003_22_dest_retraite.pdf  used on input lin
-e 2399.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[39 <./fig/ATSEM_2003_22_dest_retraite.pdf>]
-Chapitre 8.
-<fig/grille_ProfEcoles.pdf, id=2325, 462.52798pt x 346.89601pt>
-File: fig/grille_ProfEcoles.pdf Graphic file (type pdf)
-<use fig/grille_ProfEcoles.pdf>
-Package pdftex.def Info: fig/grille_ProfEcoles.pdf  used on input line 2405.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc8) [40
-
- <./fig/grille_ProfEcoles.pdf>]
-<fig/ProfEcoles_1975_22_dest_retraite.pdf, id=2379, 1734.48pt x 433.62pt>
-File: fig/ProfEcoles_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1975_22_dest_retraite.pdf  used on inpu
-t line 2513.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[41 <./fig/ProfEcoles_1975_22_dest_retraite.pdf>]
-<fig/ProfEcoles_1980_22_dest_retraite.pdf, id=2440, 1734.48pt x 433.62pt>
-File: fig/ProfEcoles_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1980_22_dest_retraite.pdf  used on inpu
-t line 2586.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[42 <./fig/ProfEcoles_1980_22_dest_retraite.pdf>]
-<fig/ProfEcoles_1990_22_dest_retraite.pdf, id=2502, 1734.48pt x 433.62pt>
-File: fig/ProfEcoles_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_1990_22_dest_retraite.pdf  used on inpu
-t line 2659.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[43 <./fig/ProfEcoles_1990_22_dest_retraite.pdf>]
-<fig/ProfEcoles_2003_22_dest_retraite.pdf, id=2563, 1734.48pt x 433.62pt>
-File: fig/ProfEcoles_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfEcoles_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfEcoles_2003_22_dest_retraite.pdf  used on inpu
-t line 2732.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[44 <./fig/ProfEcoles_2003_22_dest_retraite.pdf>]
-Chapitre 9.
-<fig/grille_ProfCertifie.pdf, id=2624, 462.52798pt x 346.89601pt>
-File: fig/grille_ProfCertifie.pdf Graphic file (type pdf)
-<use fig/grille_ProfCertifie.pdf>
-Package pdftex.def Info: fig/grille_ProfCertifie.pdf  used on input line 2738.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc9) [45
-
- <./fig/grille_ProfCertifie.pdf>]
-<fig/ProfCertifie_1975_22_dest_retraite.pdf, id=2677, 1734.48pt x 433.62pt>
-File: fig/ProfCertifie_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1975_22_dest_retraite.pdf  used on in
-put line 2846.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[46 <./fig/ProfCertifie_1975_22_dest_retraite.pdf>]
-<fig/ProfCertifie_1980_22_dest_retraite.pdf, id=2738, 1734.48pt x 433.62pt>
-File: fig/ProfCertifie_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1980_22_dest_retraite.pdf  used on in
-put line 2919.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[47 <./fig/ProfCertifie_1980_22_dest_retraite.pdf>]
-<fig/ProfCertifie_1990_22_dest_retraite.pdf, id=2799, 1734.48pt x 433.62pt>
-File: fig/ProfCertifie_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_1990_22_dest_retraite.pdf  used on in
-put line 2992.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[48 <./fig/ProfCertifie_1990_22_dest_retraite.pdf>]
-<fig/ProfCertifie_2003_22_dest_retraite.pdf, id=2861, 1734.48pt x 433.62pt>
-File: fig/ProfCertifie_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfCertifie_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfCertifie_2003_22_dest_retraite.pdf  used on in
-put line 3065.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[49 <./fig/ProfCertifie_2003_22_dest_retraite.pdf>]
-Chapitre 10.
-<fig/grille_ProfAgrege.pdf, id=2923, 462.52798pt x 346.89601pt>
-File: fig/grille_ProfAgrege.pdf Graphic file (type pdf)
-<use fig/grille_ProfAgrege.pdf>
-Package pdftex.def Info: fig/grille_ProfAgrege.pdf  used on input line 3071.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc10) [50
-
- <./fig/grille_ProfAgrege.pdf>]
-<fig/ProfAgrege_1975_22_dest_retraite.pdf, id=2978, 1734.48pt x 433.62pt>
-File: fig/ProfAgrege_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1975_22_dest_retraite.pdf  used on inpu
-t line 3185.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[51 <./fig/ProfAgrege_1975_22_dest_retraite.pdf>]
-<fig/ProfAgrege_1980_22_dest_retraite.pdf, id=3039, 1734.48pt x 433.62pt>
-File: fig/ProfAgrege_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1980_22_dest_retraite.pdf  used on inpu
-t line 3258.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[52 <./fig/ProfAgrege_1980_22_dest_retraite.pdf>]
-<fig/ProfAgrege_1990_22_dest_retraite.pdf, id=3100, 1734.48pt x 433.62pt>
-File: fig/ProfAgrege_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_1990_22_dest_retraite.pdf  used on inpu
-t line 3331.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[53 <./fig/ProfAgrege_1990_22_dest_retraite.pdf>]
-<fig/ProfAgrege_2003_22_dest_retraite.pdf, id=3161, 1734.48pt x 433.62pt>
-File: fig/ProfAgrege_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/ProfAgrege_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/ProfAgrege_2003_22_dest_retraite.pdf  used on inpu
-t line 3404.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[54 <./fig/ProfAgrege_2003_22_dest_retraite.pdf>]
-Chapitre 11.
-<fig/grille_BIATSS.pdf, id=3223, 462.52798pt x 346.89601pt>
-File: fig/grille_BIATSS.pdf Graphic file (type pdf)
-<use fig/grille_BIATSS.pdf>
-Package pdftex.def Info: fig/grille_BIATSS.pdf  used on input line 3410.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc11) [55
-
- <./fig/grille_BIATSS.pdf>]
-<fig/BIATSS_1975_22_dest_retraite.pdf, id=3278, 1734.48pt x 433.62pt>
-File: fig/BIATSS_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1975_22_dest_retraite.pdf  used on input li
-ne 3526.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[56 <./fig/BIATSS_1975_22_dest_retraite.pdf>]
-<fig/BIATSS_1980_22_dest_retraite.pdf, id=3339, 1734.48pt x 433.62pt>
-File: fig/BIATSS_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1980_22_dest_retraite.pdf  used on input li
-ne 3599.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[57 <./fig/BIATSS_1980_22_dest_retraite.pdf>]
-<fig/BIATSS_1990_22_dest_retraite.pdf, id=3400, 1734.48pt x 433.62pt>
-File: fig/BIATSS_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_1990_22_dest_retraite.pdf  used on input li
-ne 3672.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[58 <./fig/BIATSS_1990_22_dest_retraite.pdf>]
-<fig/BIATSS_2003_22_dest_retraite.pdf, id=3462, 1734.48pt x 433.62pt>
-File: fig/BIATSS_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/BIATSS_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/BIATSS_2003_22_dest_retraite.pdf  used on input li
-ne 3745.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[59 <./fig/BIATSS_2003_22_dest_retraite.pdf>]
-Chapitre 12.
-<fig/grille_MCF.pdf, id=3523, 462.52798pt x 346.89601pt>
-File: fig/grille_MCF.pdf Graphic file (type pdf)
-<use fig/grille_MCF.pdf>
-Package pdftex.def Info: fig/grille_MCF.pdf  used on input line 3751.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc12) [60
-
- <./fig/grille_MCF.pdf>]
-<fig/MCF_1975_25_dest_retraite.pdf, id=3586, 1734.48pt x 433.62pt>
-File: fig/MCF_1975_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1975_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1975_25_dest_retraite.pdf  used on input line 
-3867.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.51453pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[61 <./fig/MCF_1975_25_dest_retraite.pdf>]
-<fig/MCF_1980_25_dest_retraite.pdf, id=3647, 1734.48pt x 433.62pt>
-File: fig/MCF_1980_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1980_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1980_25_dest_retraite.pdf  used on input line 
-3940.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.51453pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[62 <./fig/MCF_1980_25_dest_retraite.pdf>]
-<fig/MCF_1990_25_dest_retraite.pdf, id=3708, 1734.48pt x 433.62pt>
-File: fig/MCF_1990_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_1990_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/MCF_1990_25_dest_retraite.pdf  used on input line 
-4013.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.51453pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[63 <./fig/MCF_1990_25_dest_retraite.pdf>]
-<fig/MCF_2003_25_dest_retraite.pdf, id=3769, 1734.48pt x 433.62pt>
-File: fig/MCF_2003_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/MCF_2003_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/MCF_2003_25_dest_retraite.pdf  used on input line 
-4086.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.51453pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[64 <./fig/MCF_2003_25_dest_retraite.pdf>]
-Chapitre 13.
-<fig/grille_CR.pdf, id=3830, 462.52798pt x 346.89601pt>
-File: fig/grille_CR.pdf Graphic file (type pdf)
-<use fig/grille_CR.pdf>
-Package pdftex.def Info: fig/grille_CR.pdf  used on input line 4092.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc13) [65
-
- <./fig/grille_CR.pdf>]
-<fig/CR_1975_25_dest_retraite.pdf, id=3891, 1734.48pt x 433.62pt>
-File: fig/CR_1975_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1975_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/CR_1975_25_dest_retraite.pdf  used on input line 4
-208.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[66 <./fig/CR_1975_25_dest_retraite.pdf>]
-<fig/CR_1980_25_dest_retraite.pdf, id=3953, 1734.48pt x 433.62pt>
-File: fig/CR_1980_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1980_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/CR_1980_25_dest_retraite.pdf  used on input line 4
-281.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[67 <./fig/CR_1980_25_dest_retraite.pdf>]
-<fig/CR_1990_25_dest_retraite.pdf, id=4015, 1734.48pt x 433.62pt>
-File: fig/CR_1990_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/CR_1990_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/CR_1990_25_dest_retraite.pdf  used on input line 4
-354.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[68 <./fig/CR_1990_25_dest_retraite.pdf>]
-<fig/CR_2003_25_dest_retraite.pdf, id=4076, 1734.48pt x 433.62pt>
-File: fig/CR_2003_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/CR_2003_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/CR_2003_25_dest_retraite.pdf  used on input line 4
-427.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[69 <./fig/CR_2003_25_dest_retraite.pdf>]
-Chapitre 14.
-<fig/grille_PR.pdf, id=4137, 462.52798pt x 346.89601pt>
-File: fig/grille_PR.pdf Graphic file (type pdf)
-<use fig/grille_PR.pdf>
-Package pdftex.def Info: fig/grille_PR.pdf  used on input line 4433.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc14) [70
-
- <./fig/grille_PR.pdf>]
-<fig/PR_1975_25_dest_retraite.pdf, id=4202, 1734.48pt x 433.62pt>
-File: fig/PR_1975_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1975_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/PR_1975_25_dest_retraite.pdf  used on input line 4
-547.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[71 <./fig/PR_1975_25_dest_retraite.pdf>]
-<fig/PR_1980_25_dest_retraite.pdf, id=4263, 1734.48pt x 433.62pt>
-File: fig/PR_1980_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1980_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/PR_1980_25_dest_retraite.pdf  used on input line 4
-620.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[72 <./fig/PR_1980_25_dest_retraite.pdf>]
-<fig/PR_1990_25_dest_retraite.pdf, id=4325, 1734.48pt x 433.62pt>
-File: fig/PR_1990_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/PR_1990_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/PR_1990_25_dest_retraite.pdf  used on input line 4
-693.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[73 <./fig/PR_1990_25_dest_retraite.pdf>]
-<fig/PR_2003_25_dest_retraite.pdf, id=4386, 1734.48pt x 433.62pt>
-File: fig/PR_2003_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/PR_2003_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/PR_2003_25_dest_retraite.pdf  used on input line 4
-766.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[74 <./fig/PR_2003_25_dest_retraite.pdf>]
-Chapitre 15.
-<fig/grille_DR.pdf, id=4447, 462.52798pt x 346.89601pt>
-File: fig/grille_DR.pdf Graphic file (type pdf)
-<use fig/grille_DR.pdf>
-Package pdftex.def Info: fig/grille_DR.pdf  used on input line 4772.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc15) [75
-
- <./fig/grille_DR.pdf>]
-<fig/DR_1975_25_dest_retraite.pdf, id=4507, 1734.48pt x 433.62pt>
-File: fig/DR_1975_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1975_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/DR_1975_25_dest_retraite.pdf  used on input line 4
-886.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[76 <./fig/DR_1975_25_dest_retraite.pdf>]
-<fig/DR_1980_25_dest_retraite.pdf, id=4569, 1734.48pt x 433.62pt>
-File: fig/DR_1980_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1980_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/DR_1980_25_dest_retraite.pdf  used on input line 4
-959.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[77 <./fig/DR_1980_25_dest_retraite.pdf>]
-<fig/DR_1990_25_dest_retraite.pdf, id=4630, 1734.48pt x 433.62pt>
-File: fig/DR_1990_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/DR_1990_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/DR_1990_25_dest_retraite.pdf  used on input line 5
-032.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[78 <./fig/DR_1990_25_dest_retraite.pdf>]
-<fig/DR_2003_25_dest_retraite.pdf, id=4692, 1734.48pt x 433.62pt>
-File: fig/DR_2003_25_dest_retraite.pdf Graphic file (type pdf)
-<use fig/DR_2003_25_dest_retraite.pdf>
-Package pdftex.def Info: fig/DR_2003_25_dest_retraite.pdf  used on input line 5
-105.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[79 <./fig/DR_2003_25_dest_retraite.pdf>]
-Chapitre 16.
-<fig/grille_Magistrat.pdf, id=4753, 462.52798pt x 346.89601pt>
-File: fig/grille_Magistrat.pdf Graphic file (type pdf)
-<use fig/grille_Magistrat.pdf>
-Package pdftex.def Info: fig/grille_Magistrat.pdf  used on input line 5111.
-(pdftex.def)             Requested size: 303.43477pt x 227.58643pt.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc16) [80
-
- <./fig/grille_Magistrat.pdf>]
-<fig/Magistrat_1975_22_dest_retraite.pdf, id=4808, 1734.48pt x 433.62pt>
-File: fig/Magistrat_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Magistrat_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Magistrat_1975_22_dest_retraite.pdf  used on input
- line 5235.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[81 <./fig/Magistrat_1975_22_dest_retraite.pdf>]
-<fig/Magistrat_1980_22_dest_retraite.pdf, id=4869, 1734.48pt x 433.62pt>
-File: fig/Magistrat_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Magistrat_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Magistrat_1980_22_dest_retraite.pdf  used on input
- line 5308.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[82 <./fig/Magistrat_1980_22_dest_retraite.pdf>]
-<fig/Magistrat_1990_22_dest_retraite.pdf, id=4930, 1734.48pt x 433.62pt>
-File: fig/Magistrat_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Magistrat_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Magistrat_1990_22_dest_retraite.pdf  used on input
- line 5381.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[83 <./fig/Magistrat_1990_22_dest_retraite.pdf>]
-<fig/Magistrat_2003_22_dest_retraite.pdf, id=4991, 1734.48pt x 433.62pt>
-File: fig/Magistrat_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Magistrat_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Magistrat_2003_22_dest_retraite.pdf  used on input
- line 5454.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[84 <./fig/Magistrat_2003_22_dest_retraite.pdf>]
-Chapitre 17.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc17) [85
-
-]
-<fig/SMPT_1975_22_dest_retraite.pdf, id=5068, 1734.48pt x 433.62pt>
-File: fig/SMPT_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMPT_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMPT_1975_22_dest_retraite.pdf  used on input line
- 5535.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[86 <./fig/SMPT_1975_22_dest_retraite.pdf>]
-<fig/SMPT_1980_22_dest_retraite.pdf, id=5129, 1734.48pt x 433.62pt>
-File: fig/SMPT_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMPT_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMPT_1980_22_dest_retraite.pdf  used on input line
- 5608.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[87 <./fig/SMPT_1980_22_dest_retraite.pdf>]
-<fig/SMPT_1990_22_dest_retraite.pdf, id=5190, 1734.48pt x 433.62pt>
-File: fig/SMPT_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMPT_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMPT_1990_22_dest_retraite.pdf  used on input line
- 5681.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[88 <./fig/SMPT_1990_22_dest_retraite.pdf>]
-<fig/SMPT_2003_22_dest_retraite.pdf, id=5251, 1734.48pt x 433.62pt>
-File: fig/SMPT_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMPT_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMPT_2003_22_dest_retraite.pdf  used on input line
- 5754.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[89 <./fig/SMPT_2003_22_dest_retraite.pdf>]
-Chapitre 18.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc18) [90
-
-]
-<fig/SMIC_1975_22_dest_retraite.pdf, id=5327, 1734.48pt x 433.62pt>
-File: fig/SMIC_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMIC_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMIC_1975_22_dest_retraite.pdf  used on input line
- 5835.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[91 <./fig/SMIC_1975_22_dest_retraite.pdf>]
-<fig/SMIC_1980_22_dest_retraite.pdf, id=5388, 1734.48pt x 433.62pt>
-File: fig/SMIC_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMIC_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMIC_1980_22_dest_retraite.pdf  used on input line
- 5908.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[92 <./fig/SMIC_1980_22_dest_retraite.pdf>]
-<fig/SMIC_1990_22_dest_retraite.pdf, id=5449, 1734.48pt x 433.62pt>
-File: fig/SMIC_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMIC_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMIC_1990_22_dest_retraite.pdf  used on input line
- 5981.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[93 <./fig/SMIC_1990_22_dest_retraite.pdf>]
-<fig/SMIC_2003_22_dest_retraite.pdf, id=5510, 1734.48pt x 433.62pt>
-File: fig/SMIC_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/SMIC_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/SMIC_2003_22_dest_retraite.pdf  used on input line
- 6054.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[94 <./fig/SMIC_2003_22_dest_retraite.pdf>]
-Chapitre 19.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc19) [95
-
-]
-<fig/Ascendant12_1975_22_dest_retraite.pdf, id=5586, 1734.48pt x 433.62pt>
-File: fig/Ascendant12_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant12_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant12_1975_22_dest_retraite.pdf  used on inp
-ut line 6135.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[96 <./fig/Ascendant12_1975_22_dest_retraite.pdf>]
-<fig/Ascendant12_1980_22_dest_retraite.pdf, id=5648, 1734.48pt x 433.62pt>
-File: fig/Ascendant12_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant12_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant12_1980_22_dest_retraite.pdf  used on inp
-ut line 6208.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[97 <./fig/Ascendant12_1980_22_dest_retraite.pdf>]
-<fig/Ascendant12_1990_22_dest_retraite.pdf, id=5709, 1734.48pt x 433.62pt>
-File: fig/Ascendant12_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant12_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant12_1990_22_dest_retraite.pdf  used on inp
-ut line 6281.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[98 <./fig/Ascendant12_1990_22_dest_retraite.pdf>]
-<fig/Ascendant12_2003_22_dest_retraite.pdf, id=5770, 1734.48pt x 433.62pt>
-File: fig/Ascendant12_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant12_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant12_2003_22_dest_retraite.pdf  used on inp
-ut line 6354.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[99 <./fig/Ascendant12_2003_22_dest_retraite.pdf>]
-Chapitre 20.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc20) [100
-
-]
-<fig/Ascendant1525_1975_22_dest_retraite.pdf, id=5845, 1734.48pt x 433.62pt>
-File: fig/Ascendant1525_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant1525_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant1525_1975_22_dest_retraite.pdf  used on i
-nput line 6435.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[101 <./fig/Ascendant1525_1975_22_dest_retraite.pdf>]
-<fig/Ascendant1525_1980_22_dest_retraite.pdf, id=5906, 1734.48pt x 433.62pt>
-File: fig/Ascendant1525_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant1525_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant1525_1980_22_dest_retraite.pdf  used on i
-nput line 6508.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[102 <./fig/Ascendant1525_1980_22_dest_retraite.pdf>]
-<fig/Ascendant1525_1990_22_dest_retraite.pdf, id=5968, 1734.48pt x 433.62pt>
-File: fig/Ascendant1525_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant1525_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant1525_1990_22_dest_retraite.pdf  used on i
-nput line 6581.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[103 <./fig/Ascendant1525_1990_22_dest_retraite.pdf>]
-<fig/Ascendant1525_2003_22_dest_retraite.pdf, id=6029, 1734.48pt x 433.62pt>
-File: fig/Ascendant1525_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant1525_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant1525_2003_22_dest_retraite.pdf  used on i
-nput line 6654.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[104 <./fig/Ascendant1525_2003_22_dest_retraite.pdf>]
-Chapitre 21.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc21) [105
-
-]
-<fig/Ascendant23_1975_22_dest_retraite.pdf, id=6105, 1734.48pt x 433.62pt>
-File: fig/Ascendant23_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant23_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant23_1975_22_dest_retraite.pdf  used on inp
-ut line 6735.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[106 <./fig/Ascendant23_1975_22_dest_retraite.pdf>]
-<fig/Ascendant23_1980_22_dest_retraite.pdf, id=6166, 1734.48pt x 433.62pt>
-File: fig/Ascendant23_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant23_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant23_1980_22_dest_retraite.pdf  used on inp
-ut line 6808.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[107 <./fig/Ascendant23_1980_22_dest_retraite.pdf>]
-<fig/Ascendant23_1990_22_dest_retraite.pdf, id=6227, 1734.48pt x 433.62pt>
-File: fig/Ascendant23_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant23_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant23_1990_22_dest_retraite.pdf  used on inp
-ut line 6881.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[108 <./fig/Ascendant23_1990_22_dest_retraite.pdf>]
-<fig/Ascendant23_2003_22_dest_retraite.pdf, id=6289, 1734.48pt x 433.62pt>
-File: fig/Ascendant23_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant23_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant23_2003_22_dest_retraite.pdf  used on inp
-ut line 6954.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[109 <./fig/Ascendant23_2003_22_dest_retraite.pdf>]
-Chapitre 22.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc22) [110
-
-]
-<fig/Ascendant34_1975_22_dest_retraite.pdf, id=6364, 1734.48pt x 433.62pt>
-File: fig/Ascendant34_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant34_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant34_1975_22_dest_retraite.pdf  used on inp
-ut line 7035.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[111 <./fig/Ascendant34_1975_22_dest_retraite.pdf>]
-<fig/Ascendant34_1980_22_dest_retraite.pdf, id=6425, 1734.48pt x 433.62pt>
-File: fig/Ascendant34_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant34_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant34_1980_22_dest_retraite.pdf  used on inp
-ut line 7108.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[112 <./fig/Ascendant34_1980_22_dest_retraite.pdf>]
-<fig/Ascendant34_1990_22_dest_retraite.pdf, id=6486, 1734.48pt x 433.62pt>
-File: fig/Ascendant34_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant34_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant34_1990_22_dest_retraite.pdf  used on inp
-ut line 7181.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[113 <./fig/Ascendant34_1990_22_dest_retraite.pdf>]
-<fig/Ascendant34_2003_22_dest_retraite.pdf, id=6547, 1734.48pt x 433.62pt>
-File: fig/Ascendant34_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant34_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant34_2003_22_dest_retraite.pdf  used on inp
-ut line 7254.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[114 <./fig/Ascendant34_2003_22_dest_retraite.pdf>]
-Chapitre 23.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc23) [115
-
-]
-<fig/Ascendant45_1975_22_dest_retraite.pdf, id=6624, 1734.48pt x 433.62pt>
-File: fig/Ascendant45_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant45_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant45_1975_22_dest_retraite.pdf  used on inp
-ut line 7335.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[116 <./fig/Ascendant45_1975_22_dest_retraite.pdf>]
-<fig/Ascendant45_1980_22_dest_retraite.pdf, id=6685, 1734.48pt x 433.62pt>
-File: fig/Ascendant45_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant45_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant45_1980_22_dest_retraite.pdf  used on inp
-ut line 7408.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[117 <./fig/Ascendant45_1980_22_dest_retraite.pdf>]
-<fig/Ascendant45_1990_22_dest_retraite.pdf, id=6746, 1734.48pt x 433.62pt>
-File: fig/Ascendant45_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant45_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant45_1990_22_dest_retraite.pdf  used on inp
-ut line 7481.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[118 <./fig/Ascendant45_1990_22_dest_retraite.pdf>]
-<fig/Ascendant45_2003_22_dest_retraite.pdf, id=6807, 1734.48pt x 433.62pt>
-File: fig/Ascendant45_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Ascendant45_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Ascendant45_2003_22_dest_retraite.pdf  used on inp
-ut line 7554.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[119 <./fig/Ascendant45_2003_22_dest_retraite.pdf>]
-Chapitre 24.
-\openout3 = `book.mtc'.
-
-\openout3 = `book.mtc'.
-
-(./book.mtc24) [120
-
-]
-<fig/Riche_1975_22_dest_retraite.pdf, id=6883, 1734.48pt x 433.62pt>
-File: fig/Riche_1975_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Riche_1975_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Riche_1975_22_dest_retraite.pdf  used on input lin
-e 7635.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[121 <./fig/Riche_1975_22_dest_retraite.pdf>]
-<fig/Riche_1980_22_dest_retraite.pdf, id=6944, 1734.48pt x 433.62pt>
-File: fig/Riche_1980_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Riche_1980_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Riche_1980_22_dest_retraite.pdf  used on input lin
-e 7708.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[122 <./fig/Riche_1980_22_dest_retraite.pdf>]
-<fig/Riche_1990_22_dest_retraite.pdf, id=7005, 1734.48pt x 433.62pt>
-File: fig/Riche_1990_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Riche_1990_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Riche_1990_22_dest_retraite.pdf  used on input lin
-e 7781.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[123 <./fig/Riche_1990_22_dest_retraite.pdf>]
-<fig/Riche_2003_22_dest_retraite.pdf, id=7066, 1734.48pt x 433.62pt>
-File: fig/Riche_2003_22_dest_retraite.pdf Graphic file (type pdf)
-<use fig/Riche_2003_22_dest_retraite.pdf>
-Package pdftex.def Info: fig/Riche_2003_22_dest_retraite.pdf  used on input lin
-e 7854.
-(pdftex.def)             Requested size: 709.3224pt x 177.32881pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.1638pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[124 <./fig/Riche_2003_22_dest_retraite.pdf>])
+[21 <./fig/AdjTech_1975_22.pdf>])
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the book.maf file.
@@ -2723,47 +1352,142 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the book.log file.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 67.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 67.
-(./book.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 67.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 67.
-Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 3C4394D51D9186846F007EE7F92BC9B5;1902.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.1638pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
+ (./book.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
+
+
+Package rerunfilecheck Warning: File `book.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `book.out':
+(rerunfilecheck)             Before: 3C4394D51D9186846F007EE7F92BC9B5;1902
+(rerunfilecheck)             After:  A385FEF11D9AF4242DAB727B63AA2681;299.
  ) 
 Here is how much of TeX's memory you used:
- 12319 strings out of 494780
- 192733 string characters out of 6176875
- 331345 words of memory out of 5000000
- 14762 multiletter control sequences out of 15000+600000
- 21492 words of font info for 46 fonts, out of 8000000 for 9000
+ 12090 strings out of 494780
+ 175785 string characters out of 6176875
+ 349963 words of memory out of 5000000
+ 14877 multiletter control sequences out of 15000+600000
+ 21316 words of font info for 46 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 37i,11n,48p,793b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx0700.
-600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0
-700.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-cbi1000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecbx1440.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ecsl1000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecbx1200.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/ecti1000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecbx2488.600pk> </home/scherrer/.texlive2017/texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecbx0900.600pk> </home/scherrer/.texlive2017/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/scherrer/.texlive2017/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/scherrer/.texlive2017/tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/scherrer/.texlive2017
-/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/scherrer/.texlive
-2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/scherrer/.tex
-live2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/scherrer/
-.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/eurosym/feymr10.pfb>
-Output written on book.pdf (125 pages, 5321333 bytes).
+ 40i,11n,48p,789b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.4.1.4} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.1.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.24.1.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.23.1.4} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19.1.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8.1.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.24} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.23} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.22} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.21} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.20} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.19} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.18} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.17} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.16} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.15} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.14} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.13} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.12} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.11} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.10} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.9} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.8} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.7} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.6} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+ </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.60
+0pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl100
+0.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecb
+x1200.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecti1000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecbx2488.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour
+/jknappen/ec/ectt0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecti0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecbi1000.600pk> </home/scherrer/.texlive2017/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/scherrer/.texlive2017/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/scherrer/.texlive2017/texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/scherrer/.texlive2017/t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/scherrer/.texlive20
+17/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/scherrer/.texli
+ve2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1728.600pk> </home/scherrer/.t
+exlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/eurosym/feymr10.pfb>
+Output written on book.pdf (23 pages, 747542 bytes).
 PDF statistics:
- 7797 PDF objects out of 8907 (max. 8388607)
- 1582 compressed objects within 16 object streams
- 270 named destinations out of 1000 (max. 500000)
- 763 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1879 PDF objects out of 2073 (max. 8388607)
+ 457 compressed objects within 5 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 288 words of extra memory for PDF output out of 10000 (max. 10000000)
 
