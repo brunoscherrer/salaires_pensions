@@ -13,9 +13,15 @@
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
 
-\usepackage{minitoc}
+\usepackage{tocloft}
+\usepackage{etoc}
 
-\pagestyle{fancy}
+
+\cftsubsubsecindent 0pt
+\cftsubsecindent 0pt
+\cftsecindent 0pt
+\cftparaindent 0pt
+%\pagestyle{fancy}
 
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
@@ -27,3 +33,7 @@
 \author{Bruno Scherrer\footnote{bruno.scherrer@inria.fr}}
 \date{\today}
 
+
+\setcounter{secnumdepth}{4} % jusqu'à paragraph
+
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}

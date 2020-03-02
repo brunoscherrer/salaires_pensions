@@ -32,7 +32,7 @@ def genere_anim( carrieres,  plot_retraite=0, filename="", dir="./", ):
         fig = plt.figure( figsize=(7, 5) )
         plt.xlim( (a1, a2) )
         ax = fig.add_subplot(111)
-                dec(carrieres[focus].nom_metier+" débutant en %d"%carrieres[focus].annee_debut)
+        #dec(carrieres[focus].nom_metier+" débutant en %d"%carrieres[focus].annee_debut)
         AnalyseCarriere(c).plot_evolution_carriere_corr(ax, m.smic, i, carrieres, a2, "Revenu/SMIC", titre, 1, plot_retraite)
         if filename!="":
             plt.savefig(tmp_dir+"ratio_"+filename+"_%d.png"%c.annee_debut)
@@ -81,11 +81,15 @@ def debug0():
     for c in carrieres:
         
         a=AnalyseCarriere(c)
-        for tex in [False,True]:
+        for tex in [False]:#,True]:
             a.affiche_carriere(tex)
             if c.public:
                 a.affiche_grille(tex)
-            a.affiche_pension_macron(tex)
+                
+            for i in range(len(Carriere.parts_enfant)):
+                print
+                print Carriere.parts_enfant[i],"parts-enfant"
+                a.affiche_pension_macron(i,tex)
 
             
 def simu0():

@@ -1,0 +1,80 @@
+
+
+Ce document présente des simulations (sous forme de graphes synthétiques et de tableaux) de l'évolution de la carrière et des possibles retraites (dans un système à points) pour plusieurs métiers de la fonction publique et trajectoires du privé.
+
+\vspace{.2cm}
+
+Nous considérons 3 cadres macro-économiques:
+\begin{itemize}
+\item un modèle avec âge-pivot bloqué à 65 ans, qui se veut aussi près que possible de celui utilisé par le gouvernement Philippe pour la génération de ses cas-types ;
+\item une version corrigée (âge pivot glissant) du modèle du gouvernement Philippe, ce qui permet de quantifier la différence ;
+\item un modèle indépendant, issu du simulateur Destinie2, également utilisé pour étudier les retraites par le COR (Conseil d'Orientation des Retraites), avec  âge pivot glissant ; par rapport aux deux précédents modèles, ce dernier a pour principale différence de prévoir une revalorisation sérieuse de la fonction publique (via une indexation du point d'indice proche de l'évolution de salaire moyen et un taux de prime fixe).
+\end{itemize}
+
+
+\vspace{.2cm}
+
+De ces simulations, on peut tirer les enseignements suivants:
+\begin{itemize}
+\item {\bf Le blocage de l'âge pivot dans les simulations diffusées par le gouvernement Philippe a un effet significatif sur le niveau des pensions (de 12\% sur la génération 2003)}. 
+\item {\bf Pour la fonction publique}:
+  \begin{itemize}
+  \item Pour les deux premiers modèles qui se basent sur des projections régressives des salaires dans la fonction publique (décrochage de 1.3\% par an par rapport au SMIC), {\bf on observe au cours du temps,  une \emph{smicardisation} de l'ensemble des salaires qui induit une retraite minimum pour les fonctionnaires en bas et en milieu de l'échelle (catégories C, mais aussi B)}.
+  \item Dans le dernier modèle qui est moins régressif sur la rémunération dans le public, le système de retraites par points fait que {\bf le taux de remplacement est d'autant plus faible que la carrière est revalorisée} c'est-à-dire recouvre le profil croissant (voulu par les grilles indiciaires). Par exemple, la revalorisation d'un professeur certifié de la génération 2003 (page \pageref{ProfEcoles_100_2003_22_0}) fait baisser son taux de remplacement brut jusqu'à environ 37\% s'il part à 62 ans, 47\% s'il part à 65 ans, et 55\% même s'il part à 67 ans.
+  \end{itemize}
+\item {\bf Dans le privé} (situation pour laquelle les deux derniers modèles sont très proches):
+  \begin{itemize}
+  \item {\bf Une retraite par points peut avoir des effets significativement anti-redistributifs}: pour des rémunérations évoluant au cours de la carrière entre $i \times$SMIC et $(i+1)\times$SMIC, (voir pages \pageref{Ascendant12_100_1975_22_0} à \pageref{Ascendant45_100_2003_22_0}) on observe que {\bf le taux de remplacement est d'autant plus grand que le salaire est élevé} (que $i$ est grand). Le meilleur taux de remplacement (et donc le meilleur rendement du système) est notamment obtenu pour les salariés étant toute leur vie au plafond ``10 SMIC'' (voir à partir de la page \pageref{10SMIC_100_1975_22_0}), et donc notamment pour ceux dont le salaire est au-dessus du plafond.
+  \end{itemize}
+\item Globalement, le choix d'une indexation des retraites sur l'indice des prix fait chuter le revenu des retraités par rapport au SMIC, entraînant ceux qui sont partis avec les retraites les plus faibles vers la pauvreté. En particulier, {\bf au cours de leur vieillesse, beaucoup de retraités se retrouvent très en dessous du seuil ``85\% du SMIC'', même s'ils ont effectué une ``carrière complète''.}
+\item Enfin, le système de retraites par points et son âge pivot glissant engendrent une grande {\bf inégalité entre les générations actuelles et futures} ; toujours sur l'exemple d'un professeur certifié: né en 1975, il partirait en retraite à 67 ans selon le modèle du gouvernement corrigé (âge pivot glissant) avec $1.25\times$SMIC (page \pageref{ProfEcoles_100_1975_22_0}) ; s'il est né en 2003, ce sera avec $0.91\times$SMIC (page \pageref{ProfEcoles_100_2003_22_0}).
+\end{itemize}
+
+\vspace{.2cm}
+
+{\small
+Dans la version \emph{non synthétique}, toutes les simulations sont accompagnées de tableaux détaillés qui permettent de vérifier tous les calculs. Ces simulations ont été produites à l'aide d'un code source informatique qui est publiquement accessible à l'adresse \url{https://github.com/brunoscherrer/salaires_pensions}. Je remercie d'avance ceux qui pourraient trouver des erreurs de me les signaler afin que je les corrige. \\
+\emph{Je remercie chaleureusement Claire Mathieu, Michaël Zemmour et Michaël Baudouin pour les échanges qui m'ont permis de corriger un certain nombre d'erreurs ; toutes les erreurs restantes sont miennes.}
+}
+
+\newpage
+
+{\small
+\setcounter{tocdepth}{0}
+\begingroup
+\let\clearpage\relax
+\tableofcontents
+\endgroup
+}
+
+\chapter*{PRECISIONS METHODOLOGIQUES}
+\label{modeles}
+
+Toutes les quantités en euros sont donnés en {\bf euros constants 2019} (corrigés de l'inflation).
+
+La page qui suit contient des graphiques qui permettent d'observer et de comparer le comportement des variables macro-économiques dans les différents modèles:
+\begin{itemize}
+\item ``Gouvernement (âge-pivot bloqué à 65 ans)''
+\item ``Gouvernement corrigé (âge-pivot glissant)''
+\item ``Destinie2 (revalorisation de la fonction publique)''
+\end{itemize}
+Dans la version \emph{non-synthétique de ce document} de ce document, trois pages suivent avec des tableaux détaillant les valeurs numériques au cours du temps.\\
+Ces trois modèles ont en commun de considérer pour l'avenir
+\begin{itemize}
+\item l'hypothèse (par ailleurs discutable) d'une croissance de 1.3\% par an et d'une inflation de 1.75\% par an ;
+\item une aumgmentation des salaires (dont SMIC et salaire moyen SMPT) selon la croissance ;
+\item une indexation des retraites sur l'indice des prix.
+\end{itemize}
+Pour les deux premiers modèles, le valeur du point de la fonction publique est supposée indexée sur l'inflation, ce qui induit un décrochage de 1.3\% par rapport au SMIC (nous nous plaçons au plus proche des hypothèses du gouvernement Philippe dans ses simulations, quand bien même ce dernier a déja annoncé un gel du point d'indice pour les années à venir) ; pour le troisième, l'indexation de l'indice de la fonction publique est faite sur le salaire moyen. \\
+Jusqu'à 2019, les valeurs d'inflation, de croissance et du point d'indice de la fonction publique sont celles historiques récupérées via le modèle Destinie2. \\
+Enfin, la valeur du point-retraite (achat et service) est supposée indexée progressivement entre 2028 et 2043 de l'inflation au salaire moyen (le vrai index cible ``revenu moyen par tête'' n'étant à l'heure actuelle pas existant).
+
+~\\
+
+Le reste du document contient des simulations détaillées pour des carrières dans le public et le privé. \\
+Par simplification, mais aussi parce que c'est intéressant en soi (cela permet de voir quel aurait été l'effet d'une retraite par points si elle avait été mise en place dans le passé), {\bf nous avons simulé pour toutes les générations une retraite par points \emph{pure}, c'est-à-dire que nous négligeons la transition complexe entre le système actuel et le système prévu par le gouvernement Philippe.}\\
+Les revenus (salaires, retraites) sont mensuels et les taux de remplacement sont des valeurs \emph{brutes}.\\
+Pour la fonction publique, les taux de primes en fin de carrière sont tirés de l'étude d'impact diffusée le 24 janvier 2020, et sont supposés augmenter de 0.23 points par an pour les deux premiers modèles tandis qu'ils sont fixes pour le troisième.\\
+Pour chaque carrière, âge de début de carrière, et année de naissance, nous décrivons synthétiquement les retraites possibles à différents âges de départ dans ces trois modèles sous forme de tableau, ainsi que graphiquement en rappelant le revenu (salaire et retraites possibles) tout au long de la carrière (courbe verte). Les courbes en grisé donnent l'évolution des carrières pour les autres générations, ce qui permet d'``apprécier'' la dévalorisation induite dans le temps par les deux premiers modèles pour l'ensemble des métiers de la fonction publique.  
+
+\newpage
