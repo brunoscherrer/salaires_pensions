@@ -158,6 +158,73 @@ def genere(file, generations, avec_tableaux):
     debut, fin = 1980, 2120
     modeles = [ ModeleGouv(debut,fin,1.3,True), ModeleGouv(debut,fin,1.3,False), ModeleDestinie(debut,fin)]
 
+    variation_age=4
+        
+    #### Génération des données
+        
+    carrieres = generation_donnees(modeles, generations, variation_age)
+                                
+    f = codecs.open("tex/"+file+".tex", "w", "utf-8")   # création du fichier
+
+    print("Génération du fichier: "+file+".tex")
+
+    ### modèles
+    
+    comparaison_modeles(f, 1995, 2070, modeles, avec_tableaux)
+
+    ### Génération des synthèses des simulations
+    
+    for i in range(len(carrieres)): # types de métiers
+
+        c = carrieres[i][0][0][0][0]
+        nom = c.nom_metier
+        f.write(dec("\\chapter{"+nom+"} \n\n"))
+        context = nom
+        
+        if c.public:
+            fic="grille_"+c.id_metier
+            print(nom)
+            f.write("\\begin{minipage}{0.55\\linewidth}\\includegraphics[width=0.7\\textwidth]{fig/"+fic+".pdf}\\end{minipage} \n")
+            f.write("\\begin{minipage}{0.3\\linewidth} \n \\begin{center} \n\n")
+            AnalyseCarriere(c).affiche_grille(True, f)
+            f.write("\\end{center} \n \\end{minipage} \n\n")
+        
+        ### Type de carrières
+        k = 0
+        
+        z = types_carrieres[k][1]
+        c = carrieres[i][k][0][0][0]
+        txt = "Début de carrière à %d ans"%(c.age_debut) + " / " + c.perso #"Enfants: "+str(Carriere.parts_enfant[z][0])+" ("+Carriere.parts_enfant[z][1]+")"
+        #f.write(dec("\\section{"+txt+"} \n\n"))
+        #print(txt)
+        f.write("~\\\\ \n \n \\noindent {\\bf "+dec(txt)+"} \n\n")
+
+        f.write(dec("\n \\etocsetnexttocdepth{2} \\etocsettocstyle{\\subsubsection*{Date de naissance (et année de début de carrière)}}{} \n \\localtableofcontents \n\n"))
+        f.write(dec("~\\\\ \n \n \\hyperlink{page.2}{\\noindent Retourner à la liste des métiers}\n\n \\newpage \n\n"))
+
+        for g in range(len(generations)): # générations
+
+            c = carrieres[i][k][0][g][0]
+            fic = "%s_%d_%d_%d"%(c.id_metier, c.annee_debut-c.age_debut, c.age_debut, z)
+            txt2 = "Génération %d (début en %d)"%(c.annee_debut-c.age_debut, c.annee_debut)
+            f.write(dec("\\section{"+txt2+"\\label{"+fic+"}} \n \n"))
+            f.write("{\\bf \\noindent "+dec(context+" / "+txt)+"}  ~ \n\n ~\\\\" )
+
+            z = types_carrieres[k][1]                
+            resume_carriere(carrieres[i][k][0], g, z, modeles, generations, avec_tableaux, fic, f)
+                
+    f.close() # on ferme le fichier
+
+
+
+
+   
+def genere_detail(file, generations, avec_tableaux):
+
+    # Modèles de projection
+    debut, fin = 1980, 2120
+    modeles = [ ModeleGouv(debut,fin,1.3,True), ModeleGouv(debut,fin,1.3,False), ModeleDestinie(debut,fin)]
+
     variation_age=1
         
     #### Génération des données
@@ -189,11 +256,7 @@ def genere(file, generations, avec_tableaux):
             AnalyseCarriere(c).affiche_grille(True, f)
             f.write("\\end{center} \n \\end{minipage} \n\n")
         
-#        f.write(dec("\n \\etocsetnexttocdepth{1} \\etocsettocstyle{\\subsubsection*{Type de carrière}}{} \n \\localtableofcontents \n\n"))
-#        f.write(dec("~\\\\ \n \n \\hyperlink{page.2}{\\noindent Retourner à la liste des métiers}\n\n \\newpage \n\n"))
-        
         ### Type de carrières
-        #for k in range(len(types_carrieres)): # type de carrière (temps plein, mi-temps, etc...)
         k = 0
         
         z = types_carrieres[k][1]
@@ -219,10 +282,7 @@ def genere(file, generations, avec_tableaux):
                 
     f.close() # on ferme le fichier
 
-
-
-
-    
+ 
 
 
 #############
@@ -261,8 +321,9 @@ cas_prive = [ ("SMPT","Salarié privé au salaire moyen durant toute sa carrièr
 
 
 ### Pour générer les images pour quelques profils seulement
-#cas_public = [ ("ProfEcoles",0.081, 22) ]
-#cas_prive = [ ("Ascendant45","Salarié privé évoluant du 3*SMIC à 4*SMIC", 22, [ 4.0 + i/43. for i in range(50) ],"SMIC") ]
+#cas_public = []
+#cas_prive = [ ("SMPT","Salarié privé au salaire moyen durant toute sa carrière", 22, [1.0]*50, "SMPT"),              ("SMIC","Salarié privé au SMIC durant toute sa carrière", 22, [1.0]*50, "SMIC") ]
+
 
 
 # types de carrières (quotité, numero du nombre d'enfants)
@@ -280,6 +341,6 @@ genere("corps2", [1975, 1980, 1990, 2003], True)
 
 exit(1)
 
-genere(False,True)
+genere("detail")
 just_tex = False
 genere(False,False)

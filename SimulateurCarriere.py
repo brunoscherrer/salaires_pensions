@@ -64,6 +64,11 @@ class ModeleAbs(object):  # classe abstraite
                     smpt[b] = float( l[6].replace(',', '.') )
                     indfp[b] = float( l[5].replace(',', '.') )
 
+        # 
+        for i in range(n):
+            smic[i] *= 35./39. # Correction valeur du SMIC (dans les données COR, il correspond à 39h => on ramène à 35) 
+            prix[i] /= prix[ self.annee_ref - self.debut ]
+            
         return prix, smic, smpt, indfp
 
     
@@ -97,11 +102,11 @@ class ModeleAbs(object):  # classe abstraite
             
         for i in range(self.debut,self.fin+1):
 
-            tmp = coef[i-self.debut] / coef[2025-self.debut]  # 1.0 en 2025 (date de mise en place des points)
+            tmp = coef[i-self.debut] / coef[2025 - self.debut]  # 1.0 en 2025 (date de mise en place des points)
             self.achat_pt[i-self.debut] = 10.0 / 0.9 / 0.2812 * tmp
             self.vente_pt[i-self.debut] = 0.55 * tmp
                         
-            self.corr_prix_annee_ref[i-self.debut] = self.prix[ i - self.debut ] / self.prix[ self.annee_ref-self.debut ]
+            self.corr_prix_annee_ref[i-self.debut] = self.prix[ i - self.debut ] / self.prix[ 2019 - self.debut ]  
 
             
 # classe pour décrire le contexte macro envisagé par le gouvernement
@@ -110,7 +115,7 @@ class ModeleGouv(ModeleAbs):
     
     def __init__(self, deb, fin, croissance=1.3, age_pivot_bloque=True):
 
-        self.annee_ref=2019
+        self.annee_ref = 2019
         super(ModeleGouv,self).__init__(deb, fin, age_pivot_bloque)
 
         self.variation_prime_fp=0.0023 # +0.23 points par an
@@ -233,9 +238,9 @@ class Carriere(object):
                 
                 for j in range(len(Carriere.parts_enfant)):
                     
-                    p = (1.0 + d) * (1.0 + 0.05*Carriere.parts_enfant[j][0]) * cp * self.m.vente_pt[ an - self.m.debut ] # pension de retraite (avec eventuel bonus enfant)
+                    p = (1.0 + d) * (1.0 + 0.025*Carriere.parts_enfant[j][0]) * cp * self.m.vente_pt[ an - self.m.debut ] # pension de retraite (avec eventuel bonus enfant)
 
-                    p = max(p, r*0.85*self.m.smic[ an - self.m.debut ]) # matelas pro-rata de la carrière complète (43 ans)
+                    p = max(p, r*0.71*self.m.smic[ an - self.m.debut ]) # matelas pro-rata de la carrière complète (43 ans)
                     
                     pension[j].append( (age, d, p, p/self.sal[i], r ) )
 

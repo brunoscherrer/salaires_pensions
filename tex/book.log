@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.20)  2 MAR 2020 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.10.20)  4 MAR 2020 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -973,7 +973,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 [3
 
 ]) (./corps.tex
-<fig/comparaison_modeles.pdf, id=175, 1192.455pt x 794.97pt>
+<fig/comparaison_modeles.pdf, id=181, 1192.455pt x 794.97pt>
 File: fig/comparaison_modeles.pdf Graphic file (type pdf)
 <use fig/comparaison_modeles.pdf>
 Package pdftex.def Info: fig/comparaison_modeles.pdf  used on input line 2.
@@ -984,7 +984,7 @@ Overfull \vbox (13.28427pt too high) has occurred while \output is active []
 
 [4 <./fig/comparaison_modeles.pdf>]
 Chapitre 1.
-<fig/grille_Infirmier_100.pdf, id=241, 462.52798pt x 346.89601pt>
+<fig/grille_Infirmier_100.pdf, id=246, 462.52798pt x 346.89601pt>
 File: fig/grille_Infirmier_100.pdf Graphic file (type pdf)
 <use fig/grille_Infirmier_100.pdf>
 Package pdftex.def Info: fig/grille_Infirmier_100.pdf  used on input line 8.
@@ -1005,7 +1005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 [5
 
  <./fig/grille_Infirmier_100.pdf>]
-<fig/Infirmier_100_1975_22_0.pdf, id=300, 2312.64pt x 433.62pt>
+<fig/Infirmier_100_1975_22_0.pdf, id=305, 2312.64pt x 433.62pt>
 File: fig/Infirmier_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Infirmier_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Infirmier_100_1975_22_0.pdf  used on input line 13
@@ -1017,7 +1017,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 134--135
  []
 
 [6 <./fig/Infirmier_100_1975_22_0.pdf>]
-<fig/Infirmier_100_1980_22_0.pdf, id=365, 2312.64pt x 433.62pt>
+<fig/Infirmier_100_1980_22_0.pdf, id=370, 2312.64pt x 433.62pt>
 File: fig/Infirmier_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Infirmier_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Infirmier_100_1980_22_0.pdf  used on input line 21
@@ -1029,7 +1029,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 215--216
  []
 
 [7 <./fig/Infirmier_100_1980_22_0.pdf>]
-<fig/Infirmier_100_1990_22_0.pdf, id=427, 2312.64pt x 433.62pt>
+<fig/Infirmier_100_1990_22_0.pdf, id=432, 2312.64pt x 433.62pt>
 File: fig/Infirmier_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Infirmier_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Infirmier_100_1990_22_0.pdf  used on input line 29
@@ -1041,7 +1041,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 296--297
  []
 
 [8 <./fig/Infirmier_100_1990_22_0.pdf>]
-<fig/Infirmier_100_2003_22_0.pdf, id=489, 2312.64pt x 433.62pt>
+<fig/Infirmier_100_2003_22_0.pdf, id=494, 2312.64pt x 433.62pt>
 File: fig/Infirmier_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Infirmier_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Infirmier_100_2003_22_0.pdf  used on input line 37
@@ -1054,7 +1054,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 377--378
 
 [9 <./fig/Infirmier_100_2003_22_0.pdf>]
 Chapitre 2.
-<fig/grille_AideSoignant_100.pdf, id=551, 462.52798pt x 346.89601pt>
+<fig/grille_AideSoignant_100.pdf, id=556, 462.52798pt x 346.89601pt>
 File: fig/grille_AideSoignant_100.pdf Graphic file (type pdf)
 <use fig/grille_AideSoignant_100.pdf>
 Package pdftex.def Info: fig/grille_AideSoignant_100.pdf  used on input line 38
@@ -1073,7 +1073,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 436--437
 [10
 
  <./fig/grille_AideSoignant_100.pdf>]
-<fig/AideSoignant_100_1975_22_0.pdf, id=606, 2312.64pt x 433.62pt>
+<fig/AideSoignant_100_1975_22_0.pdf, id=611, 2312.64pt x 433.62pt>
 File: fig/AideSoignant_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/AideSoignant_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/AideSoignant_100_1975_22_0.pdf  used on input line
@@ -1085,7 +1085,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 519--520
  []
 
 [11 <./fig/AideSoignant_100_1975_22_0.pdf>]
-<fig/AideSoignant_100_1980_22_0.pdf, id=668, 2312.64pt x 433.62pt>
+<fig/AideSoignant_100_1980_22_0.pdf, id=673, 2312.64pt x 433.62pt>
 File: fig/AideSoignant_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/AideSoignant_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/AideSoignant_100_1980_22_0.pdf  used on input line
@@ -1097,7 +1097,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 600--601
  []
 
 [12 <./fig/AideSoignant_100_1980_22_0.pdf>]
-<fig/AideSoignant_100_1990_22_0.pdf, id=731, 2312.64pt x 433.62pt>
+<fig/AideSoignant_100_1990_22_0.pdf, id=737, 2312.64pt x 433.62pt>
 File: fig/AideSoignant_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/AideSoignant_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/AideSoignant_100_1990_22_0.pdf  used on input line
@@ -1109,7 +1109,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 681--682
  []
 
 [13 <./fig/AideSoignant_100_1990_22_0.pdf>]
-<fig/AideSoignant_100_2003_22_0.pdf, id=794, 2312.64pt x 433.62pt>
+<fig/AideSoignant_100_2003_22_0.pdf, id=799, 2312.64pt x 433.62pt>
 File: fig/AideSoignant_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/AideSoignant_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/AideSoignant_100_2003_22_0.pdf  used on input line
@@ -1122,7 +1122,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 762--763
 
 [14 <./fig/AideSoignant_100_2003_22_0.pdf>]
 Chapitre 3.
-<fig/grille_TechHosp_100.pdf, id=856, 462.52798pt x 346.89601pt>
+<fig/grille_TechHosp_100.pdf, id=861, 462.52798pt x 346.89601pt>
 File: fig/grille_TechHosp_100.pdf Graphic file (type pdf)
 <use fig/grille_TechHosp_100.pdf>
 Package pdftex.def Info: fig/grille_TechHosp_100.pdf  used on input line 768.
@@ -1140,7 +1140,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 815--816
 [15
 
  <./fig/grille_TechHosp_100.pdf>]
-<fig/TechHosp_100_1975_22_0.pdf, id=907, 2312.64pt x 433.62pt>
+<fig/TechHosp_100_1975_22_0.pdf, id=912, 2312.64pt x 433.62pt>
 File: fig/TechHosp_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/TechHosp_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/TechHosp_100_1975_22_0.pdf  used on input line 898
@@ -1152,7 +1152,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 898--899
  []
 
 [16 <./fig/TechHosp_100_1975_22_0.pdf>]
-<fig/TechHosp_100_1980_22_0.pdf, id=969, 2312.64pt x 433.62pt>
+<fig/TechHosp_100_1980_22_0.pdf, id=974, 2312.64pt x 433.62pt>
 File: fig/TechHosp_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/TechHosp_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/TechHosp_100_1980_22_0.pdf  used on input line 979
@@ -1164,7 +1164,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 979--980
  []
 
 [17 <./fig/TechHosp_100_1980_22_0.pdf>]
-<fig/TechHosp_100_1990_22_0.pdf, id=1031, 2312.64pt x 433.62pt>
+<fig/TechHosp_100_1990_22_0.pdf, id=1036, 2312.64pt x 433.62pt>
 File: fig/TechHosp_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/TechHosp_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/TechHosp_100_1990_22_0.pdf  used on input line 106
@@ -1176,7 +1176,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1060--1061
  []
 
 [18 <./fig/TechHosp_100_1990_22_0.pdf>]
-<fig/TechHosp_100_2003_22_0.pdf, id=1094, 2312.64pt x 433.62pt>
+<fig/TechHosp_100_2003_22_0.pdf, id=1099, 2312.64pt x 433.62pt>
 File: fig/TechHosp_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/TechHosp_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/TechHosp_100_2003_22_0.pdf  used on input line 114
@@ -1189,7 +1189,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1141--1142
 
 [19 <./fig/TechHosp_100_2003_22_0.pdf>]
 Chapitre 4.
-<fig/grille_AdjTech_100.pdf, id=1156, 462.52798pt x 346.89601pt>
+<fig/grille_AdjTech_100.pdf, id=1161, 462.52798pt x 346.89601pt>
 File: fig/grille_AdjTech_100.pdf Graphic file (type pdf)
 <use fig/grille_AdjTech_100.pdf>
 Package pdftex.def Info: fig/grille_AdjTech_100.pdf  used on input line 1147.
@@ -1207,7 +1207,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
 [20
 
  <./fig/grille_AdjTech_100.pdf>]
-<fig/AdjTech_100_1975_22_0.pdf, id=1211, 2312.64pt x 433.62pt>
+<fig/AdjTech_100_1975_22_0.pdf, id=1216, 2312.64pt x 433.62pt>
 File: fig/AdjTech_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/AdjTech_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/AdjTech_100_1975_22_0.pdf  used on input line 1289
@@ -1219,7 +1219,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1289--1290
  []
 
 [21 <./fig/AdjTech_100_1975_22_0.pdf>]
-<fig/AdjTech_100_1980_22_0.pdf, id=1274, 2312.64pt x 433.62pt>
+<fig/AdjTech_100_1980_22_0.pdf, id=1279, 2312.64pt x 433.62pt>
 File: fig/AdjTech_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/AdjTech_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/AdjTech_100_1980_22_0.pdf  used on input line 1370
@@ -1231,7 +1231,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1370--1371
  []
 
 [22 <./fig/AdjTech_100_1980_22_0.pdf>]
-<fig/AdjTech_100_1990_22_0.pdf, id=1336, 2312.64pt x 433.62pt>
+<fig/AdjTech_100_1990_22_0.pdf, id=1341, 2312.64pt x 433.62pt>
 File: fig/AdjTech_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/AdjTech_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/AdjTech_100_1990_22_0.pdf  used on input line 1451
@@ -1243,7 +1243,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1451--1452
  []
 
 [23 <./fig/AdjTech_100_1990_22_0.pdf>]
-<fig/AdjTech_100_2003_22_0.pdf, id=1398, 2312.64pt x 433.62pt>
+<fig/AdjTech_100_2003_22_0.pdf, id=1403, 2312.64pt x 433.62pt>
 File: fig/AdjTech_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/AdjTech_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/AdjTech_100_2003_22_0.pdf  used on input line 1532
@@ -1256,7 +1256,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1532--1533
 
 [24 <./fig/AdjTech_100_2003_22_0.pdf>]
 Chapitre 5.
-<fig/grille_Redacteur_100.pdf, id=1461, 462.52798pt x 346.89601pt>
+<fig/grille_Redacteur_100.pdf, id=1466, 462.52798pt x 346.89601pt>
 File: fig/grille_Redacteur_100.pdf Graphic file (type pdf)
 <use fig/grille_Redacteur_100.pdf>
 Package pdftex.def Info: fig/grille_Redacteur_100.pdf  used on input line 1538.
@@ -1275,7 +1275,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1591--1592
 [25
 
  <./fig/grille_Redacteur_100.pdf>]
-<fig/Redacteur_100_1975_22_0.pdf, id=1512, 2312.64pt x 433.62pt>
+<fig/Redacteur_100_1975_22_0.pdf, id=1517, 2312.64pt x 433.62pt>
 File: fig/Redacteur_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Redacteur_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Redacteur_100_1975_22_0.pdf  used on input line 16
@@ -1287,7 +1287,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1674--1675
  []
 
 [26 <./fig/Redacteur_100_1975_22_0.pdf>]
-<fig/Redacteur_100_1980_22_0.pdf, id=1574, 2312.64pt x 433.62pt>
+<fig/Redacteur_100_1980_22_0.pdf, id=1579, 2312.64pt x 433.62pt>
 File: fig/Redacteur_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Redacteur_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Redacteur_100_1980_22_0.pdf  used on input line 17
@@ -1299,7 +1299,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1755--1756
  []
 
 [27 <./fig/Redacteur_100_1980_22_0.pdf>]
-<fig/Redacteur_100_1990_22_0.pdf, id=1636, 2312.64pt x 433.62pt>
+<fig/Redacteur_100_1990_22_0.pdf, id=1641, 2312.64pt x 433.62pt>
 File: fig/Redacteur_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Redacteur_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Redacteur_100_1990_22_0.pdf  used on input line 18
@@ -1311,7 +1311,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1836--1837
  []
 
 [28 <./fig/Redacteur_100_1990_22_0.pdf>]
-<fig/Redacteur_100_2003_22_0.pdf, id=1698, 2312.64pt x 433.62pt>
+<fig/Redacteur_100_2003_22_0.pdf, id=1703, 2312.64pt x 433.62pt>
 File: fig/Redacteur_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Redacteur_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Redacteur_100_2003_22_0.pdf  used on input line 19
@@ -1324,7 +1324,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 1917--1918
 
 [29 <./fig/Redacteur_100_2003_22_0.pdf>]
 Chapitre 6.
-<fig/grille_SecretaireAdmin_100.pdf, id=1760, 462.52798pt x 346.89601pt>
+<fig/grille_SecretaireAdmin_100.pdf, id=1765, 462.52798pt x 346.89601pt>
 File: fig/grille_SecretaireAdmin_100.pdf Graphic file (type pdf)
 <use fig/grille_SecretaireAdmin_100.pdf>
 Package pdftex.def Info: fig/grille_SecretaireAdmin_100.pdf  used on input line
@@ -1343,7 +1343,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1970--1971
 [30
 
  <./fig/grille_SecretaireAdmin_100.pdf>]
-<fig/SecretaireAdmin_100_1975_22_0.pdf, id=1812, 2312.64pt x 433.62pt>
+<fig/SecretaireAdmin_100_1975_22_0.pdf, id=1817, 2312.64pt x 433.62pt>
 File: fig/SecretaireAdmin_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/SecretaireAdmin_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/SecretaireAdmin_100_1975_22_0.pdf  used on input l
@@ -1355,7 +1355,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2053--2054
  []
 
 [31 <./fig/SecretaireAdmin_100_1975_22_0.pdf>]
-<fig/SecretaireAdmin_100_1980_22_0.pdf, id=1874, 2312.64pt x 433.62pt>
+<fig/SecretaireAdmin_100_1980_22_0.pdf, id=1879, 2312.64pt x 433.62pt>
 File: fig/SecretaireAdmin_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/SecretaireAdmin_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/SecretaireAdmin_100_1980_22_0.pdf  used on input l
@@ -1367,7 +1367,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2134--2135
  []
 
 [32 <./fig/SecretaireAdmin_100_1980_22_0.pdf>]
-<fig/SecretaireAdmin_100_1990_22_0.pdf, id=1936, 2312.64pt x 433.62pt>
+<fig/SecretaireAdmin_100_1990_22_0.pdf, id=1941, 2312.64pt x 433.62pt>
 File: fig/SecretaireAdmin_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/SecretaireAdmin_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/SecretaireAdmin_100_1990_22_0.pdf  used on input l
@@ -1379,7 +1379,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2215--2216
  []
 
 [33 <./fig/SecretaireAdmin_100_1990_22_0.pdf>]
-<fig/SecretaireAdmin_100_2003_22_0.pdf, id=1998, 2312.64pt x 433.62pt>
+<fig/SecretaireAdmin_100_2003_22_0.pdf, id=2003, 2312.64pt x 433.62pt>
 File: fig/SecretaireAdmin_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/SecretaireAdmin_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/SecretaireAdmin_100_2003_22_0.pdf  used on input l
@@ -1392,7 +1392,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2296--2297
 
 [34 <./fig/SecretaireAdmin_100_2003_22_0.pdf>]
 Chapitre 7.
-<fig/grille_ATSEM_100.pdf, id=2060, 462.52798pt x 346.89601pt>
+<fig/grille_ATSEM_100.pdf, id=2065, 462.52798pt x 346.89601pt>
 File: fig/grille_ATSEM_100.pdf Graphic file (type pdf)
 <use fig/grille_ATSEM_100.pdf>
 Package pdftex.def Info: fig/grille_ATSEM_100.pdf  used on input line 2302.
@@ -1410,7 +1410,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2353--2354
 [35
 
  <./fig/grille_ATSEM_100.pdf>]
-<fig/ATSEM_100_1975_22_0.pdf, id=2115, 2312.64pt x 433.62pt>
+<fig/ATSEM_100_1975_22_0.pdf, id=2120, 2312.64pt x 433.62pt>
 File: fig/ATSEM_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/ATSEM_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/ATSEM_100_1975_22_0.pdf  used on input line 2436.
@@ -1421,7 +1421,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2436--2437
  []
 
 [36 <./fig/ATSEM_100_1975_22_0.pdf>]
-<fig/ATSEM_100_1980_22_0.pdf, id=2178, 2312.64pt x 433.62pt>
+<fig/ATSEM_100_1980_22_0.pdf, id=2183, 2312.64pt x 433.62pt>
 File: fig/ATSEM_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/ATSEM_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/ATSEM_100_1980_22_0.pdf  used on input line 2517.
@@ -1432,7 +1432,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2517--2518
  []
 
 [37 <./fig/ATSEM_100_1980_22_0.pdf>]
-<fig/ATSEM_100_1990_22_0.pdf, id=2240, 2312.64pt x 433.62pt>
+<fig/ATSEM_100_1990_22_0.pdf, id=2245, 2312.64pt x 433.62pt>
 File: fig/ATSEM_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/ATSEM_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/ATSEM_100_1990_22_0.pdf  used on input line 2598.
@@ -1443,7 +1443,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2598--2599
  []
 
 [38 <./fig/ATSEM_100_1990_22_0.pdf>]
-<fig/ATSEM_100_2003_22_0.pdf, id=2302, 2312.64pt x 433.62pt>
+<fig/ATSEM_100_2003_22_0.pdf, id=2307, 2312.64pt x 433.62pt>
 File: fig/ATSEM_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/ATSEM_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/ATSEM_100_2003_22_0.pdf  used on input line 2679.
@@ -1455,7 +1455,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2679--2680
 
 [39 <./fig/ATSEM_100_2003_22_0.pdf>]
 Chapitre 8.
-<fig/grille_ProfEcoles_100.pdf, id=2364, 462.52798pt x 346.89601pt>
+<fig/grille_ProfEcoles_100.pdf, id=2370, 462.52798pt x 346.89601pt>
 File: fig/grille_ProfEcoles_100.pdf Graphic file (type pdf)
 <use fig/grille_ProfEcoles_100.pdf>
 Package pdftex.def Info: fig/grille_ProfEcoles_100.pdf  used on input line 2685
@@ -1474,7 +1474,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2726--2727
 [40
 
  <./fig/grille_ProfEcoles_100.pdf>]
-<fig/ProfEcoles_100_1975_22_0.pdf, id=2416, 2312.64pt x 433.62pt>
+<fig/ProfEcoles_100_1975_22_0.pdf, id=2421, 2312.64pt x 433.62pt>
 File: fig/ProfEcoles_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/ProfEcoles_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/ProfEcoles_100_1975_22_0.pdf  used on input line 2
@@ -1486,7 +1486,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2809--2810
  []
 
 [41 <./fig/ProfEcoles_100_1975_22_0.pdf>]
-<fig/ProfEcoles_100_1980_22_0.pdf, id=2478, 2312.64pt x 433.62pt>
+<fig/ProfEcoles_100_1980_22_0.pdf, id=2483, 2312.64pt x 433.62pt>
 File: fig/ProfEcoles_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/ProfEcoles_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/ProfEcoles_100_1980_22_0.pdf  used on input line 2
@@ -1498,7 +1498,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2890--2891
  []
 
 [42 <./fig/ProfEcoles_100_1980_22_0.pdf>]
-<fig/ProfEcoles_100_1990_22_0.pdf, id=2541, 2312.64pt x 433.62pt>
+<fig/ProfEcoles_100_1990_22_0.pdf, id=2546, 2312.64pt x 433.62pt>
 File: fig/ProfEcoles_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/ProfEcoles_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/ProfEcoles_100_1990_22_0.pdf  used on input line 2
@@ -1510,7 +1510,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 2971--2972
  []
 
 [43 <./fig/ProfEcoles_100_1990_22_0.pdf>]
-<fig/ProfEcoles_100_2003_22_0.pdf, id=2603, 2312.64pt x 433.62pt>
+<fig/ProfEcoles_100_2003_22_0.pdf, id=2608, 2312.64pt x 433.62pt>
 File: fig/ProfEcoles_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/ProfEcoles_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/ProfEcoles_100_2003_22_0.pdf  used on input line 3
@@ -1523,7 +1523,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3052--3053
 
 [44 <./fig/ProfEcoles_100_2003_22_0.pdf>]
 Chapitre 9.
-<fig/grille_ProfCertifie_100.pdf, id=2665, 462.52798pt x 346.89601pt>
+<fig/grille_ProfCertifie_100.pdf, id=2670, 462.52798pt x 346.89601pt>
 File: fig/grille_ProfCertifie_100.pdf Graphic file (type pdf)
 <use fig/grille_ProfCertifie_100.pdf>
 Package pdftex.def Info: fig/grille_ProfCertifie_100.pdf  used on input line 30
@@ -1542,7 +1542,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3099--3100
 [45
 
  <./fig/grille_ProfCertifie_100.pdf>]
-<fig/ProfCertifie_100_1975_22_0.pdf, id=2718, 2312.64pt x 433.62pt>
+<fig/ProfCertifie_100_1975_22_0.pdf, id=2723, 2312.64pt x 433.62pt>
 File: fig/ProfCertifie_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/ProfCertifie_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/ProfCertifie_100_1975_22_0.pdf  used on input line
@@ -1554,7 +1554,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3182--3183
  []
 
 [46 <./fig/ProfCertifie_100_1975_22_0.pdf>]
-<fig/ProfCertifie_100_1980_22_0.pdf, id=2780, 2312.64pt x 433.62pt>
+<fig/ProfCertifie_100_1980_22_0.pdf, id=2785, 2312.64pt x 433.62pt>
 File: fig/ProfCertifie_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/ProfCertifie_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/ProfCertifie_100_1980_22_0.pdf  used on input line
@@ -1566,7 +1566,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3263--3264
  []
 
 [47 <./fig/ProfCertifie_100_1980_22_0.pdf>]
-<fig/ProfCertifie_100_1990_22_0.pdf, id=2842, 2312.64pt x 433.62pt>
+<fig/ProfCertifie_100_1990_22_0.pdf, id=2847, 2312.64pt x 433.62pt>
 File: fig/ProfCertifie_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/ProfCertifie_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/ProfCertifie_100_1990_22_0.pdf  used on input line
@@ -1578,7 +1578,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3344--3345
  []
 
 [48 <./fig/ProfCertifie_100_1990_22_0.pdf>]
-<fig/ProfCertifie_100_2003_22_0.pdf, id=2906, 2312.64pt x 433.62pt>
+<fig/ProfCertifie_100_2003_22_0.pdf, id=2911, 2312.64pt x 433.62pt>
 File: fig/ProfCertifie_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/ProfCertifie_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/ProfCertifie_100_2003_22_0.pdf  used on input line
@@ -1591,7 +1591,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3425--3426
 
 [49 <./fig/ProfCertifie_100_2003_22_0.pdf>]
 Chapitre 10.
-<fig/grille_ProfAgrege_100.pdf, id=2968, 462.52798pt x 346.89601pt>
+<fig/grille_ProfAgrege_100.pdf, id=2973, 462.52798pt x 346.89601pt>
 File: fig/grille_ProfAgrege_100.pdf Graphic file (type pdf)
 <use fig/grille_ProfAgrege_100.pdf>
 Package pdftex.def Info: fig/grille_ProfAgrege_100.pdf  used on input line 3431
@@ -1610,7 +1610,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3478--3479
 [50
 
  <./fig/grille_ProfAgrege_100.pdf>]
-<fig/ProfAgrege_100_1975_22_0.pdf, id=3023, 2312.64pt x 433.62pt>
+<fig/ProfAgrege_100_1975_22_0.pdf, id=3028, 2312.64pt x 433.62pt>
 File: fig/ProfAgrege_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/ProfAgrege_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/ProfAgrege_100_1975_22_0.pdf  used on input line 3
@@ -1622,7 +1622,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3561--3562
  []
 
 [51 <./fig/ProfAgrege_100_1975_22_0.pdf>]
-<fig/ProfAgrege_100_1980_22_0.pdf, id=3085, 2312.64pt x 433.62pt>
+<fig/ProfAgrege_100_1980_22_0.pdf, id=3090, 2312.64pt x 433.62pt>
 File: fig/ProfAgrege_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/ProfAgrege_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/ProfAgrege_100_1980_22_0.pdf  used on input line 3
@@ -1634,7 +1634,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3642--3643
  []
 
 [52 <./fig/ProfAgrege_100_1980_22_0.pdf>]
-<fig/ProfAgrege_100_1990_22_0.pdf, id=3147, 2312.64pt x 433.62pt>
+<fig/ProfAgrege_100_1990_22_0.pdf, id=3152, 2312.64pt x 433.62pt>
 File: fig/ProfAgrege_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/ProfAgrege_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/ProfAgrege_100_1990_22_0.pdf  used on input line 3
@@ -1646,7 +1646,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3723--3724
  []
 
 [53 <./fig/ProfAgrege_100_1990_22_0.pdf>]
-<fig/ProfAgrege_100_2003_22_0.pdf, id=3209, 2312.64pt x 433.62pt>
+<fig/ProfAgrege_100_2003_22_0.pdf, id=3214, 2312.64pt x 433.62pt>
 File: fig/ProfAgrege_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/ProfAgrege_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/ProfAgrege_100_2003_22_0.pdf  used on input line 3
@@ -1659,7 +1659,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3804--3805
 
 [54 <./fig/ProfAgrege_100_2003_22_0.pdf>]
 Chapitre 11.
-<fig/grille_BIATSS_100.pdf, id=3272, 462.52798pt x 346.89601pt>
+<fig/grille_BIATSS_100.pdf, id=3277, 462.52798pt x 346.89601pt>
 File: fig/grille_BIATSS_100.pdf Graphic file (type pdf)
 <use fig/grille_BIATSS_100.pdf>
 Package pdftex.def Info: fig/grille_BIATSS_100.pdf  used on input line 3810.
@@ -1677,7 +1677,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3859--3860
 [55
 
  <./fig/grille_BIATSS_100.pdf>]
-<fig/BIATSS_100_1975_22_0.pdf, id=3327, 2312.64pt x 433.62pt>
+<fig/BIATSS_100_1975_22_0.pdf, id=3332, 2312.64pt x 433.62pt>
 File: fig/BIATSS_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/BIATSS_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/BIATSS_100_1975_22_0.pdf  used on input line 3942.
@@ -1689,7 +1689,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 3942--3943
  []
 
 [56 <./fig/BIATSS_100_1975_22_0.pdf>]
-<fig/BIATSS_100_1980_22_0.pdf, id=3389, 2312.64pt x 433.62pt>
+<fig/BIATSS_100_1980_22_0.pdf, id=3394, 2312.64pt x 433.62pt>
 File: fig/BIATSS_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/BIATSS_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/BIATSS_100_1980_22_0.pdf  used on input line 4023.
@@ -1701,7 +1701,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4023--4024
  []
 
 [57 <./fig/BIATSS_100_1980_22_0.pdf>]
-<fig/BIATSS_100_1990_22_0.pdf, id=3452, 2312.64pt x 433.62pt>
+<fig/BIATSS_100_1990_22_0.pdf, id=3457, 2312.64pt x 433.62pt>
 File: fig/BIATSS_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/BIATSS_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/BIATSS_100_1990_22_0.pdf  used on input line 4104.
@@ -1713,7 +1713,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4104--4105
  []
 
 [58 <./fig/BIATSS_100_1990_22_0.pdf>]
-<fig/BIATSS_100_2003_22_0.pdf, id=3514, 2312.64pt x 433.62pt>
+<fig/BIATSS_100_2003_22_0.pdf, id=3519, 2312.64pt x 433.62pt>
 File: fig/BIATSS_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/BIATSS_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/BIATSS_100_2003_22_0.pdf  used on input line 4185.
@@ -1726,7 +1726,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4185--4186
 
 [59 <./fig/BIATSS_100_2003_22_0.pdf>]
 Chapitre 12.
-<fig/grille_MCF_100.pdf, id=3576, 462.52798pt x 346.89601pt>
+<fig/grille_MCF_100.pdf, id=3581, 462.52798pt x 346.89601pt>
 File: fig/grille_MCF_100.pdf Graphic file (type pdf)
 <use fig/grille_MCF_100.pdf>
 Package pdftex.def Info: fig/grille_MCF_100.pdf  used on input line 4191.
@@ -1744,7 +1744,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4238--4239
 [60
 
  <./fig/grille_MCF_100.pdf>]
-<fig/MCF_100_1975_23_0.pdf, id=3642, 2312.64pt x 433.62pt>
+<fig/MCF_100_1975_23_0.pdf, id=3647, 2312.64pt x 433.62pt>
 File: fig/MCF_100_1975_23_0.pdf Graphic file (type pdf)
 <use fig/MCF_100_1975_23_0.pdf>
 Package pdftex.def Info: fig/MCF_100_1975_23_0.pdf  used on input line 4321.
@@ -1755,7 +1755,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4321--4322
  []
 
 [61 <./fig/MCF_100_1975_23_0.pdf>]
-<fig/MCF_100_1980_23_0.pdf, id=3704, 2312.64pt x 433.62pt>
+<fig/MCF_100_1980_23_0.pdf, id=3709, 2312.64pt x 433.62pt>
 File: fig/MCF_100_1980_23_0.pdf Graphic file (type pdf)
 <use fig/MCF_100_1980_23_0.pdf>
 Package pdftex.def Info: fig/MCF_100_1980_23_0.pdf  used on input line 4402.
@@ -1766,7 +1766,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4402--4403
  []
 
 [62 <./fig/MCF_100_1980_23_0.pdf>]
-<fig/MCF_100_1990_23_0.pdf, id=3766, 2312.64pt x 433.62pt>
+<fig/MCF_100_1990_23_0.pdf, id=3771, 2312.64pt x 433.62pt>
 File: fig/MCF_100_1990_23_0.pdf Graphic file (type pdf)
 <use fig/MCF_100_1990_23_0.pdf>
 Package pdftex.def Info: fig/MCF_100_1990_23_0.pdf  used on input line 4483.
@@ -1777,7 +1777,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4483--4484
  []
 
 [63 <./fig/MCF_100_1990_23_0.pdf>]
-<fig/MCF_100_2003_23_0.pdf, id=3828, 2312.64pt x 433.62pt>
+<fig/MCF_100_2003_23_0.pdf, id=3833, 2312.64pt x 433.62pt>
 File: fig/MCF_100_2003_23_0.pdf Graphic file (type pdf)
 <use fig/MCF_100_2003_23_0.pdf>
 Package pdftex.def Info: fig/MCF_100_2003_23_0.pdf  used on input line 4564.
@@ -1789,7 +1789,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4564--4565
 
 [64 <./fig/MCF_100_2003_23_0.pdf>]
 Chapitre 13.
-<fig/grille_CR_100.pdf, id=3890, 462.52798pt x 346.89601pt>
+<fig/grille_CR_100.pdf, id=3895, 462.52798pt x 346.89601pt>
 File: fig/grille_CR_100.pdf Graphic file (type pdf)
 <use fig/grille_CR_100.pdf>
 Package pdftex.def Info: fig/grille_CR_100.pdf  used on input line 4570.
@@ -1807,7 +1807,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4617--4618
 [65
 
  <./fig/grille_CR_100.pdf>]
-<fig/CR_100_1975_23_0.pdf, id=3953, 2312.64pt x 433.62pt>
+<fig/CR_100_1975_23_0.pdf, id=3958, 2312.64pt x 433.62pt>
 File: fig/CR_100_1975_23_0.pdf Graphic file (type pdf)
 <use fig/CR_100_1975_23_0.pdf>
 Package pdftex.def Info: fig/CR_100_1975_23_0.pdf  used on input line 4700.
@@ -1818,7 +1818,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4700--4701
  []
 
 [66 <./fig/CR_100_1975_23_0.pdf>]
-<fig/CR_100_1980_23_0.pdf, id=4017, 2312.64pt x 433.62pt>
+<fig/CR_100_1980_23_0.pdf, id=4022, 2312.64pt x 433.62pt>
 File: fig/CR_100_1980_23_0.pdf Graphic file (type pdf)
 <use fig/CR_100_1980_23_0.pdf>
 Package pdftex.def Info: fig/CR_100_1980_23_0.pdf  used on input line 4781.
@@ -1829,7 +1829,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4781--4782
  []
 
 [67 <./fig/CR_100_1980_23_0.pdf>]
-<fig/CR_100_1990_23_0.pdf, id=4079, 2312.64pt x 433.62pt>
+<fig/CR_100_1990_23_0.pdf, id=4084, 2312.64pt x 433.62pt>
 File: fig/CR_100_1990_23_0.pdf Graphic file (type pdf)
 <use fig/CR_100_1990_23_0.pdf>
 Package pdftex.def Info: fig/CR_100_1990_23_0.pdf  used on input line 4862.
@@ -1840,7 +1840,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4862--4863
  []
 
 [68 <./fig/CR_100_1990_23_0.pdf>]
-<fig/CR_100_2003_23_0.pdf, id=4141, 2312.64pt x 433.62pt>
+<fig/CR_100_2003_23_0.pdf, id=4146, 2312.64pt x 433.62pt>
 File: fig/CR_100_2003_23_0.pdf Graphic file (type pdf)
 <use fig/CR_100_2003_23_0.pdf>
 Package pdftex.def Info: fig/CR_100_2003_23_0.pdf  used on input line 4943.
@@ -1852,7 +1852,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 4943--4944
 
 [69 <./fig/CR_100_2003_23_0.pdf>]
 Chapitre 14.
-<fig/grille_PR_100.pdf, id=4203, 462.52798pt x 346.89601pt>
+<fig/grille_PR_100.pdf, id=4208, 462.52798pt x 346.89601pt>
 File: fig/grille_PR_100.pdf Graphic file (type pdf)
 <use fig/grille_PR_100.pdf>
 Package pdftex.def Info: fig/grille_PR_100.pdf  used on input line 4949.
@@ -1870,7 +1870,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5002--5003
 [70
 
  <./fig/grille_PR_100.pdf>]
-<fig/PR_100_1975_23_0.pdf, id=4270, 2312.64pt x 433.62pt>
+<fig/PR_100_1975_23_0.pdf, id=4275, 2312.64pt x 433.62pt>
 File: fig/PR_100_1975_23_0.pdf Graphic file (type pdf)
 <use fig/PR_100_1975_23_0.pdf>
 Package pdftex.def Info: fig/PR_100_1975_23_0.pdf  used on input line 5085.
@@ -1881,7 +1881,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5085--5086
  []
 
 [71 <./fig/PR_100_1975_23_0.pdf>]
-<fig/PR_100_1980_23_0.pdf, id=4332, 2312.64pt x 433.62pt>
+<fig/PR_100_1980_23_0.pdf, id=4337, 2312.64pt x 433.62pt>
 File: fig/PR_100_1980_23_0.pdf Graphic file (type pdf)
 <use fig/PR_100_1980_23_0.pdf>
 Package pdftex.def Info: fig/PR_100_1980_23_0.pdf  used on input line 5166.
@@ -1892,7 +1892,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5166--5167
  []
 
 [72 <./fig/PR_100_1980_23_0.pdf>]
-<fig/PR_100_1990_23_0.pdf, id=4395, 2312.64pt x 433.62pt>
+<fig/PR_100_1990_23_0.pdf, id=4400, 2312.64pt x 433.62pt>
 File: fig/PR_100_1990_23_0.pdf Graphic file (type pdf)
 <use fig/PR_100_1990_23_0.pdf>
 Package pdftex.def Info: fig/PR_100_1990_23_0.pdf  used on input line 5247.
@@ -1903,7 +1903,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5247--5248
  []
 
 [73 <./fig/PR_100_1990_23_0.pdf>]
-<fig/PR_100_2003_23_0.pdf, id=4457, 2312.64pt x 433.62pt>
+<fig/PR_100_2003_23_0.pdf, id=4462, 2312.64pt x 433.62pt>
 File: fig/PR_100_2003_23_0.pdf Graphic file (type pdf)
 <use fig/PR_100_2003_23_0.pdf>
 Package pdftex.def Info: fig/PR_100_2003_23_0.pdf  used on input line 5328.
@@ -1915,7 +1915,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5328--5329
 
 [74 <./fig/PR_100_2003_23_0.pdf>]
 Chapitre 15.
-<fig/grille_DR_100.pdf, id=4519, 462.52798pt x 346.89601pt>
+<fig/grille_DR_100.pdf, id=4524, 462.52798pt x 346.89601pt>
 File: fig/grille_DR_100.pdf Graphic file (type pdf)
 <use fig/grille_DR_100.pdf>
 Package pdftex.def Info: fig/grille_DR_100.pdf  used on input line 5334.
@@ -1933,7 +1933,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5387--5388
 [75
 
  <./fig/grille_DR_100.pdf>]
-<fig/DR_100_1975_25_0.pdf, id=4582, 2312.64pt x 433.62pt>
+<fig/DR_100_1975_25_0.pdf, id=4587, 2312.64pt x 433.62pt>
 File: fig/DR_100_1975_25_0.pdf Graphic file (type pdf)
 <use fig/DR_100_1975_25_0.pdf>
 Package pdftex.def Info: fig/DR_100_1975_25_0.pdf  used on input line 5470.
@@ -1944,7 +1944,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5470--5471
  []
 
 [76 <./fig/DR_100_1975_25_0.pdf>]
-<fig/DR_100_1980_25_0.pdf, id=4644, 2312.64pt x 433.62pt>
+<fig/DR_100_1980_25_0.pdf, id=4649, 2312.64pt x 433.62pt>
 File: fig/DR_100_1980_25_0.pdf Graphic file (type pdf)
 <use fig/DR_100_1980_25_0.pdf>
 Package pdftex.def Info: fig/DR_100_1980_25_0.pdf  used on input line 5551.
@@ -1955,7 +1955,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5551--5552
  []
 
 [77 <./fig/DR_100_1980_25_0.pdf>]
-<fig/DR_100_1990_25_0.pdf, id=4706, 2312.64pt x 433.62pt>
+<fig/DR_100_1990_25_0.pdf, id=4711, 2312.64pt x 433.62pt>
 File: fig/DR_100_1990_25_0.pdf Graphic file (type pdf)
 <use fig/DR_100_1990_25_0.pdf>
 Package pdftex.def Info: fig/DR_100_1990_25_0.pdf  used on input line 5632.
@@ -1966,7 +1966,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5632--5633
  []
 
 [78 <./fig/DR_100_1990_25_0.pdf>]
-<fig/DR_100_2003_25_0.pdf, id=4769, 2312.64pt x 433.62pt>
+<fig/DR_100_2003_25_0.pdf, id=4774, 2312.64pt x 433.62pt>
 File: fig/DR_100_2003_25_0.pdf Graphic file (type pdf)
 <use fig/DR_100_2003_25_0.pdf>
 Package pdftex.def Info: fig/DR_100_2003_25_0.pdf  used on input line 5713.
@@ -1978,7 +1978,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5713--5714
 
 [79 <./fig/DR_100_2003_25_0.pdf>]
 Chapitre 16.
-<fig/grille_Magistrat_100.pdf, id=4831, 462.52798pt x 346.89601pt>
+<fig/grille_Magistrat_100.pdf, id=4836, 462.52798pt x 346.89601pt>
 File: fig/grille_Magistrat_100.pdf Graphic file (type pdf)
 <use fig/grille_Magistrat_100.pdf>
 Package pdftex.def Info: fig/grille_Magistrat_100.pdf  used on input line 5719.
@@ -1997,7 +1997,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5776--5777
 [80
 
  <./fig/grille_Magistrat_100.pdf>]
-<fig/Magistrat_100_1975_22_0.pdf, id=4886, 2312.64pt x 433.62pt>
+<fig/Magistrat_100_1975_22_0.pdf, id=4891, 2312.64pt x 433.62pt>
 File: fig/Magistrat_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Magistrat_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Magistrat_100_1975_22_0.pdf  used on input line 58
@@ -2009,7 +2009,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5859--5860
  []
 
 [81 <./fig/Magistrat_100_1975_22_0.pdf>]
-<fig/Magistrat_100_1980_22_0.pdf, id=4948, 2312.64pt x 433.62pt>
+<fig/Magistrat_100_1980_22_0.pdf, id=4953, 2312.64pt x 433.62pt>
 File: fig/Magistrat_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Magistrat_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Magistrat_100_1980_22_0.pdf  used on input line 59
@@ -2021,7 +2021,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 5940--5941
  []
 
 [82 <./fig/Magistrat_100_1980_22_0.pdf>]
-<fig/Magistrat_100_1990_22_0.pdf, id=5010, 2312.64pt x 433.62pt>
+<fig/Magistrat_100_1990_22_0.pdf, id=5015, 2312.64pt x 433.62pt>
 File: fig/Magistrat_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Magistrat_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Magistrat_100_1990_22_0.pdf  used on input line 60
@@ -2033,7 +2033,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6021--6022
  []
 
 [83 <./fig/Magistrat_100_1990_22_0.pdf>]
-<fig/Magistrat_100_2003_22_0.pdf, id=5072, 2312.64pt x 433.62pt>
+<fig/Magistrat_100_2003_22_0.pdf, id=5077, 2312.64pt x 433.62pt>
 File: fig/Magistrat_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Magistrat_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Magistrat_100_2003_22_0.pdf  used on input line 61
@@ -2059,7 +2059,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6116--6117
 [85
 
 ]
-<fig/SMPT_100_1975_22_0.pdf, id=5150, 2312.64pt x 433.62pt>
+<fig/SMPT_100_1975_22_0.pdf, id=5155, 2312.64pt x 433.62pt>
 File: fig/SMPT_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/SMPT_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/SMPT_100_1975_22_0.pdf  used on input line 6199.
@@ -2070,7 +2070,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6199--6200
  []
 
 [86 <./fig/SMPT_100_1975_22_0.pdf>]
-<fig/SMPT_100_1980_22_0.pdf, id=5212, 2312.64pt x 433.62pt>
+<fig/SMPT_100_1980_22_0.pdf, id=5217, 2312.64pt x 433.62pt>
 File: fig/SMPT_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/SMPT_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/SMPT_100_1980_22_0.pdf  used on input line 6280.
@@ -2081,7 +2081,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6280--6281
  []
 
 [87 <./fig/SMPT_100_1980_22_0.pdf>]
-<fig/SMPT_100_1990_22_0.pdf, id=5274, 2312.64pt x 433.62pt>
+<fig/SMPT_100_1990_22_0.pdf, id=5279, 2312.64pt x 433.62pt>
 File: fig/SMPT_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/SMPT_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/SMPT_100_1990_22_0.pdf  used on input line 6361.
@@ -2092,7 +2092,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6361--6362
  []
 
 [88 <./fig/SMPT_100_1990_22_0.pdf>]
-<fig/SMPT_100_2003_22_0.pdf, id=5336, 2312.64pt x 433.62pt>
+<fig/SMPT_100_2003_22_0.pdf, id=5341, 2312.64pt x 433.62pt>
 File: fig/SMPT_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/SMPT_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/SMPT_100_2003_22_0.pdf  used on input line 6442.
@@ -2117,7 +2117,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6456--6457
 [90
 
 ]
-<fig/SMIC_100_1975_22_0.pdf, id=5413, 2312.64pt x 433.62pt>
+<fig/SMIC_100_1975_22_0.pdf, id=5418, 2312.64pt x 433.62pt>
 File: fig/SMIC_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/SMIC_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/SMIC_100_1975_22_0.pdf  used on input line 6539.
@@ -2128,7 +2128,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6539--6540
  []
 
 [91 <./fig/SMIC_100_1975_22_0.pdf>]
-<fig/SMIC_100_1980_22_0.pdf, id=5475, 2312.64pt x 433.62pt>
+<fig/SMIC_100_1980_22_0.pdf, id=5480, 2312.64pt x 433.62pt>
 File: fig/SMIC_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/SMIC_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/SMIC_100_1980_22_0.pdf  used on input line 6620.
@@ -2139,7 +2139,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6620--6621
  []
 
 [92 <./fig/SMIC_100_1980_22_0.pdf>]
-<fig/SMIC_100_1990_22_0.pdf, id=5537, 2312.64pt x 433.62pt>
+<fig/SMIC_100_1990_22_0.pdf, id=5542, 2312.64pt x 433.62pt>
 File: fig/SMIC_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/SMIC_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/SMIC_100_1990_22_0.pdf  used on input line 6701.
@@ -2150,7 +2150,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6701--6702
  []
 
 [93 <./fig/SMIC_100_1990_22_0.pdf>]
-<fig/SMIC_100_2003_22_0.pdf, id=5599, 2312.64pt x 433.62pt>
+<fig/SMIC_100_2003_22_0.pdf, id=5604, 2312.64pt x 433.62pt>
 File: fig/SMIC_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/SMIC_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/SMIC_100_2003_22_0.pdf  used on input line 6782.
@@ -2175,7 +2175,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6796--6797
 [95
 
 ]
-<fig/Ascendant12_100_1975_22_0.pdf, id=5675, 2312.64pt x 433.62pt>
+<fig/Ascendant12_100_1975_22_0.pdf, id=5680, 2312.64pt x 433.62pt>
 File: fig/Ascendant12_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant12_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant12_100_1975_22_0.pdf  used on input line 
@@ -2187,7 +2187,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6879--6880
  []
 
 [96 <./fig/Ascendant12_100_1975_22_0.pdf>]
-<fig/Ascendant12_100_1980_22_0.pdf, id=5738, 2312.64pt x 433.62pt>
+<fig/Ascendant12_100_1980_22_0.pdf, id=5743, 2312.64pt x 433.62pt>
 File: fig/Ascendant12_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant12_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant12_100_1980_22_0.pdf  used on input line 
@@ -2199,7 +2199,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 6960--6961
  []
 
 [97 <./fig/Ascendant12_100_1980_22_0.pdf>]
-<fig/Ascendant12_100_1990_22_0.pdf, id=5800, 2312.64pt x 433.62pt>
+<fig/Ascendant12_100_1990_22_0.pdf, id=5805, 2312.64pt x 433.62pt>
 File: fig/Ascendant12_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant12_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant12_100_1990_22_0.pdf  used on input line 
@@ -2211,7 +2211,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7041--7042
  []
 
 [98 <./fig/Ascendant12_100_1990_22_0.pdf>]
-<fig/Ascendant12_100_2003_22_0.pdf, id=5862, 2312.64pt x 433.62pt>
+<fig/Ascendant12_100_2003_22_0.pdf, id=5867, 2312.64pt x 433.62pt>
 File: fig/Ascendant12_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant12_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant12_100_2003_22_0.pdf  used on input line 
@@ -2237,7 +2237,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7136--7137
 [100
 
 ]
-<fig/Ascendant1525_100_1975_22_0.pdf, id=5938, 2312.64pt x 433.62pt>
+<fig/Ascendant1525_100_1975_22_0.pdf, id=5943, 2312.64pt x 433.62pt>
 File: fig/Ascendant1525_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant1525_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant1525_100_1975_22_0.pdf  used on input lin
@@ -2249,7 +2249,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7219--7220
  []
 
 [101 <./fig/Ascendant1525_100_1975_22_0.pdf>]
-<fig/Ascendant1525_100_1980_22_0.pdf, id=6000, 2312.64pt x 433.62pt>
+<fig/Ascendant1525_100_1980_22_0.pdf, id=6005, 2312.64pt x 433.62pt>
 File: fig/Ascendant1525_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant1525_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant1525_100_1980_22_0.pdf  used on input lin
@@ -2261,7 +2261,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7300--7301
  []
 
 [102 <./fig/Ascendant1525_100_1980_22_0.pdf>]
-<fig/Ascendant1525_100_1990_22_0.pdf, id=6063, 2312.64pt x 433.62pt>
+<fig/Ascendant1525_100_1990_22_0.pdf, id=6068, 2312.64pt x 433.62pt>
 File: fig/Ascendant1525_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant1525_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant1525_100_1990_22_0.pdf  used on input lin
@@ -2273,7 +2273,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7381--7382
  []
 
 [103 <./fig/Ascendant1525_100_1990_22_0.pdf>]
-<fig/Ascendant1525_100_2003_22_0.pdf, id=6125, 2312.64pt x 433.62pt>
+<fig/Ascendant1525_100_2003_22_0.pdf, id=6130, 2312.64pt x 433.62pt>
 File: fig/Ascendant1525_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant1525_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant1525_100_2003_22_0.pdf  used on input lin
@@ -2299,7 +2299,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7476--7477
 [105
 
 ]
-<fig/Ascendant23_100_1975_22_0.pdf, id=6202, 2312.64pt x 433.62pt>
+<fig/Ascendant23_100_1975_22_0.pdf, id=6207, 2312.64pt x 433.62pt>
 File: fig/Ascendant23_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant23_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant23_100_1975_22_0.pdf  used on input line 
@@ -2311,7 +2311,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7559--7560
  []
 
 [106 <./fig/Ascendant23_100_1975_22_0.pdf>]
-<fig/Ascendant23_100_1980_22_0.pdf, id=6264, 2312.64pt x 433.62pt>
+<fig/Ascendant23_100_1980_22_0.pdf, id=6269, 2312.64pt x 433.62pt>
 File: fig/Ascendant23_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant23_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant23_100_1980_22_0.pdf  used on input line 
@@ -2323,7 +2323,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7640--7641
  []
 
 [107 <./fig/Ascendant23_100_1980_22_0.pdf>]
-<fig/Ascendant23_100_1990_22_0.pdf, id=6326, 2312.64pt x 433.62pt>
+<fig/Ascendant23_100_1990_22_0.pdf, id=6331, 2312.64pt x 433.62pt>
 File: fig/Ascendant23_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant23_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant23_100_1990_22_0.pdf  used on input line 
@@ -2335,7 +2335,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7721--7722
  []
 
 [108 <./fig/Ascendant23_100_1990_22_0.pdf>]
-<fig/Ascendant23_100_2003_22_0.pdf, id=6389, 2312.64pt x 433.62pt>
+<fig/Ascendant23_100_2003_22_0.pdf, id=6394, 2312.64pt x 433.62pt>
 File: fig/Ascendant23_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant23_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant23_100_2003_22_0.pdf  used on input line 
@@ -2361,7 +2361,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7816--7817
 [110
 
 ]
-<fig/Ascendant34_100_1975_22_0.pdf, id=6465, 2312.64pt x 433.62pt>
+<fig/Ascendant34_100_1975_22_0.pdf, id=6470, 2312.64pt x 433.62pt>
 File: fig/Ascendant34_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant34_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant34_100_1975_22_0.pdf  used on input line 
@@ -2373,7 +2373,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7899--7900
  []
 
 [111 <./fig/Ascendant34_100_1975_22_0.pdf>]
-<fig/Ascendant34_100_1980_22_0.pdf, id=6527, 2312.64pt x 433.62pt>
+<fig/Ascendant34_100_1980_22_0.pdf, id=6532, 2312.64pt x 433.62pt>
 File: fig/Ascendant34_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant34_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant34_100_1980_22_0.pdf  used on input line 
@@ -2385,7 +2385,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 7980--7981
  []
 
 [112 <./fig/Ascendant34_100_1980_22_0.pdf>]
-<fig/Ascendant34_100_1990_22_0.pdf, id=6589, 2312.64pt x 433.62pt>
+<fig/Ascendant34_100_1990_22_0.pdf, id=6594, 2312.64pt x 433.62pt>
 File: fig/Ascendant34_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant34_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant34_100_1990_22_0.pdf  used on input line 
@@ -2397,7 +2397,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 8061--8062
  []
 
 [113 <./fig/Ascendant34_100_1990_22_0.pdf>]
-<fig/Ascendant34_100_2003_22_0.pdf, id=6651, 2312.64pt x 433.62pt>
+<fig/Ascendant34_100_2003_22_0.pdf, id=6656, 2312.64pt x 433.62pt>
 File: fig/Ascendant34_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant34_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant34_100_2003_22_0.pdf  used on input line 
@@ -2423,7 +2423,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8156--8157
 [115
 
 ]
-<fig/Ascendant45_100_1975_22_0.pdf, id=6728, 2312.64pt x 433.62pt>
+<fig/Ascendant45_100_1975_22_0.pdf, id=6733, 2312.64pt x 433.62pt>
 File: fig/Ascendant45_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant45_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant45_100_1975_22_0.pdf  used on input line 
@@ -2435,7 +2435,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 8239--8240
  []
 
 [116 <./fig/Ascendant45_100_1975_22_0.pdf>]
-<fig/Ascendant45_100_1980_22_0.pdf, id=6790, 2312.64pt x 433.62pt>
+<fig/Ascendant45_100_1980_22_0.pdf, id=6795, 2312.64pt x 433.62pt>
 File: fig/Ascendant45_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant45_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant45_100_1980_22_0.pdf  used on input line 
@@ -2447,7 +2447,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 8320--8321
  []
 
 [117 <./fig/Ascendant45_100_1980_22_0.pdf>]
-<fig/Ascendant45_100_1990_22_0.pdf, id=6852, 2312.64pt x 433.62pt>
+<fig/Ascendant45_100_1990_22_0.pdf, id=6857, 2312.64pt x 433.62pt>
 File: fig/Ascendant45_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant45_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant45_100_1990_22_0.pdf  used on input line 
@@ -2459,7 +2459,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 8401--8402
  []
 
 [118 <./fig/Ascendant45_100_1990_22_0.pdf>]
-<fig/Ascendant45_100_2003_22_0.pdf, id=6914, 2312.64pt x 433.62pt>
+<fig/Ascendant45_100_2003_22_0.pdf, id=6919, 2312.64pt x 433.62pt>
 File: fig/Ascendant45_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/Ascendant45_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/Ascendant45_100_2003_22_0.pdf  used on input line 
@@ -2485,7 +2485,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8496--8497
 [120
 
 ]
-<fig/10SMIC_100_1975_22_0.pdf, id=6990, 2312.64pt x 433.62pt>
+<fig/10SMIC_100_1975_22_0.pdf, id=6995, 2312.64pt x 433.62pt>
 File: fig/10SMIC_100_1975_22_0.pdf Graphic file (type pdf)
 <use fig/10SMIC_100_1975_22_0.pdf>
 Package pdftex.def Info: fig/10SMIC_100_1975_22_0.pdf  used on input line 8579.
@@ -2497,7 +2497,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 8579--8580
  []
 
 [121 <./fig/10SMIC_100_1975_22_0.pdf>]
-<fig/10SMIC_100_1980_22_0.pdf, id=7052, 2312.64pt x 433.62pt>
+<fig/10SMIC_100_1980_22_0.pdf, id=7057, 2312.64pt x 433.62pt>
 File: fig/10SMIC_100_1980_22_0.pdf Graphic file (type pdf)
 <use fig/10SMIC_100_1980_22_0.pdf>
 Package pdftex.def Info: fig/10SMIC_100_1980_22_0.pdf  used on input line 8660.
@@ -2509,7 +2509,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 8660--8661
  []
 
 [122 <./fig/10SMIC_100_1980_22_0.pdf>]
-<fig/10SMIC_100_1990_22_0.pdf, id=7114, 2312.64pt x 433.62pt>
+<fig/10SMIC_100_1990_22_0.pdf, id=7119, 2312.64pt x 433.62pt>
 File: fig/10SMIC_100_1990_22_0.pdf Graphic file (type pdf)
 <use fig/10SMIC_100_1990_22_0.pdf>
 Package pdftex.def Info: fig/10SMIC_100_1990_22_0.pdf  used on input line 8741.
@@ -2521,7 +2521,7 @@ Overfull \hbox (31.22298pt too wide) in paragraph at lines 8741--8742
  []
 
 [123 <./fig/10SMIC_100_1990_22_0.pdf>]
-<fig/10SMIC_100_2003_22_0.pdf, id=7176, 2312.64pt x 433.62pt>
+<fig/10SMIC_100_2003_22_0.pdf, id=7181, 2312.64pt x 433.62pt>
 File: fig/10SMIC_100_2003_22_0.pdf Graphic file (type pdf)
 <use fig/10SMIC_100_2003_22_0.pdf>
 Package pdftex.def Info: fig/10SMIC_100_2003_22_0.pdf  used on input line 8822.
@@ -2542,36 +2542,38 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 1D31DA03694249049E51B602FE0F5607;1926.
  ) 
 Here is how much of TeX's memory you used:
- 11918 strings out of 494780
- 185547 string characters out of 6176875
+ 11923 strings out of 494780
+ 185599 string characters out of 6176875
  354721 words of memory out of 5000000
- 14654 multiletter control sequences out of 15000+600000
- 19721 words of font info for 44 fonts, out of 8000000 for 9000
+ 14656 multiletter control sequences out of 15000+600000
+ 20802 words of font info for 46 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  40i,11n,48p,789b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.
-600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1
-000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-cbx2488.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/
-ec/ecbx0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknap
-pen/ec/ectt0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/j
-knappen/ec/ecti0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfo
-ur/jknappen/ec/ecbi1000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecbx1000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/scherrer/.texlive2017/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/scherrer/.texlive2017/texmf-v
-ar/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/scherrer/.texlive2017/tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/scherrer/.texlive2017
-/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1728.600pk> </home/scherrer/.texlive
-2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/eurosym/feymr10.pfb>
-Output written on book.pdf (125 pages, 3998744 bytes).
+600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0
+800.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+crm0700.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ecti1000.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecbx2488.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecbx0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/ljfo
+ur/jknappen/ec/ectt0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts/pk/
+ljfour/jknappen/ec/ecti0900.600pk> </home/scherrer/.texlive2017/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecbi1000.600pk> </home/scherrer/.texlive2017/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/scherrer/.texlive2017/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/scherrer/.texlive2017/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </home/scherrer/.texlive2017
+/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/scherrer/.texlive
+2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/scherrer/.tex
+live2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1728.600pk> </home/scherrer/
+.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/eurosym/feymr10.pfb>
+Output written on book.pdf (125 pages, 4054441 bytes).
 PDF statistics:
- 7844 PDF objects out of 8907 (max. 8388607)
- 1580 compressed objects within 16 object streams
- 270 named destinations out of 1000 (max. 500000)
+ 7895 PDF objects out of 8907 (max. 8388607)
+ 1592 compressed objects within 16 object streams
+ 271 named destinations out of 1000 (max. 500000)
  763 words of extra memory for PDF output out of 10000 (max. 10000000)
 

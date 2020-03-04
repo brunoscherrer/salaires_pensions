@@ -293,7 +293,7 @@ class AnalyseModele():
         for a in range(deb,fin+1):
             i = a-m.debut
             l.append( [str(a),
-                       "%.2f"%(m.corr_prix_annee_ref[i]),
+                       "%.2f"%(m.prix[i]), ### correction
                        "%.2f"%(m.inflation[i]),
                        "%.2f"%(m.croissance[i]),
                        "%.2f"%(m.smic[i]/12/m.corr_prix_annee_ref[i]),
