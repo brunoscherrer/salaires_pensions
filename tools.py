@@ -71,3 +71,4 @@ def print_table(l, f=sys.stdout, tex=False, texparams="", colemph=[]): # fonctio
             x.add_row(l[i])
 
         f.write(x.get_string())
+        f.write("\n")
