@@ -207,7 +207,7 @@ cas = [ ("ProfEcoles",0.081,23) ]
 ### Génération d'un exemple
 
 debug0()
-exit(1)
+
 
 ### Génération comparaison des grilles
     
