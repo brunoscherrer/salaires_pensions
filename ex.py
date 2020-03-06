@@ -8,8 +8,6 @@ import matplotlib.pyplot as plt
 import sys
 
 # Modèle de projection: Gouvernement corrigé
-
-debut, fin = 1980, 2120
 m = ModeleGouv(1980,2120,1.3,False) # modèle du gouv avec age glissant corrigé
 
 ###
@@ -34,7 +32,7 @@ print("\n")
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
-AnalyseCarriere.plot_evolution_carriere_corr(0, ax, m.smic, 0, [c], c.annee_debut+60, "Revenu/SMIC", dec("Titre: "+c.nom_metier), 12, 1)  # trace la courbe normalisée par le smic
+AnalyseCarriere.plot_evolution_carriere_corr(0, ax, m.smic, 0, [c], c.annee_debut+75, "Revenu/SMIC", dec("Titre: "+c.nom_metier), 12, 1)  # trace la courbe normalisée par le smic
 
 
 
@@ -65,7 +63,7 @@ print("\n")
 
 fig = plt.figure()
 ax = fig.add_subplot(1,1,1)
-AnalyseCarriere.plot_evolution_carriere_corr(0, ax, m.smic, 0, [c], c.annee_debut+60, "Revenu/SMIC", dec("Titre: "+c.nom_metier), 12, 1)  # trace la courbe normalisée par le smic
+AnalyseCarriere.plot_evolution_carriere_corr(0, ax, m.smic, 0, [c], c.annee_debut+75, "Revenu/SMIC", dec("Titre: "+c.nom_metier), 12, 1)  # trace la courbe normalisée par le smic
 
 
 # affiche les graphiques
