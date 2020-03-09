@@ -178,8 +178,9 @@ class Carriere(object):
                      (2, "2 enfants"),
                      (3, "3 enfants") ]
     
-    def __init__(self, m, age_debut, annee_debut, id_metier, nom_metier, quotite):
-        
+    def __init__(self, m, age_debut, annee_debut, id, nom_metier, quotite):
+
+        self.id = id
         self.m = m
         self.nom_metier = nom_metier
         self.age_debut = age_debut
@@ -192,19 +193,22 @@ class Carriere(object):
         quot = []   # Calcul de la quotité au long de la carrière
         q = tp[0]
         perso = "Quotité : %d\\%%"%(int(q*100))
-        id_metier = id_metier+"_%d"%(int(q*100))
+        perso_md = "Quotité : %d%%"%(int(q*100))
+        id_carriere = id+"_%d"%(int(q*100))
         iq = 1
         for a in range(age_debut, Carriere.age_max+1):
             if a == tp[iq][0]: # changement de quotité
                 q = tp[iq][1]
                 iq += 1
                 perso = perso + " $\\stackrel{\\mbox{\\tiny %d ans}}{\\longrightarrow}$ %d\\%%"%(a,int(q*100))
-                id_metier = id_metier+"_%d_%d"%(int(q*100),a)
+                perso_md = perso_md + " &rarr; (%d ans) %d%%"%(a,int(q*100))
+                id_carriere = id_carriere+"_%d_%d"%(int(q*100),a)
             quot.append(q)
                         
-        self.id_metier = id_metier   
+        self.id_carriere = id_carriere   
         self.quot = quot
         self.perso = perso
+        self.perso_md = perso_md
 
         
     def calcule_retraite_macron(self):
@@ -281,7 +285,7 @@ class Carriere(object):
 
 class CarrierePrive(Carriere):
     
-    def __init__(self, m, age_debut, annee_debut, id_metier="Travailleur", nom_metier="Travailleur", coefs=[], ref="SMIC", quotite=[1.0]):
+    def __init__(self, m, age_debut, annee_debut, id="Travailleur", nom_metier="Travailleur", coefs=[], ref="SMIC", quotite=[1.0]):
 
         self.public = False
         
@@ -293,7 +297,7 @@ class CarrierePrive(Carriere):
         elif ref=="SMPT":
             base = m.smpt
             
-        super(CarrierePrive,self).__init__(m, age_debut, annee_debut, id_metier, nom_metier, quotite)
+        super(CarrierePrive,self).__init__(m, age_debut, annee_debut, id, nom_metier, quotite)
         self.sal = [ self.quot[i] * coefs[i] * base[ i + annee_debut - m.debut ] for i in range(Carriere.age_max+1-age_debut) ]
 
         self.calcule_retraite_macron()
@@ -328,14 +332,13 @@ class CarrierePublic(Carriere):
     ]
     
     @classmethod
-    def numero_metier_public(cls, id_metier):
+    def numero_metier_public(cls, id):
 
         n_metier = [0,0]
         while ( n_metier[0] < len(CarrierePublic.grilles) ):
             lc = CarrierePublic.grilles[ n_metier[0] ][0]
             while n_metier[1] < len(lc):
-                #print id_metier, lc[ n_metier[1] ][0]
-                if id_metier == lc[ n_metier[1] ][0]:
+                if id == lc[ n_metier[1] ][0]:
                     return n_metier
                 n_metier[1] += 1
             n_metier[0] +=1
@@ -344,17 +347,17 @@ class CarrierePublic(Carriere):
         return(-1,0) # si pas trouvé
     
     
-    def __init__(self, m, age_debut, annee_debut, id_metier, part_prime=0.0, quotite=[1.0]):
+    def __init__(self, m, age_debut, annee_debut, id, part_prime=0.0, quotite=[1.0]):
 
         self.public = True
         
-        n_metier = CarrierePublic.numero_metier_public(id_metier)
+        n_metier = CarrierePublic.numero_metier_public(id)
         if n_metier == (-1,0):
-            raise Exception("L'identifiant "+id_metier+" n'a pas été trouvé dans la liste des métiers publics!")
+            raise Exception("L'identifiant "+id+" n'a pas été trouvé dans la liste des métiers publics!")
         self.n_metier = n_metier
         nom_metier = CarrierePublic.grilles[ n_metier[0] ][0][n_metier[1]][1]
 
-        super(CarrierePublic,self).__init__(m, age_debut, annee_debut, id_metier, nom_metier, quotite)
+        super(CarrierePublic,self).__init__(m, age_debut, annee_debut, id, nom_metier, quotite)
         
         grille = CarrierePublic.grilles[n_metier[0]][1]
         

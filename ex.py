@@ -30,7 +30,7 @@ a.affiche_carriere(False, sys.stdout )        # sortie texte d'un tableau récap
 a.affiche_pension_macron(0, False, sys.stdout)   # 
 print("\n")
 
-fig = plt.figure()
+fig = plt.figure(figsize=((12,8)))
 ax = fig.add_subplot(1,1,1)
 AnalyseCarriere.plot_evolution_carriere_corr(0, ax, m.smic, 0, [c], c.annee_debut+75, "Revenu/SMIC", dec("Titre: "+c.nom_metier), 12, 1)  # trace la courbe normalisée par le smic
 
