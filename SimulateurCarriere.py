@@ -99,6 +99,10 @@ class ModeleAbs(object):  # classe abstraite
             coef[i-self.debut] = coef[i-1-self.debut] * (
                 math.pow( self.smpt[i-self.debut] / self.smpt[i-1-self.debut], alpha ) * # moyenne géométrique (c'est ce qui est le plus naturel pour des taux)
                 math.pow( self.prix[i-self.debut] / self.prix[i-1-self.debut], 1.0-alpha ) )
+            #coef[i-self.debut] = coef[i-1-self.debut] * (
+            #    alpha * self.smpt[i-self.debut] / self.smpt[i-1-self.debut] +
+            #    (1.0-alpha) * self.prix[i-self.debut] / self.prix[i-1-self.debut] )
+            
             
         for i in range(self.debut,self.fin+1):
 

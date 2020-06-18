@@ -451,7 +451,7 @@ cas_prive = [ ("SMPT","Salarié privé au salaire moyen durant toute sa carrièr
 
 
 ### Pour générer les images pour quelques profils seulement
-#cas_public = [ ("Infirmier", 0.299, 22) ] #("ATSEM", 0.299, 22) ]
+#cas_public = []# ("Infirmier", 0.299, 22) ] #("ATSEM", 0.299, 22) ]
 #cas_prive = [ ("SMPT","Salarié privé au salaire moyen durant toute sa carrière", 22, [1.0]*50, "SMPT") ]
 
 
@@ -467,7 +467,7 @@ types_carrieres = [ ([1.0],                       0),  # temps plein, pas d'enfa
                     ([1.0, (30, 0.6), (40, 1.)],  2)   # temps plein, puis à 60% entre 30 et 40 ans, 2 enfants
 ]
 
-force_generate_figures = False
+force_generate_figures = True
 
 def tex():
     genere_tex("corps", [1975, 1980, 1990, 2003], False)
@@ -485,4 +485,4 @@ def html():
 
 
 tex()
-html()
+#html()

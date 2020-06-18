@@ -106,9 +106,9 @@ class AnalyseCarriere:
         l=[]
             
         eurcst="("+euroconst(c.m,tex)+")"
-        l.append( [ "Année","Âge", "Quot(\\%)", "Revenu "+eurcst,"SMIC "+eurcst,"Rev/SMIC","Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ] )
+        l.append( [ "Année","Âge", "Quot(\\%)", "Revenu "+eurcst,"SMIC "+eurcst,"Rev/SMIC","Points", "Cumul Pts","Achat Pt"+eurcst,"Serv. Pt"+eurcst ] )
 
-        for i in range(1, sim.Carriere.age_max - c.age_debut + 1):
+        for i in range(sim.Carriere.age_max - c.age_debut + 1):
             an = c.annee_debut+i
             l.append([ "%d"%an,
                        "%d ans"%(c.age_debut+i),
@@ -116,10 +116,12 @@ class AnalyseCarriere:
                        "%.2f"%(c.sal[i]/12/m.prix[ an - m.debut ]*m.prix[ c.m.annee_ref - m.debut]),
                        "%.2f"%(m.smic[ an - m.debut ]/m.corr_prix_annee_ref[ an - m.debut]/12),
                        "%.2f"%(c.sal[i] / m.smic[ an - m.debut ]),
-                       "%.2f"%(c.cumul_pts[i]),"%.2f"%(m.achat_pt[an - m.debut]),
+                       "%.2f"%(c.pts[i]),
+                       "%.2f"%(c.cumul_pts[i]),
+                       "%.2f"%(m.achat_pt[an - m.debut]),
                        "%.2f"%(m.vente_pt[ an - m.debut]) ])
 
-        print_table(l, f, tex, "{|c|c||c|c|c|c||c|c|c|}",[5])
+        print_table(l, f, tex, "{|c|c||c|c|c|c||c|c|c|c|}",[5])
 
 
     # affichage de graphiques
@@ -365,5 +367,5 @@ class AnalyseModele():
                 k=k+1
             #plt.legend(loc='upper right')
         handles, labels = ax.get_legend_handles_labels()
-        plt.figlegend(handles, labels, borderaxespad=0.0, loc='upper center')
+        plt.legend(handles, labels, borderaxespad=0.0, loc='upper center')
         #plt.tight_layout()
